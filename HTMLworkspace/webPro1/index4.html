@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>我的第一个网页</title>
+    <style type="text/css">
+        h2#myid{ /*id选择器，前面加了元素就只能给h2用*/
+            color: purple;
+            font-size: 30px;
+        }
+        #myid2{ /*id选择器的优先级高于类选择器*/
+            font-weight: bold; /*粗体字*/
+        }
+        .myclass1{ /*类选择器，灵活，多对多*/
+            font-style: italic;
+            color: blue;
+        }
+        .myclass2{ /*两个类选择器，重复元素不同值的显示后声明的*/
+            text-decoration: underline;
+            color: darkorange;
+        }
+        ul ol{ /*后代选择器, ol是ul的孙子，所以用空格，如果是儿子就用；这个例子变的是ol*/
+            color: red;
+            font-size: medium;
+        }
+        ul > li{ /*apply to li*/
+            font-size: smaller;
+            font-weight: lighter;
+            color: darkmagenta;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="myclass1">一级标题</h1>
+    <h2 class="myclass1 myclass2">二级标题</h2>
+    <p id="myid"> 本节课内容学习css嵌套样式，重点为选择器。 </p>
+    <span id="myid2">我是span标签</span>
+<!--
+html注释格式，不应该显示
+-->
+    <ul>
+        <li>选择合适的答案：</li>
+        <ol type="A">
+            <li>答案1</li>
+            <li>答案2</li>
+            <li>答案3</li>
+            <li>答案4</li>
+        </ol>
+        <li>选择合适的答案：</li>
+        <ol type="A">
+            <li>答案1</li>
+            <li>答案2</li>
+            <li>答案3</li>
+            <li>答案4</li>
+        </ol>
+        <li>选择合适的答案：</li>
+            <ol type="A">
+                <li>答案1</li>
+                <li>答案2</li>
+                <li>答案3</li>
+                <li>答案4</li>
+            </ol>
+    </ul>
+</body>
+
+</html>
