@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>常用字体文本样式的学习</title>
+    <!--快捷键：代码格式化：ctrl+shift+f，前提是先关闭中文输入法：ctrl+space -->
+    <style type="text/css">
+        .myp {
+            /*---------------------------字体样式------------------------------*/
+            font-family: "微软雅黑" ; /*设置字体类型*/
+            font-size: 49px;
+            font-weight: 200; /*设置字体的粗细，100的整数倍*/
+            font-style: italic;/*设置字体的样式，斜体或正常体，若字体类型不支持italic，可以用oblique*/
+            /*---------------------------文本样式------------------------------*/
+            color: red; /*设置文本颜色*/
+            /*颜色的表示方式：
+            1.直接英文单词，例如red，blue
+            2.用十六进制描述（RGB，每一位颜色描述的范围是0-255位,0-ff），#开头，比如#112233，#aabbcc
+            3.RGB（12,13,14），每一位是0-255，比如描述红色是：RGB(255,0,0)*/
+            text-decoration: underline; /*设置文本装置，加下划线或者去除下划线用得较多*/
+            text-align: left;/*设置文本对齐方式，常用的有left，center，right，默认值是left*/
+            text-indent: 20px;/*设置文本首行缩进，单位为px*/
+            text-shadow: -5px -5px 30px yellow;
+            /*设置文本阴影，有四个参数：
+            第一个参数：阴影水平偏移量，正数向右，负数向左
+            第二个参数：阴影垂直偏移量，正数向下篇，负数向上
+            第三个参数：阴影模糊半径，数字越大，阴影越模糊
+            第四个参数：阴影的颜色*/
+            text-transform: capitalize;/*文本的转换，针对英文，有lowercase，uppercase，capitalize*/
+            letter-spacing: 5px;/*设置字符间距*/
+            word-spacing: 10px;/*设置单词之间的间距，比如 and 和 cat*/
+        }
+    </style>
+</head>
+<body>
+<!--<p class="myp">p元素，测试样式的文本内容, and lowercase or UPPERCASE for test-transorm test</p>-->
+<!--<p &lt;!&ndash;class="myp&ndash;&gt;">这是一段普通的文字</p>-->
+</body>
+</html>

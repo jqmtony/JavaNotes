@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>对背景的学习</title>
+    <style type="text/css">
+        div.container{
+            width: 500px;
+            height: 300px;
+            border: 5px solid red;
+
+            /*background-color: aquamarine;/!*设置背景颜色*!/*/
+            /*background-image: url("images/img-9.jpg");/!*设置背景图片，会覆盖边框背景色，默认平铺，拉伸效果从css3出现*!/*/
+            /*background-repeat: no-repeat;*/
+            /*设置背景图片平铺方式,repeat-x水平方向平铺，-y纵向平铺，
+            no-repeat不平铺，repeat平铺*/
+            /*background-position: center bottom;*/
+            /*设置背景图片的位置，有两个值：代表水平方向、垂直方向，
+            值可以是像素px，
+            也可以是百分比，50% 50%指的是水平居中
+            也可以是left，right，top，bottom，center等表示位置的单词*/
+
+            /*对背景的设置推荐使用简写*/
+            background: aquamarine url("images/img-9.jpg") no-repeat left center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">123</div>
+</body>
+</html>

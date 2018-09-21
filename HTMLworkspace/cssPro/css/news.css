@@ -1,0 +1,50 @@
+/*通用设置,把所有元素的内边距和外边距清零*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*对整个页面的字体类型和大小做统一设置*/
+body {
+    font-family: "微软雅黑", serif;
+    font-size: 12px;
+}
+
+.news {
+    width: 260px; /*设置模块的宽度*/
+    border: 1px solid #cccccc; /*设置模块的边框*/
+    margin: 20px auto;
+}
+
+.news > h3 {
+    height: 28px;
+    line-height: 28px; /*行高和高度设置一样,内容就会垂直居中*/
+    background: url("../images/titleBg.jpg") repeat-x; /*设置背景图片并水平平铺*/
+    /* padding-left: 10px;*/
+    text-indent: 10px; /*设置文本首行缩进*/
+    color: brown;
+}
+
+.news > ul {
+    list-style: none; /*让子元素去继承ul父元素的list-style属性,去除li元素左边的默认图标*/
+    padding: 10px 5px;/*设置内边距*/
+}
+
+.news > ul > li {
+    height: 28px;/*设置高度*/
+    border-bottom: 1px dashed #cccccc;/*设置底部边框*/
+    line-height: 28px;/*行高和高度设置一样,内容就会垂直居中*/
+    background: url("../images/btn-04.gif") no-repeat 3px center;/*设置背景图片*/
+    text-indent: 45px;/*设置文本首行缩进*/
+}
+.news > ul > li.noborder{
+    border-bottom: none;/*去除底部边框*/
+}
+.news > ul > li > a:link{
+    color: black;
+    text-decoration: none;/*去除下划线*/
+}
+
+.news > ul > li > a:hover{
+    text-decoration: underline;/*添加下划线*/
+}

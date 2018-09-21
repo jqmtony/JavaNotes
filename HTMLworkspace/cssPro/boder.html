@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>边框样式学习</title>
+    <style type="text/css">
+        p{
+            /*border-width: 3px;/!*设置边框的粗细*!/*/
+            /*border-style: dotted;/!*设置边框的样式，也就是类型，dashed虚线，solid实现，dotted点线*!/*/
+            /*border-color: yellow; /!*设置边框颜色*!/*/
+
+            /*可以直接用border简写，无顺序要求*/
+            /*border: 10px solid yellowgreen;*/
+
+            /*单独设置四个边框的样式*/
+            border-top: 10px solid yellowgreen;
+            border-bottom: 10px dotted blue;
+            border-left: 10px dashed orange;
+            border-right: 10px solid darkred;
+            width: 250px;/*设置元素的宽度*/
+            height: 250px;/*设置元素的高度*/
+
+            border-bottom: none;/*去除底部边框*/
+        }
+    </style>
+</head>
+<body>
+    <p>我是一个p元素，用来测试边框 ^_^</p>
+</body>
+</html>
