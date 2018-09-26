@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>浮动定位</title>
+    <style type="text/css">
+        .parent{
+            width: 500px;
+            border: 5px solid red;
+            /*在没有设高度的时候，高度是子元素之和*/
+        }
+
+        .son1{
+            height: 200px;
+            background: blue;
+            float:left;/*宽度和高度默认适应内容，
+            并脱离父元素，即释放原先在父元素所占空间，
+            进而影响父元素的宽高，基本上缩小范围的意思*/
+        }
+        .son2{
+            height: 300px;
+            background: orange;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="son1">son11111111</div>
+    <div class="son2">son2</div>
+</div>
+</body>
+</html>

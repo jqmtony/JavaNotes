@@ -1,0 +1,73 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*body统一设置，方便一次性改为最舒服的，如果有单独的模块需要改动，
+           可以在模块里再进行改动，反正会覆盖。*/
+    font-size: 12px;
+    font-family: "宋体", serif;
+}
+
+.content {
+    border: solid black 1px;
+    margin: 10px auto;
+    width: 190px;
+}
+
+.content ul {
+    list-style-type: none;
+    /*也可以放在li里面，效果一样，但如果
+                后续增加其它的li，可以直接覆盖，道理和body一样*/
+}
+
+.content li {
+    height: 29px;
+    line-height: 29px; /*加了这两行可以让li内的元素整体垂直居中*/
+    background: url("../images/gameBg1.jpg");/*记得改目录层级问题*/
+    text-decoration: none;
+}
+
+.content img {
+    vertical-align: middle;
+    /*不声明的话，文字再图片的左下方对齐，
+               实际上移动的是图片不是文字。*/
+    margin: 0 10px; /*设置图片左右的间隔*/
+}
+
+/*----------------------以下是第一种做法----------------------*/
+/*.content a:link {*/
+/*color: black;*/
+/*text-decoration: none;*/
+/*height: 29px;*/
+/*line-height: 29px;*/
+/*display: block;*/
+/*}*/
+
+/*.content > ul > li:hover {*/
+/*color: white;*/
+/*text-decoration: none;*/
+/*background: url("images/gameBg2.jpg"); /!*如果不针对hover设置，*!/*/
+/*/!*border: solid 1px red;*!/*/
+/*}*/
+
+/*.content a:hover {*/
+/*color: white;*/
+/*text-decoration: none;*/
+/*/!*border: solid 1px red;*!/*/
+
+
+/*----------------------以下是第二种做法----------------------*/
+.content >ul>li>a:link {
+    color: black;
+    text-decoration: none;
+    display: block;;/*将超链接范围扩充指整个li区域，图片背景可整体替换，而非仅仅a href的部分*/
+    /*border: red solid 3px;*/
+}
+
+.content a:hover {
+    color: white;
+    background: url("../images/gameBg2.jpg");
+}

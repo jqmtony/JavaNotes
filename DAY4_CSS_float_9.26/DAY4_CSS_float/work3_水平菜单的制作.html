@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>水平菜单的制作</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: "微软雅黑", serif;
+            font-size: 12px;
+        }
+        .nav{
+            width: 492px;
+            margin: 10px auto;
+            /*border: 2px red solid;/!*设置边框便于调试，直观*!/*/
+        }
+        .nav>ul{
+            list-style: none;
+        }
+        .nav>ul>li{
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;/*表格内居中*/
+            border: 1px solid red;
+            float: left;
+
+            background: greenyellow;
+        }
+        .nav a:link{
+            text-decoration: none;
+            background: cadetblue;
+            display: block;/*撑满行级元素*/
+        }
+        .nav a:hover{
+            color: white;
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">公司概况</a></li>
+        <li><a href="#">公司产品</a></li>
+        <li><a href="#">公司员工</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">关于我们</a></li>
+    </ul>
+</div>
+</body>
+</html>

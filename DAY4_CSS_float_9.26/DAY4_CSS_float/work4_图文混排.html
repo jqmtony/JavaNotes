@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图文混排</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "微软雅黑", serif;
+            font-size: 14px;
+        }
+
+        /*可以通过修改一下框值移动内容*/
+
+        .desc {
+            width: 400px; /*内容如果放不下，会自动换行*/
+            border: 2px blue solid;
+            margin: 10px auto; /*整个模块内容水平居中*/
+        }
+
+        .desc > img {
+            float: left;
+            border: 2px red solid;
+            margin: 10px;
+        }
+
+        .desc > p {
+            /*float:left;*/
+            border: 2px red solid;
+            margin: 20px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="desc">
+    <img src="images/img-5.jpg">
+
+    <p>你好，这是图文混排的文字内容部分！<br>我换了一行看看！</p>
+</div>
+</body>
+</html>
