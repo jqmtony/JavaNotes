@@ -22,7 +22,7 @@
         }
         .games > .head1{
             /*border: 1px solid red;*/
-            height: 30px;
+            height: 33px;
             background: url("images/titleBg.jpg");
             /*padding: 2px;*/
         }
@@ -34,22 +34,27 @@
             /*height: 20px;*/
             /*line-height: 20px;*/
             /*border: 1px blue solid;*/
-            border-right: 1px grey solid;
+            border-right: 1px lightgrey solid;
             margin-top: 4px;
             text-align: center;
         }
         .games > .head1 a:link {
-            color: blue;
-            font-size: 13px;
+            color: grey;
+            font-size: 15px;
+        }
+        .games .head1 span{
+            color: #aa5d5b;
+            font-size: 15px;
             font-weight: bold;
         }
+
         /*解决并列title的问题：把每一个单独的a:linkfloat，
         这样不会导致图片窜上来，因为title的框框没有动*/
-        .games > .head1 .title1{
+        .games .title1{
             float: left;
-            text-decoration: none;
-        }
-        .games>.head1 .title2{
+            color: #7e0a0a;
+]        }
+        .games .title2{
             float: left;
         }
         .games > .head1 a:hover{
@@ -68,7 +73,7 @@
         }
 
 
-        .games .div1 > a:link {
+        .games .div1 {
             /*margin: 3px;*/
             line-height: 20px;
             text-decoration: none;
@@ -87,7 +92,9 @@
             margin: 5px;
         }
 
-        .games .button > li {
+        .games .button > ul {  /*设置进入游戏、新手资料的两个绿色按钮*/
+        }
+        .games .button > li {  /*设置进入游戏、新手资料的两个绿色按钮*/
             border: 1px #afc4a5 solid;
             background: #eafcdd;
             width: 50px;
@@ -96,6 +103,16 @@
             float: left;
             margin-right: 10px;
             list-style: none;
+            text-align: center;
+            padding: 0 2px; /*第一个参数是上下的内边，第二个参数是左右的内边*/
+        }
+        .button a:link{
+            text-decoration: none;
+            color: green;
+        }
+
+        .games .div1 span{
+            color: #aa1412;
         }
     </style>
 </head>
@@ -103,28 +120,25 @@
 <div class="games">
     <div class="head1">
         <ul>
-            <li class="title1"><a href="#">全部游戏</a></li>
+            <li class="title1"><span>全部游戏</span></li>
             <li class="title2"><a href="#">战争策略</a></li>
             <li class="title2"><a href="#">体育经营</a></li>
             <li class="title2"><a href="#">社交游戏</a></li>
-            <!--<li class="title1"><a href="#"></a></li>-->
         </ul>
     </div>
 
     <ul>
         <li class="div1">
             <img src="images/img-5.jpg">
-            <a href="#">
                 <h4>龙将</h4>
                 三国题材横版RPG网游，
                 <br>丰富的武将系统
                 <br>类型：角色扮演
-                <br>游戏人气：470921
+                <br>游戏人气：<span>470921</span>
                 <ul class="button">
-                    <li>进入游戏</li>
-                    <li>新手资料</li>
+                    <li><a href="#">进入游戏</a></li>
+                    <li><a href="#">新手资料</a></li>
                 </ul>
-            </a>
         </li>
         <li class="div1" class="no_right_margin">
             <img src="images/img-5.jpg">
@@ -133,10 +147,10 @@
                 一款不建主城不等CD，
                 <br>不占资源，全程战斗
                 <br>类型：战征策略
-                <br>游戏人气：8745221
+                <br>游戏人气：<span>8745221</span>
                 <ul class="button">
-                    <li>进入游戏</li>
-                    <li>新手资料</li>
+                    <li><a href="#">进入游戏</a></li>
+                    <li><a href="#">新手资料</a></li>
                 </ul>
             </a>
         </li>
