@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>游戏模块</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .allGame {
+            width: 722px;
+            border: 1px solid #cccccc;
+            margin: 10px auto;
+        }
+
+        /*标题栏样式*/
+        .title {
+            height: 28px;
+            background: url("images/titleBg.jpg") repeat-x;
+            line-height: 28px;
+            text-indent: 10px;
+        }
+
+        .title > dt, .title > dd {
+            float: left;
+        }
+
+        .title > dt {
+            color: brown;
+            font-weight: bold;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .title > dd {
+            margin-left: 5px;
+            color: black;
+        }
+
+        .title > dd > a:link {
+            color: black;
+        }
+
+        /*游戏列表样式的修饰*/
+        .g_list {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .g_list > li {
+            border: 1px solid #cccccc;
+            float: left;
+            width: 329px;
+        }
+
+        .margin-right {
+            margin-right: 20px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .g_list > li > img {
+            float: left;
+            margin: 5px 5px 15px 5px;
+        }
+
+        .g_list > li > h3 {
+            margin: 8px 0;
+        }
+
+        .g_list > li > h3 > a:link {
+            color: brown;
+            text-decoration: none;
+        }
+
+        .g_list > li > h3 > a:hover {
+            text-decoration: underline;
+        }
+
+        .g_list > li > p {
+            line-height: 20px;
+        }
+        .g_list > li > p >span{
+            color: brown;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="allGame">
+    <dl class="title">
+        <dt>全部游戏</dt>
+        <dd><a href="#">战争策略</a></dd>
+        <dd>|</dd>
+        <dd><a href="#">体育经营</a></dd>
+        <dd>|</dd>
+        <dd><a href="#">社交游戏</a></dd>
+    </dl>
+
+    <ul class="g_list">
+        <li class="margin-right">
+            <img src="images/img-4.jpg">
+
+            <h3><a href="#">龙将</a></h3>
+
+            <p>三国题材横版RPG网<br>游，丰富的武将系统<br>
+                类型：角色扮演<br>
+                游戏人气：<span>470921</span><br>
+                <img src="images/btn-02.jpg">
+                <img src="images/btn-03.jpg">
+            </p>
+        </li>
+        <li>
+            <img src="images/img-4.jpg">
+
+            <h3><a href="#">征战四方</a></h3>
+
+            <p>一款不建主城不等CD，<br>不占资源，全程战斗<br>
+                类型：战征策略<br>
+                游戏人气：8745221<br>
+                <img src="images/btn-02.jpg">
+                <img src="images/btn-03.jpg">
+            </p>
+        </li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>

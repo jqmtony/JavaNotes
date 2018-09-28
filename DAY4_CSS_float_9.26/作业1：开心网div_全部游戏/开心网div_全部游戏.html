@@ -14,6 +14,7 @@
             font-size: 12px;
         }
 
+        /* 可以使用浏览器的开发者工具确定px大小*/
         .games {
             width: 725px; /*与.games li的主要两块内容对应*/
             border: 1px darkgray solid;
@@ -119,7 +120,7 @@
 <body>
 <div class="games">
     <div class="head1">
-        <ul>
+        <ul><!-- 标题与标题之间的竖杠可以直接用"|"-->
             <li class="title1"><span>全部游戏</span></li>
             <li class="title2"><a href="#">战争策略</a></li>
             <li class="title2"><a href="#">体育经营</a></li>
@@ -136,23 +137,22 @@
                 <br>类型：角色扮演
                 <br>游戏人气：<span>470921</span>
                 <ul class="button">
+                    <!--可以直接使用button image，不用自己做框框-->
                     <li><a href="#">进入游戏</a></li>
                     <li><a href="#">新手资料</a></li>
                 </ul>
         </li>
         <li class="div1" class="no_right_margin">
             <img src="images/img-5.jpg">
-            <a href="#">
                 <h4>征战四方</h4>
                 一款不建主城不等CD，
                 <br>不占资源，全程战斗
                 <br>类型：战征策略
-                <br>游戏人气：<span>8745221</span>
+                <br>游戏人气：8745221
                 <ul class="button">
                     <li><a href="#">进入游戏</a></li>
                     <li><a href="#">新手资料</a></li>
                 </ul>
-            </a>
         </li>
     </ul>
 </div>

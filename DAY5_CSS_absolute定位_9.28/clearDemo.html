@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>clear清除功能</title>
+    <style type="text/css">
+        .parent{
+            width: 500px;
+            border: 1px red solid;
+        }
+        .s1{
+            height: 200px;
+            background: blue;
+            float: left;
+        }
+        .s2{
+            height: 300px;
+            background: red;
+            float: right;
+        }
+        .clearfix{
+            clear:both;
+        }
+        .s3{
+            height: 100px;
+            background: purple;
+
+            /*clear: left; /!*清除周围左浮动元素造成的影响*!/*/
+            /*clear: right;/!*清除周围右浮动元素造成的影响*!/*/
+            /*clear:both; /!*添加到分割线的div中*!/*/
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="s1">son1</div>
+    <div class="s2">son2</div>
+    <div class="clearfix"></div><!--分割线，在此分割线下面都不受浮动元素的影响-->
+    <div class="s3">son3</div>
+
+</div>
+</body>
+</html>

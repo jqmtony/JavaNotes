@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>作业2_淘宝网导航</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "微软雅黑", serif;
+            font-size: 12px;
+        }
+
+        .nav {
+            margin: 10px auto;
+            width: 550px;
+            /*border: 2px black solid;*/
+            border-bottom: 2px solid #f27c07;
+            position: absolute;
+            left: 50px;
+            top: 100px; /*整个模块往下往右移动*/
+        }
+
+        .nav ul {
+            list-style: none;
+            font-size: 15px;
+            color: #f27c07;
+            /*padding: 5px;*/
+        }
+
+        .nav li {
+            /*border: 1px black solid;*/
+            width: 75px;
+            float: left;
+            text-align: center;
+            /*margin: 3px;*/
+        }
+
+        .nav .clearfix {
+            clear: both;
+        }
+
+        .nav .highlight {
+            background: url("图片素材/current.gif");
+            color: white;
+            display: block;
+            padding: 3px;
+            /*display: inline-table;*/
+        }
+
+        .nav .high {
+            /*border: 1px solid red;*/
+            /*margin-bottom: 20px;*/
+        }
+
+        .nav img {
+            position: absolute;
+            left: 90px;
+            top: -18px;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <img src="图片素材/shop.gif">
+    <ul>
+        <li><span class="highlight">首页</span></li>
+        <li>天猫</li>
+        <li>聚划算</li>
+        <li>电器</li>
+        <li>良无限</li>
+        <li>吃喝玩乐</li>
+        <div class="clearfix"></div>
+    </ul>
+</div>
+</body>
+</html>
