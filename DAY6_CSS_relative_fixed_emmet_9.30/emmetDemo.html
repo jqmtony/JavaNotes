@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Emmet学习：批量生成html</title>
+</head>
+<body>
+<!-- ul>li，>：生成子元素，tab执行生成-->
+<ul>
+    <li></li>
+</ul>
+
+<!--div>div>div, tab声成三层嵌套-->
+<div>
+    <div>
+        <div></div>
+    </div>
+</div>
+<!--回到父元素生成同级标签，ul>li^span，tab执行-->
+<ul>
+    <li></li>
+</ul>
+<span></span>
+<!--生成多个子元素，ul>li*5，tab-->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<!--分组（归为一个整体）：(ul>li*5)*3，tab-->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<!--生成id生成器/类选择器：div#id, div.nav，tab-->
+<div id="id"></div>
+<div class="nav"></div>
+<!--{}添加内容，自动编号：ul>li{$}*5-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<!--自动编号，从3开始，使用@：ul>li{$@3}*5-->
+<ul>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+<!--修改编号的方向：@-，ul>li{$@-3}*5-->
+<ul>
+    <li>7</li>
+    <li>6</li>
+    <li>5</li>
+    <li>4</li>
+    <li>3</li>
+</ul>
+<!---->
+</body>
+</html>
