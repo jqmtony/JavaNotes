@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>相对定位（相对的是自身原先的位置，非父元素</title>
+    <style type="text/css">
+        .parent {
+            width: 500px;
+            border: 3px solid green;
+            position: relative;/*只需要子元素针对父元素改变，父元素relative，子元素absolute*/
+        }
+
+        .son1 {
+            height: 200px;
+            background: red;
+            position: absolute;
+        /*如果设置为relative的话，不会释放空间，只是相对原来的位置偏移，
+        只想做相对定位的话，子元素absolute，父元素relative，
+        父元素不会影响后续元素*/
+            top : 100px;
+            left: 100px;
+        }
+
+        .son2 {
+            height: 300px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="son1">son1</div>
+    <div class="son2">son2</div>
+</div>
+</body>
+</html>

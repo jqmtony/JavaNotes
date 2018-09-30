@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>开心网div_导航条</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "微软雅黑", serif;
+            font-size: 12px;
+        }
+
+        .nav {
+            margin: 10px auto;
+            width: 700px;
+            /*border: 2px solid black;*/
+            border-bottom: 1px solid white;
+            background: url("images/menuBg.jpg") repeat-x;
+            position: relative;
+            padding-bottom: 1px;
+        }
+
+        .nav > img {
+            float: left;
+            /*border: 1px solid blue;*/
+
+        }
+
+        .nav > h3 {
+            float: left;
+            /*border: 1px solid blue;*/
+            width: 80px;
+            height: 35px;
+            line-height: 35px;
+            position: absolute;
+            top: 11px;
+            left: 260px;
+            background: url("images/btn-01.gif");
+            /*padding: 10px;*/
+            text-align: center;
+            color: #7e0a0a;
+        }
+
+        .nav > ul {
+            /*float: left;*/
+            /*border: 1px solid blue;*/
+            list-style: none;
+            /*width: 230px;*/
+            /*height: 3px;*/
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            text-align: center;
+            color: whitesmoke;
+            font-size: 8px;
+        }
+
+        .nav li {
+            float: left;
+            /*border: 1px solid blue;*/
+            /*width: 26px;*/
+            /*height: 30px;*/
+            margin-left: 5px;
+        }
+
+        .nav .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <img src="images/gameLogo.jpg">
+
+    <h3>首页</h3>
+    <ul>
+        <li>注册</li>
+        <li>&nbsp;|&nbsp;</li>
+        <li>登陆</li>
+        <li>&nbsp;|&nbsp;</li>
+        <li>帮助</li>
+        <li>&nbsp;|&nbsp;</li>
+        <li>更多</li>
+    </ul>
+    <div class="clearfix"></div>
+</div>
+</body>
+</html>
