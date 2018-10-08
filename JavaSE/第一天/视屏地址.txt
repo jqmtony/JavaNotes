@@ -1,0 +1,3 @@
+第一天
+内容:JDK安装.环境变量配置.入口函数的书写
+http://oracleoaec.gensee.com/webcast/site/vod/play-148fd923b3b340bba9e8ce04f23c6793
