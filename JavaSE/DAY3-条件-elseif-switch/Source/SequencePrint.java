@@ -46,6 +46,8 @@ class SequencePrint {
 		// 5.从大到小顺序输出
 		System.out.println("按顺序从小到大输出："+max+mid+min);
 		System.out.println(toString(max));
+		// 6.如何让结果以 a:1, b:2, c:3这样出现
+		
 	}
 }
 
