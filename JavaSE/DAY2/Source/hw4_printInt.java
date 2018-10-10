@@ -18,5 +18,8 @@ public class hw4_printInt {
 		System.out.println("百位："+(num/100)); //220/100=2
 		System.out.println("十位："+(num/10%10)); //220/10=22%10=2
 		System.out.println("个位："+(num%10)); //222%10=2 
+		
+		//-- 使用Math.random()的方式取三位整数
+		//-- int num = (int)(Math.random()*900+100);
 	}
 }

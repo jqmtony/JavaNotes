@@ -32,5 +32,9 @@ public class hw6_secret {
 		//-- 输出加密后的数据，顺序：d2-c2-b2-a2
 		System.out.println("你输入的数字为："+num1);
 		System.out.println("加密后的数字为："+num2);
+		
+		//-- 思考题，如果是5555之类会让result变成000x类似的这种的数字，
+		//-- 其实没有问题，但是需要有所限制
+		System.out.println("a-b-c-d单独形式的话："+d2+c2+b2+a2);
 	}
 }

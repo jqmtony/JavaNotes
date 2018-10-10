@@ -17,8 +17,9 @@ public class hw2_exchange {
 	int num2 = num.nextInt();
 	System.out.println("你输入的两个值为："+num1+","+num2);
 	//-- 交换两个变量的值
-	num1 = num2;
-	num2 = num1;
-	System.out.println("交换过后两个值为："+num1+","+num2);
+	int num3 = num1 + num2;
+	num1 = num3 - num2;
+	num2 = num3 - num1;
+	System.out.println("交换过后两个值为："+num2+","+num1);
 	}
 }
