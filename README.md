@@ -11,4 +11,6 @@
 - DAY5(9.28)：CSS属性float中的clear、position的static和absolute属性；完成练习：absolute demo、天猫导航条和开心网登陆模块
 
 ### JavaSE
-- DAY1(10.8): Java基础术语与语法、安装环境变量的概念梳理
+- DAY1(10.8): Java-基础术语与语法、安装环境变量的概念梳理
+- DAY2(10.9): Java-变量和常量、数据类型（8种原型、自动转换、强制转换）、进制与进制转换、运算符（算数、逻辑、关系、赋值）
+- DAY3(10.10): Java-条件语句if、else-if、if-else，条件语句switch-case
