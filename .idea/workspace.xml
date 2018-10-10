@@ -17,23 +17,24 @@
     <session id="-1297663299">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="PNG" value="1" />
           <entry key="gif" value="1" />
-          <entry key="html" value="1" />
+          <entry key="html" value="2" />
           <entry key="jpg" value="1" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="2" />
           <entry key="Image" value="5" />
         </counts>
       </usages-collector>
@@ -55,7 +56,13 @@
     <favorites_list name="JavaNotes" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HTML_CSS基础/Project_开心网游戏界面/project_开心网游戏界面.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,6 +117,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,11 +125,21 @@
               <item name="JavaNotes" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaNotes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JavaNotes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaNotes" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML_CSS基础" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaNotes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaNotes" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML_CSS基础" type="462c0819:PsiDirectoryNode" />
+              <item name="Project_开心网游戏界面" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,11 +200,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538098727228</updated>
       <workItem from="1538983378173" duration="1999000" />
+      <workItem from="1538994376345" duration="466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1999000" />
+    <option name="totallyTimeSpent" value="2465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="95" width="1034" height="860" extended-state="0" />
@@ -194,7 +213,6 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25502008" />
       <window_info id="Structure" order="1" weight="0.24969098" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -206,6 +224,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32921812" />
       <window_info anchor="bottom" id="Application Servers" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -226,9 +245,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DAY4_CSS_float_9.26/作业1：开心网div_全部游戏/作业1：开心网——网页游戏.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DAY4_CSS_float_9.26/作业1：开心网div_全部游戏/作业1：开心网——网页游戏.png" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state>
@@ -236,47 +253,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAY5_CSS_absolute定位_9.28/开心网div_登陆.html">
+    <entry file="file://$PROJECT_DIR$/DAY5_CSS_absolute定位_9.28/开心网div_登陆.html" />
+    <entry file="file://$PROJECT_DIR$/DAY4_CSS_float_9.26/作业1：开心网div_全部游戏/开心网div_全部游戏.html" />
+    <entry file="file://$PROJECT_DIR$/DAY6_CSS_relative_fixed_emmet_9.30/作业5：新品游戏页面/页面完成效果图.jpg" />
+    <entry file="file://$PROJECT_DIR$/DAY6_CSS_relative_fixed_emmet_9.30/作业5：新品游戏页面/新品游戏页面.html" />
+    <entry file="file://$PROJECT_DIR$/DAY6_CSS_relative_fixed_emmet_9.30/新品游戏页面完成图.PNG" />
+    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/开心网游戏界面示例/开心网——网页游戏.png" />
+    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/Project_开心网游戏界面/开心网——网页游戏.png" />
+    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/HTMLworkspace/webPro1/images/current.gif" />
+    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/HTMLworkspace/webPro1/images/btn-03.jpg" />
+    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/Project_开心网游戏界面/project_开心网游戏界面.html" />
+    <entry file="file://$PROJECT_DIR$/HTML_CSS基础/Project_开心网游戏界面/project_开心网游戏界面.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAY4_CSS_float_9.26/作业1：开心网div_全部游戏/开心网div_全部游戏.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="132" column="40" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAY6_CSS_relative_fixed_emmet_9.30/作业5：新品游戏页面/页面完成效果图.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAY6_CSS_relative_fixed_emmet_9.30/作业5：新品游戏页面/新品游戏页面.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAY6_CSS_relative_fixed_emmet_9.30/新品游戏页面完成图.PNG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/开心网游戏界面示例/开心网——网页游戏.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/Project_开心网游戏界面/开心网——网页游戏.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/HTMLworkspace/webPro1/images/current.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/HTMLworkspace/webPro1/images/btn-03.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/预科_9.17-9.30/Project_开心网游戏界面/project_开心网游戏界面.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
   </component>
 </project>

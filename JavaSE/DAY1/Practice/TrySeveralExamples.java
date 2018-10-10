@@ -6,13 +6,16 @@ public class TrySeveralExamples {
 	System.out.println("----------------------------------");
 	System.out.println("尝试写法2：文件的名称一定要和class的名称一致吗");
 	System.out.println("结果：文件名和class名不一致，无法完成编译");
+	// 编译源文件可以，但运行要以字节码.class的名字为准，即实际的class名称！
 	System.out.println("----------------------------------");
 	System.out.println("尝试写法3：一个源文件中可以有多少个class");
 	System.out.println("结果：如果都定为public class，编译出错，如果后续只定义为class则可以单独运行");
+	// ln是newline的意思
 	System.out.println("----------------------------------");
 	System.out.println("尝试写法4：输出语句:System.out.println()和System.out.print()的区别");
 	System.out.print("----这一行用的是：System.out.print()----");
 	System.out.println("结果：print是直接接下一句，println，输出后换行");
+	// 输出的是字符加单引号'A'
 	System.out.println("----------------------------------");
 	System.out.println("尝试写法5：输出一个数字");
 	System.out.println("结果："+1234);
