@@ -1,14 +1,14 @@
 /* 
-	1.	ç°æœ‰ä¸€ä¸ªç”µè§†å•†å“ç«çŒœæ´»åŠ¨
-	æ´»åŠ¨è§„åˆ™ï¼šéšæœºå‡ºç°ä¸€ä¸ªç”µè§†çš„ä»·æ ¼ï¼ˆ2000-10000ä¹‹é—´ï¼‰ï¼Œ
-	ç”¨æˆ·å»ç«çŒœä»·æ ¼ï¼Œå¦‚æœåœ¨5æ¬¡å†…çŒœå¯¹ä»·æ ¼ï¼Œä¾¿å¯è·å¾—æ­¤å•†å“ã€‚
-	ï¼ˆè¶…è¿‡5æ¬¡ï¼Œæ˜¾ç¤ºâ€å¾ˆå¯æƒœï¼Œä½ æ²¡æœ‰è·å¾—å¥–å“ï¼Œç«çŒœç»“æŸã€‚â€ï¼Œ
-	åœ¨5æ¬¡å†…çŒœå¯¹çš„è¯ï¼Œæ˜¾ç¤ºâ€æ­å–œä½ ï¼Œè·å¾—äº†æ­¤å¥–å“ã€‚â€ï¼‰ã€‚
-	æç¤ºï¼š
-	äº§ç”Ÿ2000-10000çš„éšæœºæ•°ï¼š
-	1ï¼‰	é¦–å…ˆåœ¨å¼€å¤´å¯¼å…¥Math ç±»
+	1.	ÏÖÓĞÒ»¸öµçÊÓÉÌÆ·¾º²Â»î¶¯
+	»î¶¯¹æÔò£ºËæ»ú³öÏÖÒ»¸öµçÊÓµÄ¼Û¸ñ£¨2000-10000Ö®¼ä£©£¬
+	ÓÃ»§È¥¾º²Â¼Û¸ñ£¬Èç¹ûÔÚ5´ÎÄÚ²Â¶Ô¼Û¸ñ£¬±ã¿É»ñµÃ´ËÉÌÆ·¡£
+	£¨³¬¹ı5´Î£¬ÏÔÊ¾¡±ºÜ¿ÉÏ§£¬ÄãÃ»ÓĞ»ñµÃ½±Æ·£¬¾º²Â½áÊø¡£¡±£¬
+	ÔÚ5´ÎÄÚ²Â¶ÔµÄ»°£¬ÏÔÊ¾¡±¹§Ï²Äã£¬»ñµÃÁË´Ë½±Æ·¡£¡±£©¡£
+	ÌáÊ¾£º
+	²úÉú2000-10000µÄËæ»úÊı£º
+	1£©	Ê×ÏÈÔÚ¿ªÍ·µ¼ÈëMath Àà
 	Import java.util.Random;
-	2ï¼‰	ç”Ÿæˆéšæœºæ•°
+	2£©	Éú³ÉËæ»úÊı
 	Random random=new Random();
 	Int price= random.nextInt(8000)+2000;
  */
@@ -18,90 +18,167 @@
  
  class Guess {
 	 public static void main(String[] args) {
-		 // 1.è®¾ç½®éšæœºä»·æ ¼
+		 // 1.ÉèÖÃËæ»ú¼Û¸ñ
 		 Random random = new Random();
-		 int price = random.nextInt(8000)+2000;
-		 System.out.println("ç”µè§†å•†å“ç«çŒœä»·æ ¼ä¸ºï¼š\t"+price);
-		 // 2.åˆ›å»ºScannerï¼Œè¾“å…¥æ•°å­—ç«çŒœ
+		 int price = random.nextInt(8001)+2000;
+		 System.out.println("µçÊÓÉÌÆ·¾º²Â¼Û¸ñÎª£º\t"+price);
+		 // 2.´´½¨Scanner£¬ÊäÈëÊı×Ö¾º²Â
 		 Scanner scan = new Scanner(System.in);
 		 
-		 // 3.5æ¬¡ç«çŒœæœºä¼š
+		 // 3.5´Î¾º²Â»ú»á
 		 for(int i=1;i<6;i++) {
-			System.out.print("è¯·è¾“å…¥ç«çŒœä»·æ ¼ï¼š \t");
+			System.out.print("ÇëÊäÈë¾º²Â¼Û¸ñ£º \t");
 			int guess = scan.nextInt();
-			// 3-1. çŒœå¯¹
+			// 3-1. ²Â¶Ô
 			if(guess==price) {
-				System.out.println("æ­å–œä½ ï¼Œè·å¾—äº†æ­¤å¥–å“ã€‚");
+				System.out.println("¹§Ï²Äã£¬»ñµÃÁË´Ë½±Æ·¡£");
 				break;
-			}else{ // 3-2. çŒœé”™
-				System.out.println("ä¸å¯¹å“¦ï¼Œè¿˜å‰©ä½™ç«çŒœæœºä¼šï¼š"+(5-i));
+			}else{ // 3-2. ²Â´í
+				if(i==5) {
+					System.out.println("5´ÎÄã¶¼²Â´í¿© o(¨i©n¨i)o");
+				}else {
+					System.out.println("²»¶ÔÅ¶£¬»¹Ê£Óà¾º²Â»ú»á£º"+(5-i));
+					// 5-i¿ÉÒÔÍ¨¹ı½«for(Ìõ¼ş)ÉèÖÃÎª£¨int-5;i<=1;i--£©
+					// ÕâÑù£¬Ê£Óà¾º²Â»ú»á¾ÍÖ±½ÓÊÇi£¬±ãÓÚÀí½âºÍ´úÂë
+				}
 			}
 		 } 
-		 System.out.println("ç«çŒœç»“æŸã€‚");
+		 System.out.println("¾º²Â½áÊø¡£");
 	 }
  }
  
  /* 
-	2.	å®Œæˆè´­ä¹°å•†å“ç»“ç®—åŠŸèƒ½ï¼š
-    1ã€å¾ªç¯è¾“å…¥å•†å“ç¼–å·å’Œè´­ç‰©æ•°é‡ï¼Œè®¡ç®—æ¶ˆè´¹é‡‘é¢å¹¶ç´¯åŠ åˆ°æ€»é‡‘é¢
-    2ã€è¾“å…¥â€œnâ€å¼€å§‹ç»“è´¦ï¼ˆå‡è®¾äº«8æŠ˜ï¼‰
-	3ã€è¾“å…¥å®ä»˜é‡‘é¢ï¼Œè®¡ç®—æ‰¾é›¶
+	2.	Íê³É¹ºÂòÉÌÆ·½áËã¹¦ÄÜ£º
+    1¡¢Ñ­»·ÊäÈëÉÌÆ·±àºÅºÍ¹ºÎïÊıÁ¿£¬¼ÆËãÏû·Ñ½ğ¶î²¢ÀÛ¼Óµ½×Ü½ğ¶î
+    2¡¢ÊäÈë¡°n¡±¿ªÊ¼½áÕË£¨¼ÙÉèÏí8ÕÛ£©
+	3¡¢ÊäÈëÊµ¸¶½ğ¶î£¬¼ÆËãÕÒÁã
  */
  
  class shopping {
 	 public static void main(String[] args) {
-	 // 0. åˆ›å»ºScanner
+	 // 0. ´´½¨Scanner
 	 Scanner scan = new Scanner(System.in);
-	 // 1. åˆ›å»ºå•†å“ç¼–å·
-	 System.out.println("\n\næˆ‘è¡Œæˆ‘ç´ è´­ç‰©ç®¡ç†ç³»ç»Ÿ > è´­ç‰©ç»“ç®—\n\n\n\n");
+	 // 1. ´´½¨ÉÌÆ·±àºÅ -> Ê¹ÓÃforÑ­»·iÈ¡1~100£¬print"*"£¬i==49
+	 // -> forÊä³öÑ¡Ôñ¹ºÂòµÄÉÌÆ·±àºÅ123,51~100£¬»á×Ô¼º¼ÌĞøÊä³öprint"*"
+	 System.out.println("\n\nÎÒĞĞÎÒËØ¹ºÎï¹ÜÀíÏµÍ³ > ¹ºÎï½áËã\n\n\n\n");
 	 System.out.println("*************************");
-	 System.out.println("è¯·é€‰æ‹©è´­ä¹°çš„å•†å“ç¼–å·ï¼š\n");
-	 System.out.println("1.Tæ¤ \t\t 2.ç½‘çƒé‹\t\t 3.ç½‘çƒæ‹");
+	 System.out.println("ÇëÑ¡Ôñ¹ºÂòµÄÉÌÆ·±àºÅ£º\n");
+	 System.out.println("1.TĞô \t\t 2.ÍøÇòĞ¬\t\t 3.ÍøÇòÅÄ");
 	 System.out.println("*************************\n\n");
-	 // 2. è¾“å…¥å•†å“ç¼–å·ã€è´­ç‰©æ•°é‡
-	 int price1 = 0;
-	 int price2 = 0;
-	 int price3 = 0;
+	 // 2. ÊäÈëÉÌÆ·±àºÅ¡¢¹ºÎïÊıÁ¿
+	 int price1, price2, price3 = 0;
 	 int temp = 0;
 	 int total = 0;
-	 for(int i=0;i<3;i++) {
-		System.out.print("è¯·è¾“å…¥å•†å“ç¼–å·ï¼š");
+	 // ºËĞÄÊÇÊäÈëy£¬´ÎÊı²»ÏŞÖÆ£¬for(;"y".equalsIgnoreCase(guess);)
+	 String answer = "y";
+	 for(;"y".equalsIgnoreCase(answer);) {
+		System.out.print("ÇëÊäÈëÉÌÆ·±àºÅ£º");
 		int clothe = scan.nextInt();
-		System.out.print("è¯·è¾“å…¥è´­ä¹°æ•°é‡ï¼š");
+		System.out.print("ÇëÊäÈë¹ºÂòÊıÁ¿£º");
 		int number = scan.nextInt();
 		switch(clothe) {
 			case 1:
 				int product1 = 245;
 				price1 = number * product1;
 				temp = price1;
-				System.out.println("Tæ¤ \t\t"+product1+"\t\t"+price1);
+				System.out.println("TĞô \t\t"+product1+"\t\t"+price1);
 				break;
 			case 2:
 				int product2 = 570;
 				price2 = number * product2;
 				temp = price2;
-				System.out.println("ç½‘çƒé‹ \t\t"+product2+"\t\t"+price2);
+				System.out.println("ÍøÇòĞ¬ \t\t"+product2+"\t\t"+price2);
 				break;
 			case 3: 
 				int product3 = 100;
 				price3 = number * product3;
 				temp = price3;
-				System.out.println("ç½‘çƒæ‹ \t\t"+product3+"\t\t"+price3);
+				System.out.println("ÍøÇòÅÄ \t\t"+product3+"\t\t"+price3);
 				break;
 		}
-		// ç´¯è®¡æ€»é‡‘é¢
+		/* 
+			ÀÛ¼Æ×Ü½ğ¶î£¬ÒòÎª²»ÊÇÃ¿´ÎÖ»ÄÜÑ¡ÔñÒ»¸öÉÌÆ·£¬
+			ËùÒÔ²»ÄÜµ¥¶À¼ÆËãÃ¿ÀàÉÌÆ·£¬ºÏÀíµÄ·½Ê½¾ÍÊÇÃ¿´ÎÍ³¼ÆÀÛ¼Ó 
+		*/
 		total += temp;
-		// è¯¢é—®æ˜¯å¦ç»§ç»­
-		System.out.print("\næ˜¯å¦ç»§ç»­(y/n)ï¼š");
-		String str = scan.next();
-		boolean bl = str.equals("n");
-		if(bl){ break;}
+		// Ñ¯ÎÊÊÇ·ñ¼ÌĞø
+		System.out.print("\nÊÇ·ñ¼ÌĞø(y/n)£º");
+		answer = scan.next(); 
+		/* 
+		ÏÂ·½±¾À´ÊÇ¹æ¶¨ÊäÈën²ÅÄÜ½áÊø£¬
+		µ«forµÄºËĞÄÒÑ¾­»»×öÁËy²Å¼ÌĞø£¬ËùÒÔÃ»±ØÒª 
+		*/
+		// Á½¸östring±È½Ï´óĞ¡£¬¿ÉÒÔÓÃº¯Êı£ºa.equalsIgnoreCase(ºöÂÔ´óĞ¡Ğ´A)»òa.equals(b)
+		// boolean bl = str.equals("n");
+		// if(bl){ break;}
 	 }
-	 // 3. è®¡ç®—æ¶ˆè´¹é‡‘é¢ï¼šå•†å“*æ•°é‡ = é‡‘é¢ï¼Œç»“è´¦ï¼šé‡‘é¢ = é‡‘é¢ * 0.8
-		System.out.println("\n\næŠ˜æ‰£ï¼š0.8");
-		System.out.println("é‡‘é¢æ€»è®¡ï¼š\t"+total);
+	 // 3. ¼ÆËãÏû·Ñ½ğ¶î£ºÉÌÆ·*ÊıÁ¿ = ½ğ¶î£¬½áÕË£º½ğ¶î = ½ğ¶î * 0.8
+		System.out.println("\n\nÕÛ¿Û£º0.8");
+		System.out.println("½ğ¶î×Ü¼Æ£º\t"+total*0.8);
+		// ½É·Ñ½ğ¶îµÄÂß¼­¿ÉÒÔ¸ÄÎªÊäÈë
 		int amount = 900;
-		System.out.println("å®é™…äº¤è´¹ï¼š\t"+amount);
-		System.out.println("æ‰¾é’±ï¼š\t\t"+(amount-total*0.8)+"\n");
+		System.out.println("Êµ¼Ê½»·Ñ£º\t"+amount);
+		System.out.println("ÕÒÇ®£º\t\t"+(amount-total)+"\n");
 	 }
  }
+ 
+ /* 
+		3.	ÓĞ5¼ÒÒÂ·ş×¨Âôµê£¬Ã¿¼Ò×î¶à¹ºÂò3¼ş¡£
+		ÓÃ»§¿ÉÒÔÑ¡ÔñÀë¿ª£¬¿ÉÒÔÂòÒÂ·ş¡£
+		×îºó´òÓ¡×Ü¹²ÂòÁË¼¸¼şÒÂ·ş¡£
+ */
+ 
+ class StoreShop {
+	 public static void main(String[] args) {
+		 // ´´½¨Scanner
+		 Scanner scan = new Scanner(System.in);
+		 int count = 0;
+		 String answer = "";
+		 // ×î¶à5¼Òµê
+		 for(int i=1;i<=5;i++) {
+			 System.out.println("»¶Ó­½øÈëµÚ"+i+"¼Òµê\n");
+			 // ¸Õ½øµêµÄÊ±ºò¾ÍÊÇ½øµê£¬µÈ½øÈëÂòÒÂ·şjµÄÑ­»·ºó
+			 answer = "n";
+			 // Ã¿¼Òµê£¬×î¶àÂò3¼şÒÂ·ş
+			 for(int j=1;j<=3 && "n".equalsIgnoreCase(answer);j++) {
+				 // ¿ÉÒÔ²»Âò£¬ËùÒÔ¿ÉÒÔÂòÒÂ·şµÄÊ±ºò¾Í¿ÉÒÔÑ¡Ôñ×ß
+				 System.out.print("ÊÇ·ñÒªÀë¿ªÕâ¼Òµê£¿(y/n)");
+				 answer = scan.next();
+				 // ²»Àë¿ª¾Í×Ô¶¯ÂòÒ»¼şÒÂ·ş
+				 if("n".equalsIgnoreCase(answer)) {
+					 System.out.println("»¶Ó­¹ºÔÚµÚ"+i+"¼ÒµêÂòµÚ"+j+"Ò»¼şÒÂ·ş\n");
+					 count++;
+				 }
+			 }
+		 }
+		 System.out.println("\n--------------------------------------");
+		 System.out.println("ÄãÒ»¹²ÂòÁË "+count+" ¼şÒÂ·ş (*^¨Œ^*)£¡");
+	 }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
