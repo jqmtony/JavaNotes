@@ -1,23 +1,23 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class lottery {
+class lottery {
 	public static void main(String[] args) {
-		// 1. ´´½¨RandomËæ»úÊı
+		// 1. åˆ›å»ºRandoméšæœºæ•°
 		Random random = new Random();
-		// 2. ´´½¨ÁĞ±í£¬{ {6¸öºì£¬1¸öÀ¶} {6¸öºì£¬1¸öÀ¶} {} {} {} {} {} {} {}....{n=100}}
+		// 2. åˆ›å»ºåˆ—è¡¨ï¼Œ{ {6ä¸ªçº¢ï¼Œ1ä¸ªè“} {6ä¸ªçº¢ï¼Œ1ä¸ªè“} {} {} {} {} {} {} {}....{n=100}}
 		int[][] lottery = new int[100][7];
 		
-		// 2.1 À¶É«È¡Öµ1-16£¬ºìÉ«È¡Öµ1-33ÇÒ²»ÖØ¸´£¬ºìÉ«ºÍÀ¶É«¿ÉÒÔÖØ¸´
+		// 2.1 è“è‰²å–å€¼1-16ï¼Œçº¢è‰²å–å€¼1-33ä¸”ä¸é‡å¤ï¼Œçº¢è‰²å’Œè“è‰²å¯ä»¥é‡å¤
 		for(int i=0; i<lottery.length;i++) {
 			for(int j=0; j<lottery[i].length; j++) {
-				// µ±jÊÇµÚ7¸öÔªËØ£¬¼´ÏÂ±êÎª6Ê±Êä³öÀ¶ÇòËæ»úÖµ
+				// å½“jæ˜¯ç¬¬7ä¸ªå…ƒç´ ï¼Œå³ä¸‹æ ‡ä¸º6æ—¶è¾“å‡ºè“çƒéšæœºå€¼
 				if(j==6) { 
 					lottery[i][j] = random.nextInt(16)+1;
 					break;
 				}else {
 					lottery[i][j] = random.nextInt(33)+1; 
-					// 0~5Õâ6¸öÔªËØÊÇºìÇòÊıÖµ£¬ÒªÇó²»ÖØ¸´
+					// 0~5è¿™6ä¸ªå…ƒç´ æ˜¯çº¢çƒæ•°å€¼ï¼Œè¦æ±‚ä¸é‡å¤
 					for(int k=0;k<j;k++) {
 						if(lottery[i][j]==lottery[i][k]) {
 							j--;
@@ -25,98 +25,86 @@ public class lottery {
 					}
 				}
 			}
-			//-- Ô¤ÀÀ100ÆÚµÄ6ºì1À¶Êı×é£¬Êä³ö¸ñÊ½£ºµÚ1ÆÚË«É«ÇòĞòÁĞ£º{.......}  µÚ2ÆÚ
-			System.out.print("µÚ"+i+"ÆÚË«É«ÇòĞòÁĞ£º");
+			//-- é¢„è§ˆ100æœŸçš„6çº¢1è“æ•°ç»„ï¼Œè¾“å‡ºæ ¼å¼ï¼šç¬¬1æœŸåŒè‰²çƒåºåˆ—ï¼š{.......}  ç¬¬2æœŸ
+			System.out.print("ç¬¬"+i+"æœŸåŒè‰²çƒåºåˆ—ï¼š");
 			System.out.println(Arrays.toString(lottery[i]));
 		}
-		System.out.println("-------------------- Ë«É«ÇòĞòÁĞÊä³öÍê±Ï -------------------");
+		System.out.println("-------------------- åŒè‰²çƒåºåˆ—è¾“å‡ºå®Œæ¯• -------------------");
 		
-		// 3. Í³¼ÆÊıÖµµÄ³öÏÖ´ÎÊı£¬·½·¨£ºÖµ¶ÔÓ¦ÏÂ±ê³öÏÖ´ÎÊı×ÔÔö1
-		int[] blueEleCount = new int[16]; // À¶É«ÇòÈ¡Öµ·¶Î§£º1~16£¬ÏÂ±ê0~15
-		int[] redEleCount = new int[33]; // ºìÉ«ÇòÈ¡Öµ·¶Î§£º1~33£¬ÏÂ±ê0~32
+		// 3. ç»Ÿè®¡æ•°å€¼çš„å‡ºç°æ¬¡æ•°ï¼Œæ–¹æ³•ï¼šå€¼å¯¹åº”ä¸‹æ ‡å‡ºç°æ¬¡æ•°è‡ªå¢1
+		int[] blueEleCount = new int[16]; // è“è‰²çƒå–å€¼èŒƒå›´ï¼š1~16ï¼Œä¸‹æ ‡0~15
+		int[] redEleCount = new int[33]; // çº¢è‰²çƒå–å€¼èŒƒå›´ï¼š1~33ï¼Œä¸‹æ ‡0~32
 		
-		for(int i=0;i<lottery.length;i++) { // »ñÈ¡Ã¿ÆÚË«É«ÇòÊı×é
-			for(int j=0;j<lottery[i].length;j++) { // »ñÈ¡Ã¿ÆÚË«É«ÇòÊı×éµÄÖµ
-				if(j==6) { // Èç¹ûÊÇµÚ6¸öÔªËØ£¬°ÑÖµµ±×öÏÂ±ê¸øblueEleCount²¢×ÔÔö1
+		for(int i=0;i<lottery.length;i++) { // è·å–æ¯æœŸåŒè‰²çƒæ•°ç»„
+			for(int j=0;j<lottery[i].length;j++) { // è·å–æ¯æœŸåŒè‰²çƒæ•°ç»„çš„å€¼
+				if(j==6) { // å¦‚æœæ˜¯ç¬¬6ä¸ªå…ƒç´ ï¼ŒæŠŠå€¼å½“åšä¸‹æ ‡ç»™blueEleCountå¹¶è‡ªå¢1
 					/*
-					if(lottery[i][j]==3) { // ÑéÖ¤ÔªËØ³öÏÖ´ÎÊıÊÇ·ñÎªÕæ
+					if(lottery[i][j]==3) { // éªŒè¯å…ƒç´ å‡ºç°æ¬¡æ•°æ˜¯å¦ä¸ºçœŸ
 						System.out.println(lottery[i][j]);
 					}
 					*/
-					blueEleCount[lottery[i][j]-1] = blueEleCount[lottery[i][j]-1]+1; // Í¬ÑùÏÂ±ê³öÏÖÒ»´ÎÔò¶ÔÓ¦Öµ+1
-				}else { // µÚ0~5¸öÔªËØ£¬¸øredEleCount
-					redEleCount[lottery[i][j]-1] = redEleCount[lottery[i][j]-1]+1; // Öµ16´æ´¢ÔÚÏÂ±ê15ÉÏ
+					blueEleCount[lottery[i][j]-1] = blueEleCount[lottery[i][j]-1]+1; // åŒæ ·ä¸‹æ ‡å‡ºç°ä¸€æ¬¡åˆ™å¯¹åº”å€¼+1
+				}else { // ç¬¬0~5ä¸ªå…ƒç´ ï¼Œç»™redEleCount
+					redEleCount[lottery[i][j]-1] = redEleCount[lottery[i][j]-1]+1; // å€¼16å­˜å‚¨åœ¨ä¸‹æ ‡15ä¸Š
 				}
 			}
 		}
-		// Ô¤ÀÀÀ¶É«ºÍºìÉ«ÊıÖµÖØ¸´³öÏÖµÄ´ÎÊı
-		System.out.println("À¶É«ÇòµÄÖµ([0]1~[15]16)³öÏÖµÄ´ÎÊı£º"+Arrays.toString(blueEleCount));
-		System.out.println("ºìÉ«ÇòµÄÖµ([0]1~[15]33)³öÏÖµÄ´ÎÊı£º"+Arrays.toString(redEleCount));
-		System.out.println("--------------------¡ü ºìÉ«ºÍÀ¶É«³öÏÖµÄ´ÎÊıĞòÁĞ ¡ü -------------------");
-		// 4. Ã¿¸öÔªËØµÄ³öÏÖ¸ÅÂÊ
-		// 4.1 ´´½¨Ò»¸ö¶şÎ¬Êı×é£¬{ {È¡Öµ1£¬³öÏÖ´ÎÊı1or¸ÅÂÊ1} {È¡Öµ2£¬³öÏÖ´ÎÊıor¸ÅÂÊ} {...} {} {} {} {} {}}
-		double[][] bluePoss = new double[16][2]; // 100ÆÚµÄÀ¶É«ÇòÈ¡Öµ£¬·¶Î§1~16£¬Êı×éÔªËØ{Öµ,³öÏÖ/¸ÅÂÊ}
+		// é¢„è§ˆè“è‰²å’Œçº¢è‰²æ•°å€¼é‡å¤å‡ºç°çš„æ¬¡æ•°
+		System.out.println("è“è‰²çƒçš„å€¼([0]1~[15]16)å‡ºç°çš„æ¬¡æ•°ï¼š"+Arrays.toString(blueEleCount));
+		System.out.println("çº¢è‰²çƒçš„å€¼([0]1~[15]33)å‡ºç°çš„æ¬¡æ•°ï¼š"+Arrays.toString(redEleCount));
+		System.out.println("--------------------â†‘ çº¢è‰²å’Œè“è‰²å‡ºç°çš„æ¬¡æ•°åºåˆ— â†‘ -------------------");
+		// 4. æ¯ä¸ªå…ƒç´ çš„å‡ºç°æ¦‚ç‡
+		// 4.1 åˆ›å»ºä¸€ä¸ªäºŒç»´æ•°ç»„ï¼Œ{ {å–å€¼1ï¼Œå‡ºç°æ¬¡æ•°1oræ¦‚ç‡1} {å–å€¼2ï¼Œå‡ºç°æ¬¡æ•°oræ¦‚ç‡} {...} {} {} {} {} {}}
+		double[][] bluePoss = new double[16][2]; // 100æœŸçš„è“è‰²çƒå–å€¼ï¼ŒèŒƒå›´1~16ï¼Œæ•°ç»„å…ƒç´ {å€¼,å‡ºç°/æ¦‚ç‡}
 		double[][] redPoss = new double[32][2];
 		int p=0;
 		
-		// 4.2 È¡À¶É«£¬{1~16, blueEleCount[i]}
+		// 4.2 å–è“è‰²ï¼Œ{1~16, blueEleCount[i]}
 		for(int i=0;i<bluePoss.length;i++) {
-			bluePoss[i][0]=i+1; // µÚÒ»¸öÔªËØ£¬ÏÂ±ê0~15µÄÖµÎª1~16
-			bluePoss[i][1]=blueEleCount[i]; // µÚ¶ş¸öÔªËØ£¬¶ÔÓ¦ÒÀ´ÎÈ¡Öµblue³öÏÖ´ÎÊı
-			// »ñÈ¡¸ÅÂÊ
-			double possibilityblue =bluePoss[i][1]/100.0; // Êı×éÔªËØÖµÊÇĞ¡Êı£¬×Ö½Ú4£¬¿ÉÒÔ×Ô¶¯×ª»»Îªdouble8×Ö½Ú
-//			System.out.println("Êä³ö¸ÅÂÊ£º"+possibilityblue);
-			bluePoss[i][1]=possibilityblue; 
+			bluePoss[i][0]=i+1; // ç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œä¸‹æ ‡0~15çš„å€¼ä¸º1~16
+			// è·å–æ¦‚ç‡
+			double possibilityblue =blueEleCount[i]/100.0; // æ•°ç»„å…ƒç´ å€¼æ˜¯å°æ•°ï¼Œå­—èŠ‚4ï¼Œå¯ä»¥è‡ªåŠ¨è½¬æ¢ä¸ºdouble8å­—èŠ‚
+			bluePoss[i][1]=possibilityblue; // å°†doubleæ¦‚ç‡èµ‹å€¼ç»™doubleæ•°ç»„
 		}
-		// Ô¤ÀÀÀ¶É«È¡ÖµºÍ¸ÅÂÊ
-		System.out.println("À¶É«Çò1~16£¨È¡Öµ£¬¸ÅÂÊ£©£º"+Arrays.deepToString(bluePoss));
+		// é¢„è§ˆè“è‰²å–å€¼å’Œæ¦‚ç‡
+		System.out.println("è“è‰²çƒ1~16ï¼ˆå–å€¼ï¼Œæ¦‚ç‡ï¼‰ï¼š"+Arrays.deepToString(bluePoss));
 		
-		// 4.3 È¡ºìÉ«£¬{1~33, redEleCount[i]}
+		// 4.3 å–çº¢è‰²ï¼Œ{1~33, redEleCount[i]}
 		p=0;
 		for(int i=0;i<redPoss.length;i++) {
 			redPoss[i][0]=i+1;
-			redPoss[i][1]=redEleCount[i]; 
-			double possibilityred =redPoss[i][1]/100.0; 
-//			System.out.println("Êä³ö¸ÅÂÊ£º"+possibilityred);
-			redPoss[i][1]=possibilityred; 		
+			double possibilityred =redEleCount[i]/100.0; 
+			redPoss[i][1]=possibilityred; 
 		}
-		System.out.println("ºìÉ«Çò1~33£¨È¡Öµ£¬¸ÅÂÊ£©£º"+Arrays.deepToString(redPoss));
-		System.out.println("--------------------¡üºìÉ«ºÍÀ¶É«£¨È¡Öµ£¬¸ÅÂÊ£© ¡ü -------------------");
+		System.out.println("çº¢è‰²çƒ1~33ï¼ˆå–å€¼ï¼Œæ¦‚ç‡ï¼‰ï¼š"+Arrays.deepToString(redPoss));
+		System.out.println("--------------------â†‘çº¢è‰²å’Œè“è‰²ï¼ˆå–å€¼ï¼Œæ¦‚ç‡ï¼‰ â†‘ -------------------");
 
-		// 5. Ã¿¸öÔªËØµÄ³öÏÖ¸ÅÂÊÅÅĞò
-		double temp = 0.0;
-		// 5.1 µİ¹éÀ¶É«Ã¿ÆÚÊı×éµÄµÚ2¸öÔªËØ£¬°´´óĞ¡½øĞĞÃ°ÅİÅÅĞò
-		for(int i=0;i<bluePoss.length;i++) {
-			for(int j=0;j<bluePoss[i].length;j++) {
-				if(bluePoss[j]>bluePoss[j+1]) { // Ğ¡µÄÖµÍùÇ°×ß£¬´óµÄÖµÍùºó×ß
-					temp = bluePoss[j+1];
-					bluePoss[j+1]=bluePoss[j];
+		// 5. æ¯ä¸ªå…ƒç´ çš„å‡ºç°æ¦‚ç‡æ’åº
+		double[] temp= new double[2];
+
+		// 5.1 é€’å½’è“è‰²æ¯æœŸæ•°ç»„çš„ç¬¬2ä¸ªå…ƒç´ ï¼ŒæŒ‰å¤§å°è¿›è¡Œå†’æ³¡æ’åº
+		for(int i=0;i<bluePoss.length-1;i++) {
+			for(int j=0;j<bluePoss.length-1;j++) {
+				if(bluePoss[j][1]>bluePoss[j+1][1]){// æ¯”è¾ƒè“è‰²çƒçš„æ¬¡æ•°{å€¼ï¼Œæ¬¡æ•°}
+					temp =bluePoss[j+1]; // æŒ‰ä»å°åˆ°å¤§æ’åˆ—
+					bluePoss[j+1] =bluePoss[j];
 					bluePoss[j]=temp;
 				}
 			}
 		}
-		// Ô¤ÀÀ
-		System.out.println("À¶É«Çò1~16£¨È¡Öµ£¬¸ÅÂÊ£©£¬ÅÅĞòºó£º"+Arrays.deepToString(bluePoss));
-		// 5.2 µİ¹éºìÉ«
-		for(int i=0;i<redPoss.length;i++) {
-			for(int j=0;j<redPoss[i].length;j++) {
-				if(redPoss[j]>redPoss[j+1]) {
-					temp = redPoss[j+1];
-					redPoss[j+1]=bluePoss[j];
+		// é¢„è§ˆ
+		System.out.println("è“è‰²çƒ1~16ï¼ˆå–å€¼ï¼Œæ¦‚ç‡ï¼‰ï¼Œæ’åºåï¼š"+Arrays.deepToString(bluePoss));
+		
+		// 5.2 é€’å½’çº¢è‰²
+		for(int i=0;i<redPoss.length-1;i++) {
+			for(int j=0;j<redPoss.length-1;j++) {
+				if(redPoss[j][1]>redPoss[j+1][1]){// æ¯”è¾ƒè“è‰²çƒçš„æ¬¡æ•°{å€¼ï¼Œæ¬¡æ•°}
+					temp =redPoss[j+1]; // æŒ‰ä»å°åˆ°å¤§æ’åˆ—
+					redPoss[j+1] =redPoss[j];
 					redPoss[j]=temp;
 				}
 			}
 		}
-		System.out.println("ºìÉ«Çò1~33£¨È¡Öµ£¬¸ÅÂÊ£©£¬ÅÅĞòºó£º"+Arrays.deepToString(redPoss));
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		System.out.println("çº¢è‰²çƒ1~33ï¼ˆå–å€¼ï¼Œæ¦‚ç‡ï¼‰ï¼Œæ’åºåï¼š"+Arrays.deepToString(redPoss));
 	}
 }
