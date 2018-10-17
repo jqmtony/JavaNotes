@@ -30,9 +30,9 @@ public class D8_Ex7_drawMap {
 				array[i]="*";
 				System.out.println(array[i]); // 换行，竖1
 			}else if(i<64) {
-				// 35~64逆序横向输出，（）←（）
-					array[i]="*";
-					System.out.print(array[i]); // 换行，竖1					
+				// 35~64逆序横向输出，（）←（）,30位
+				array[i]="*";
+				System.out.print(array[i]); // 换行，竖1					
 			}else if(i<70) {
 				//  65~69回车输出，竖2
 				array[i]="*";
@@ -42,9 +42,7 @@ public class D8_Ex7_drawMap {
 				array[i]="*";
 				System.out.print(array[i]);
 			}
-			
 		}
-		
-		
+		System.out.println();
 	}
 }
