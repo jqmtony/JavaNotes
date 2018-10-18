@@ -14,3 +14,9 @@
 - DAY1(10.8): Java-基础术语与语法、安装环境变量的概念梳理
 - DAY2(10.9): Java-变量和常量、数据类型（8种原型、自动转换、强制转换）、进制与进制转换、运算符（算数、逻辑、关系、赋值）
 - DAY3(10.10): Java-条件语句if、else-if、if-else，条件语句switch-case
+- DAY4(10.11): Scanner, For
+- DAY5(10.12): While
+- DAY6(10.15): 数组Array
+- DAY7(10.16): 数组Array、双色球Case
+- DAY8(10.17): 方法Method、引用方法、重构Case、飞行棋Case(
+- DAY9(10.18): StudyShareing-Sublime\Eclipse\CountApprearance、6道练习题、基础知识题
