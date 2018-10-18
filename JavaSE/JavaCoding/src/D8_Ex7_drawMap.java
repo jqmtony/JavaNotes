@@ -30,10 +30,16 @@ public class D8_Ex7_drawMap {
 				array[i]="*";
 				System.out.println(array[i]); // 换行，竖1
 			}else if(i<64) {
+<<<<<<< HEAD
 				// 35~64逆序横向输出，（）←（）
 					array[array.length-1 - i]="*"; // 即100-1-i = 99-i
 					array[63] = "/"; // 验证是否倒序输出
 					System.out.print(array[array.length-1 - i]); // 换行，竖1					
+=======
+				// 35~64逆序横向输出，（）←（）,30位
+				array[i]="*";
+				System.out.print(array[i]); // 换行，竖1					
+>>>>>>> e24ae992778ea17db72903ff72100e29e9fb0883
 			}else if(i<70) {
 				//  65~69回车输出，竖2
 				array[i]="*";
@@ -43,9 +49,7 @@ public class D8_Ex7_drawMap {
 				array[i]="*";
 				System.out.print(array[i]);
 			}
-			
 		}
-		
-		
+		System.out.println();
 	}
 }
