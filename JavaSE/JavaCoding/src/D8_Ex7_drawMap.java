@@ -31,8 +31,9 @@ public class D8_Ex7_drawMap {
 				System.out.println(array[i]); // 换行，竖1
 			}else if(i<64) {
 				// 35~64逆序横向输出，（）←（）
-					array[i]="*";
-					System.out.print(array[i]); // 换行，竖1					
+					array[array.length-1 - i]="*"; // 即100-1-i = 99-i
+					array[63] = "/"; // 验证是否倒序输出
+					System.out.print(array[array.length-1 - i]); // 换行，竖1					
 			}else if(i<70) {
 				//  65~69回车输出，竖2
 				array[i]="*";

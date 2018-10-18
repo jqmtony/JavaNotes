@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-/* å…ˆå°è¯•åšä¸€å¹´çš„ */
+/* ÏÈ³¢ÊÔ×öÒ»ÄêµÄ */
 
 class calendar {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		// 1. è¾“å…¥å¹´ä»½å’Œæœˆä»?
-		System.out.print("è¯·è¾“å…¥å¹´ä»½ï¼š");
+		// 1. ÊäÈëÄê·ÝºÍÔÂ·Â
+		System.out.print("ÇëÊäÈëÄê·Ý£º");
 		int year = scan.nextInt();
-		System.out.print("è¯·è¾“å…¥æœˆä»½ï¼š");
+		System.out.print("ÇëÊäÈëÔÂ·Ý£º");
 		int month = scan.nextInt();
 		
-		// 2.åˆ¤æ–­å¹´æ˜¯å¦æ˜¯é—°å¹´
+		// 2.ÅÐ¶ÏÄêÊÇ·ñÊÇÈòÄê
 		boolean irRn;
 		if(year%400==0 || (year%100!=0 && year%4==0)) {
 			irRn = true;
@@ -20,11 +20,11 @@ class calendar {
 			irRn = false;
 		}
 		if(irRn) {
-			System.out.println(year+"æ˜¯é—°å¹?);
+			System.out.println(year+"ÊÇÈò¹ã);
 		}else{
-			System.out.println(year+"æ˜¯å¹³å¹?);
+			System.out.println(year+"ÊÇÆ½¹ã);
 		}
-		// 3.è®¡ç®—æœˆå¯¹åº”çš„å¤©æ•°ï¼Œifå’Œswitchéƒ½å¯ä»?
+		// 3.¼ÆËãÔÂ¶ÔÓ¦µÄÌìÊý£¬ifºÍswitch¶¼¿É·Â
 		int monthDays =0;
 		switch(month) {
 			case 2:
@@ -50,15 +50,15 @@ class calendar {
 				monthDays=30;
 				break;
 			default:
-				System.out.println("è¾“å…¥æœ‰è¯¯ï¼?);
+				System.out.println("ÊäÈëÓÐÎó£ß);
 				break;
 		}
-		System.out.println(year+"å¹?+month+"æœˆçš„"+"å¤©æ•°ä¸ºï¼š"+monthDays);
+		System.out.println(year+"¹ã+month+"ÔÂµÄ"+"ÌìÊýÎª£º"+monthDays);
 		
-		// 4.è¾“å…¥çš„æœˆä»½è·ç¦?900å¹?æœ?æ—¥çš„å¤©æ•°
+		// 4.ÊäÈëµÄÔÂ·Ý¾à1900-1-1µÄÌìÊý
 		int total_days = 0;
 		int weekday = 0;
-		// 4-1.è®¡ç®—å¹´çš„æ€»å¤©æ•°ï¼Œå½“å¹´çš„å¤©æ•°ç®—åœ¨æœˆå¤©æ•°é‡Œé¢
+		// 4-1.¼ÆËãÄêµÄ×ÜÌìÊý£¬µ±ÄêµÄÌìÊýËãÔÚÔÂÌìÊýÀïÃæ
 		for(int i=1900;i<year;i++) {
 			if(i%400==0 || (i%100!=0 && i%4==0)) {
 				total_days+=366;
@@ -66,7 +66,7 @@ class calendar {
 				total_days+=365;
 			}
 		}
-		// 4-2.è®¡ç®—æœˆä»½æ‰€å¯¹åº”çš„å¤©æ•?
+		// 4-2.¼ÆËãÔÂ·ÝËù¶ÔÓ¦µÄÌì”¼
 		for(int i=1; i<month;i++) {
 			switch(i) {
 				case 2:
@@ -92,33 +92,33 @@ class calendar {
 					monthDays=30;
 					break;
 				default:
-					System.out.println("è¾“å…¥æœ‰è¯¯ï¼?);
+					System.out.println("ÊäÈëÓÐÎó£ß);
 					break;
 			}
-			// ç´¯åŠ æ±‚å’Œï¼Œè¿™ä¸ªåœ°æ–¹é‡ç‚¹ç†è§£è®°å¿†ï¼ï¼ï¼
+			// ÀÛ¼ÓÇóºÍ£¬Õâ¸öµØ·½ÖØµãÀí½â¼ÇÒä£¡£¡£¡
 			if(i!=month) {
 				total_days+=monthDays;
 			}
 
-			// 5.ç¬¬ä¸€å¤©æ˜¯å‘¨å‡ çš„å…¬å¼ï¼šæ˜ŸæœŸx = 1 + å¤©æ•°å·?% 7
+			// 5.µÚÒ»ÌìÊÇÖÜ¼¸µÄ¹«Ê½£ºÐÇÆÚx = 1 + ÌìÊýŽˆ% 7
 			weekday = 1 + total_days % 7;
 			if(weekday==7){
-				// weekdayçš„å€¼ä¸º0ï¼Œæ˜¯å‘¨æ—¥ï¼Œä¸éœ€è¦\tç©ºæ ¼
+				// weekdayµÄÖµÎª0£¬ÊÇÖÜÈÕ£¬²»ÐèÒª\t¿Õ¸ñ
 				weekday=0;
 			}
 		}
 		
-		// 6.æ ¼å¼åŒ–è¾“å‡ºxxå¹´xæœˆæ—¥åŽ†ï¼ˆä¸€è¡?ä¸ªï¼Œæ»?æ¢è¡Œï¼?
-		System.out.println("æ˜ŸæœŸå¤©\tæ˜ŸæœŸä¸€\tæ˜ŸæœŸäºŒ\tæ˜ŸæœŸä¸‰\tæ˜ŸæœŸå››\tæ˜ŸæœŸäº”\tæ˜ŸæœŸå…­\t");
-		// æ˜¯å‘¨å‡ å°±æ‰“å°å‡ ä¸ªç©ºæ ¼,i=0è¡¨ç¤ºå‘¨æ—¥ï¼ŒæˆåŠŸæ¢ç®—å‡ºå‘¨å‡ å¹¶åœ¨å‰é¢æ‰“å°å‡ºç©ºæ ?
+		// 6.¸ñÊ½»¯Êä³öxxÄêxÔÂÈÕÀú£¨Ò»ñÆ¸ö£¬M»»ÐÐ£ß
+		System.out.println("ÐÇÆÚÌì\tÐÇÆÚÒ»\tÐÇÆÚ¶þ\tÐÇÆÚÈý\tÐÇÆÚËÄ\tÐÇÆÚÎå\tÐÇÆÚÁù\t");
+		// ÊÇÖÜ¼¸¾Í´òÓ¡¼¸¸ö¿Õ¸ñ,i=0±íÊ¾ÖÜÈÕ£¬³É¹¦»»Ëã³öÖÜ¼¸²¢ÔÚÇ°Ãæ´òÓ¡³ö¿Õ–ó
 		for(int i=0;i<weekday;i++){
 			System.out.print("\t");
 		}
-		// å¼€å§‹è¾“å‡ºæ¯æœˆä»Ž1~31çš„æ—¥æœ?
+		// ¿ªÊ¼Êä³öÃ¿ÔÂ´Ó1~31µÄÈÕ–c
 		for(int i=1; i<monthDays; i++) {
 			System.out.print(i+"\t");
 			
-			// éš¾ç‚¹2ï¼šweekday+iï¼Œæ¯”å¦‚æ˜¯1å·æ˜¯å‘¨ä¸€ï¼Œé‚£ä¹?+1é™¤ä»¥7ä½?ï¼?å·æ˜¯å‘¨æ—¥ï¼Œå³0+7=7/7ä½?ï¼Œæ¢è¡?
+			// ÄÑµã2£ºweekday+i£¬±ÈÈçÊÇ1ºÅÊÇÖÜÒ»£¬ÄÇv+1³ýÒÔ7Ê¹£ßºÅÊÇÖÜÈÕ£¬¼´0+7=7/7Ê¹£¬»»ñÆ
 			if((weekday+i)%7== 0) {
 				System.out.println("");
 			}
