@@ -1,28 +1,103 @@
 package com.hvua.domian.test;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Random;
 import com.hvua.domain.Customer;
 
 /*
- * 	2.	Ìá¹©Ò»¸öÊı×é,Êı×éÖĞµÄÔªËØÀàĞÍÊÇ¿Í»§ÀàĞÍ..
-	a)	ÏòÊı×éÖĞ²åÈë10Ìõ¿Í»§ĞÅÏ¢
-	b)	±éÀúÕû¸öÊı×éÖĞËùÓĞ¿Í»§µÄĞÅÏ¢.
+ * 	2.	æä¾›ä¸€ä¸ªæ•°ç»„,æ•°ç»„ä¸­çš„å…ƒç´ ç±»å‹æ˜¯å®¢æˆ·ç±»å‹..
+	a)	å‘æ•°ç»„ä¸­æ’å…¥10æ¡å®¢æˆ·ä¿¡æ¯
+	b)	éå†æ•´ä¸ªæ•°ç»„ä¸­æ‰€æœ‰å®¢æˆ·çš„ä¿¡æ¯.
  */
 
 public class CustomerTest {
 	public static void main(String[] args) {
-	
+		// 1.åˆ›å»º3ä¸ªå®¢æˆ·ç³»åˆ—ï¼Œå¼•ç”¨Customerç±»
+		Customer c1 = new Customer();
+		Customer c2 = new Customer();
+		Customer c3 = new Customer();
+		
+		// 2. ä¸ºå®¢æˆ·ç³»åˆ—èµ‹å€¼
+		c1.customerID = creatCustomerID();
+		c1.companyName = "å§“å1";
+		c1.region = "ä¸Šæµ·";
+		c1.managerName="ææ˜";
+		c1.customerLevel = "â˜†â˜†â˜†";
+		c1.customerLove = "â¤";
+		c1.customerCredit = "â˜†â˜†â˜†";
+		c1.address = "ä¸Šæµ·å¸‚é•¿å®åŒº";
+		c1.postCode = 201845;
+		c1.phoneNum = "021-61557874";
+		c1.faxNum = "021-11231233";
+		c1.website = "www.baidu.com";
+		
+		c2.customerID = creatCustomerID();
+		c2.companyName = "å§“å2";
+		c2.region = "åŒ—äº¬";
+		c2.managerName="ææ˜";
+		c2.customerLevel = "â˜†â˜†";
+		c2.customerLove = "â¤â¤";
+		c2.customerCredit = "â˜†â˜†â˜†â˜†";
+		c2.address = "ä¸Šæµ·å¸‚é™å®‰åŒº";
+		c2.postCode = 201921;
+		c2.phoneNum = "021-61557874";
+		c2.faxNum = "021-11231233";
+		c2.website = "www.baidu.com";
+		
+		c3.customerID = creatCustomerID();
+		c3.companyName = "å§“å3";
+		c3.region = "æ­å·";
+		c3.managerName="ææ˜";
+		c3.customerLevel = "â˜†";
+		c3.customerLove = "â¤â¤â¤";
+		c3.customerCredit = "â˜†â˜†";
+		c3.address = "ä¸Šæµ·å¸‚æ™®é™€åŒº";
+		c3.postCode = 21249;
+		c3.phoneNum = "021-61557874";
+		c3.faxNum = "021-11231233";
+		c3.website = "www.baidu.com";
+		
+		c4.customerID = creatCustomerID();
+		c4.companyName = "è¾“å‡ºæ’å…¥";
+		c4.region = "æ­å·";
+		c4.managerName="ææ˜";
+		c4.customerLevel = "â˜†";
+		c4.customerLove = "â¤â¤â¤";
+		c4.customerCredit = "â˜†â˜†";
+		c4.address = "ä¸Šæµ·å¸‚æ™®é™€åŒº";
+		c4.postCode = 21249;
+		c4.phoneNum = "021-61557874";
+		c4.faxNum = "021-11231233";
+		c4.website = "www.baidu.com";
+		
+		// 3.æ’å…¥æ•°ç»„
+		// 3.1 åˆ›å»ºCustomerç±»æ•°ç»„
+		Customer[] array = new Customer[10];  // è¾“å…¥10ä¸ªå®¢æˆ·çš„åºåˆ—
+//		System.out.println(Arrays.toString(array));
+		
+		// 3.2 èµ‹å€¼æ•°ç»„
+		array[0] = c1;
+		array[1] = c2;
+		array[2] = c3;
+		
+		// 4.è¾“å‡ºæ•°ç»„å…ƒç´ 
+		for(Customer cu: array) {
+			System.out.println(cu);
+		}
+//		System.out.println("where is it");
 	}
-
-	// ´´½¨¿Í»§±àÂëÉú³É·½·¨
-	public String customerID() { // ²»ĞèÒª¼Óstatic¾²Ì¬£¬Í¨¹ı¶ÔÏóµ÷ÓÃ
+	
+	
+	// åˆ›å»ºå®¢æˆ·ç¼–ç ç”Ÿæˆæ–¹æ³•
+	private static String creatCustomerID() {
 		Random random = new Random();
 		int date = 201810;
-		// TODO JavaÌá¹©ÁËCalendarÀàÀ´´ú±íÈÕÀú£¬Ò»°ã»ñÈ¡Ê±¼äÍ¨¹ıËü
-		Calendar cal = new Calendar;
-		int month = cal.get
-		int last4d = random.nextInt(9000)+1000; // Ëæ»úÉú³É4Î»Êı
+		// TODO Javaæä¾›äº†Calendarç±»æ¥ä»£è¡¨æ—¥å†ï¼Œä¸€èˆ¬è·å–æ—¶é—´é€šè¿‡å®ƒ
+		int last4d = random.nextInt(9000)+1000; // éšæœºç”Ÿæˆ4ä½æ•°
 		String customerID = "KH"+date+last4d;
 		return customerID; 
 	}
+
+
+		
 }

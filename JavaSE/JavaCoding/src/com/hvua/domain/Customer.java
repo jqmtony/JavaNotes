@@ -7,8 +7,7 @@ import java.util.Random;
  *  	a)	编号的取值:KH + 当前日期的月和日(不足两位数的补零) + 四位随机数.
  */
 public class Customer {
-	public String customerID = customerID();
-	// 调用客户编码生成器
+	public String customerID;
 	public String companyName;
 	public String region;
 	public String managerName;
@@ -16,12 +15,20 @@ public class Customer {
 	public String customerLove; // 客户满意度
 	public String customerCredit; // 客户信用度
 	public String address;
-	public String postCode;
-	int phoneNum;
-	int faxNum;
-	String website;
+	public int postCode;
+	public String phoneNum;
+	public String faxNum;
+	public String website;
 	
-
+	@Override
+	public String toString() {
+		return "Customer [customerID=" + customerID + ", companyName=" + companyName + ", region=" + region
+				+ ", managerName=" + managerName + ", customerLevel=" + customerLevel + ", customerLove=" + customerLove
+				+ ", customerCredit=" + customerCredit + ", address=" + address + ", postCode=" + postCode
+				+ ", phoneNum=" + phoneNum + ", faxNum=" + faxNum + ", website=" + website + "]";
+	}
+	
+	
 	
 	
 }
