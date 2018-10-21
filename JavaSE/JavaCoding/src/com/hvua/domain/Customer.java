@@ -11,7 +11,7 @@ public class Customer {
 	public String companyName;
 	public String region;
 	public String managerName;
-	public String customerLevel;
+	public int customerLevel;
 	public String customerLove; // 客户满意度
 	public String customerCredit; // 客户信用度
 	public String address;
@@ -20,6 +20,7 @@ public class Customer {
 	public String faxNum;
 	public String website;
 	
+
 	@Override
 	public String toString() {
 		return "Customer [customerID=" + customerID + ", companyName=" + companyName + ", region=" + region
