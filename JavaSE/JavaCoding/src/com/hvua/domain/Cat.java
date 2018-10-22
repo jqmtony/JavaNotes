@@ -1,4 +1,4 @@
-package com.hvua.domain;
+package com.hwua.domain;
 
 public class Cat {
 	public String name;
