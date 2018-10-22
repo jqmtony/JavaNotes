@@ -25,7 +25,7 @@ public class Customer {
 	/**
 	 * 	客户等级
 	 */
-	private String customerLevel;
+	public int customerLevel;
 	/**
 	 *  客户满意度
 	 */
@@ -74,7 +74,7 @@ public class Customer {
 	 * @param customerUrl
 	 */
 	public Customer(String customerID, String customerName, String customerPlace, String customerManager,
-			String customerLevel, String customerDegree, String customerCredit, String customerAddress,
+			int customerLevel, String customerDegree, String customerCredit, String customerAddress,
 			String customerTel, String customerPostalcode, String customerFax, String customerUrl) {
 		super();
 		this.customerID = CustomerTool.creatCustomerID(); // 赋值ID以随机生成的customerID
@@ -91,6 +91,9 @@ public class Customer {
 		this.customerUrl = customerUrl;
 	}
 
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public String toString() {
 		return "Customer [customerID=" + customerID + ", customerName=" + customerName + ", CustomerPlace="
