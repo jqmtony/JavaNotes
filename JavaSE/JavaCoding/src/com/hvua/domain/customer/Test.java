@@ -7,7 +7,8 @@ public class Test{
 		Customer c2 = new Customer(null,"李四","上海","经理一号",3,8+"",8+"","天知道","110","210000","110","www.baidu.com"); 
 		Customer c3 = new Customer(null,"王五","上海","经理一号",4,8+"",8+"","天知道","110","210000","110","www.baidu.com"); 
 		Customer c4 = new Customer(null,"赵六","上海","经理一号",2,8+"",8+"","天知道","110","210000","110","www.baidu.com"); 
-
+		
+		
 		CustomerManager cm = new CustomerManager(10);
 //		// 显示所有对象
 //		cm.showAllCustomer();

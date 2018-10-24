@@ -54,10 +54,104 @@ public class Customer {
 	 * 	客户网址
 	 */
 	private String customerUrl;
-	
+
+
+	public String getCustomerID() {
+		return customerID;
+	}
+
+	public void setCustomerID(String customerID) {
+		this.customerID = customerID;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public String getCustomerPlace() {
+		return CustomerPlace;
+	}
+
+	public void setCustomerPlace(String customerPlace) {
+		CustomerPlace = customerPlace;
+	}
+
+	public String getCustomerManager() {
+		return customerManager;
+	}
+
+	public void setCustomerManager(String customerManager) {
+		this.customerManager = customerManager;
+	}
+
 	public int getCustomerLevel() {
 		return customerLevel;
 	}
+
+	public void setCustomerLevel(int customerLevel) {
+		this.customerLevel = customerLevel;
+	}
+
+	public String getCustomerDegree() {
+		return customerDegree;
+	}
+
+	public void setCustomerDegree(String customerDegree) {
+		this.customerDegree = customerDegree;
+	}
+
+	public String getCustomerCredit() {
+		return customerCredit;
+	}
+
+	public void setCustomerCredit(String customerCredit) {
+		this.customerCredit = customerCredit;
+	}
+
+	public String getCustomerAddress() {
+		return customerAddress;
+	}
+
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
+	}
+
+	public String getCustomerTel() {
+		return customerTel;
+	}
+
+	public void setCustomerTel(String customerTel) {
+		this.customerTel = customerTel;
+	}
+
+	public String getCustomerPostalcode() {
+		return customerPostalcode;
+	}
+
+	public void setCustomerPostalcode(String customerPostalcode) {
+		this.customerPostalcode = customerPostalcode;
+	}
+
+	public String getCustomerFax() {
+		return customerFax;
+	}
+
+	public void setCustomerFax(String customerFax) {
+		this.customerFax = customerFax;
+	}
+
+	public String getCustomerUrl() {
+		return customerUrl;
+	}
+
+	public void setCustomerUrl(String customerUrl) {
+		this.customerUrl = customerUrl;
+	}
+
 	/**
 	 * 通过赋值参数添加Customer对象
 	 * @param customerID

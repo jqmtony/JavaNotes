@@ -89,21 +89,9 @@ public class CustomerManager {
 	 * 客户等级降序排列
 	 */
 	public void sortCustomerLevel() {
-		Customer temp = new Customer();
-		Customer a = new Customer();
-		Customer b = new Customer();
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < i; j++) {
-				a = array[j];
-				b = array[j+1];
-				if (a.customerLevel < b.customerLevel) {
-					temp = b;
-					b = a;
-					a = temp;
-				}else {
-					System.out.println("出错！");
-				}
-			}
+		for(Customer customer: array) {
+			// Exception in thread "main" 
+			System.out.println(customer.customerLevel);
 		}
 		showAllCustomer();
 	}
@@ -122,5 +110,6 @@ public class CustomerManager {
 				System.out.println(cu);
 			}
 		}
+		
 	}
 }
