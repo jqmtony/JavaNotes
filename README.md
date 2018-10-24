@@ -20,3 +20,7 @@
 - DAY7(10.16): 数组Array、双色球Case
 - DAY8(10.17): 方法Method、引用方法、重构Case、飞行棋Case(
 - DAY9(10.18): StudyShareing-Sublime\Eclipse\CountApprearance、6道练习题、基础知识题
+- DAY10(10.18): 面向对象-OOP、位运算、类和对象
+- DAY11(10.18): OOP-构造方法、this关键字、static静态与非静态方法、封装
+- DAY12(10.18): OOP-继承-equals-Final-toString
+- DAY13(10.18): OOP-多态-转型-OCP-动态绑定
