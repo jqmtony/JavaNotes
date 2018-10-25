@@ -7,8 +7,9 @@ public class DVDManager {
 
 	Scanner scanner = new Scanner(System.in);
 	private DVD[] array;
-	private DVDDB[] dvdLend;
+	private DVD[] dvdLend;
 	private int size;
+	private int sizeLend;
 
 	/**
 	 * 初始化操作
@@ -17,6 +18,7 @@ public class DVDManager {
 	 */
 	public DVDManager(int initSize) {
 		array = new DVD[initSize];
+		dvdLend = new DVD[initSize];
 	}
 
 	/**
@@ -30,6 +32,10 @@ public class DVDManager {
 
 	public int getSize() {
 		return size;
+	}
+
+	public int getSizeLend() {
+		return sizeLend;
 	}
 
 	/**
@@ -85,7 +91,7 @@ public class DVDManager {
 	 * 1.新增DVD
 	 */
 	public void addDVD(DVD dvd) {
-//		System.out.println("请先使用addDVD添加");
+		// System.out.println("请先使用addDVD添加");
 		// TODO 尝试使用告诉下标，利用无参构造添加的方式
 		enlarge();
 		array[size] = dvd;
@@ -94,12 +100,22 @@ public class DVDManager {
 	}
 
 	/**
-	 * 2.查看DVD
+	 * 2.查看DVD（存留、借出）
 	 */
 	public void viewDVD() {
+		System.out.println("****************存留目录****************");
 		for (DVD dvd : array) {
 			if (dvd != null) {
 				System.out.println(dvd);
+			}
+		}
+	}
+
+	public void viewLend() {
+		System.out.println("****************借出目录****************");
+		for (DVD dvdLend : dvdLend) {
+			if (dvdLend != null) {
+				System.out.println(dvdLend);
 			}
 		}
 	}
@@ -108,40 +124,72 @@ public class DVDManager {
 	 * 3.删除DVD
 	 */
 	public void delDVD(int id) { // 输入序号
-		int index = findID(id);
-		for (int j = index-1; j <size; j++) {
-			array[j]=array[j+1];
+		int index = findPos(id);
+		for (int j = index - 1; j < size; j++) {
+			array[j] = array[j + 1];
 		}
 		array[size] = null; // 本来最后的一个元素自然清除
 		size = size - 1;
-		System.out.println("***********已删除" + id + "当前size为" + size + "***********");
+		System.out.println("[ 已删除" + id + "当前size为" + size + " ] ");
 		viewDVD();
 	}
+
+	public void delDVDLend(int id) { // 输入序号
+		int index = findPos(id);
+		for (int j = index - 1; j < sizeLend; j++) {
+			dvdLend[j] = dvdLend[j + 1];
+		}
+		sizeLend = sizeLend - 1;
+		dvdLend[sizeLend] = null;
+		viewLend();
+	}
+
 	/**
 	 * 找到id对应的数组下标
 	 */
-	public int findID(int id) {
+	public int findPos(int id) {
 		int index = 0;
-		for(DVD dvd:array) {
+		for (DVD dvd : array) {
 			index++;
-			if(dvd.getId()==id) {
+			if (dvd.getId() == id) {
 				break;
 			}
 		}
 		return index;
 	}
+
+	public int findLendPos(int id) {
+		int index = 0;
+		for (DVD dvdLend : dvdLend) {
+			index++;
+			if (dvdLend.getId() == id) {
+				break;
+			}
+		}
+		return index;
+	}
+
 	/**
 	 * 4.借出
 	 */
 	public void lendDVD(int id) {
-		System.out.println("--------------你要借出的dvd信息如下---------------");
-		int target = findID(id);
-		int index = 0;
-		for(DVD dvd: array) {
-			if(dvd.getId()==target) {
-				
-			}
-		}
+		dvdLend[sizeLend] = array[findPos(id) - 1]; // 存留→借出
+		dvdLend[sizeLend].setLendCount(dvdLend[sizeLend].getLendCount() + 1); // 出借次数+1
+		dvdLend[sizeLend].setStatus(false);
+		sizeLend = sizeLend + 1;
+		viewLend();
+		delDVD(id);
+	}
+
+	/**
+	 * 5.还入
+	 */
+	public void backDVD(int id) {
+		array[size] = dvdLend[findLendPos(id) - 1];
+		array[size].setStatus(true);
+		size = size + 1;
+		delDVDLend(id);
+		viewDVD();
 	}
 
 	@Override

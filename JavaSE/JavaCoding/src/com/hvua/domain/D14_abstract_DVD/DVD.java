@@ -5,7 +5,7 @@ public class DVD {
 	private String name;
 	private int lendCount;
 	private String lendDate;
-	private String status;
+	private Boolean status;
 
 	/**
 	 * 构造方法
@@ -13,7 +13,7 @@ public class DVD {
 	public DVD() {
 	}
 
-	public DVD(int id, String name, int lendCount, String lendDate, String status) {
+	public DVD(int id, String name, int lendCount, String lendDate, Boolean status) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -59,11 +59,11 @@ public class DVD {
 		this.lendDate = lendDate;
 	}
 
-	public String getStatus() {
+	public Boolean getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Boolean status) {
 		this.status = status;
 	}
 
