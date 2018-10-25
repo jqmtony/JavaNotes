@@ -26,7 +26,7 @@ public class Soldier {
 	}
 
 	public void attack() {
-		System.out.println("所有士兵已经就绪！准备发动攻击！");
+//		System.out.println("所有士兵已经就绪！准备发动攻击！");
 
 	}
 

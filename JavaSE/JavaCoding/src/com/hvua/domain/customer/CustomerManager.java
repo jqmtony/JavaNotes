@@ -39,6 +39,7 @@ public class CustomerManager {
 		if ((double) size / array.length >= 0.8) {
 			array = Arrays.copyOf(array, (int) (array.length * 1.8)); // 数组 = 扩充后的数组！
 		}
+		System.out.println("当前已有元素："+size+" 当前空间大小："+array.length);
 	}
 
 	/**

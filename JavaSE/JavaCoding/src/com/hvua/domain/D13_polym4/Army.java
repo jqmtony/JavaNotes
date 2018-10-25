@@ -23,26 +23,10 @@ public class Army {
 		System.out.println("[ " + getPosition() + " ] 已上场！ [ " +getAttackType() + " ] ！！" );
 	}
 
-	// 行为:2.1：发号士兵进行攻击
-	public void callSoldier(Soldier soldier, Soldier soldier2, Soldier soldier3, Soldier soldier4) {
-		if (soldier == null && soldier2 == null && soldier3 == null && soldier4 == null) {
-			System.out.println("请 [ " + getPosition() + " ] 发号施令！");
-		} else if (soldier2 == null && soldier3 == null && soldier4 == null) {
+	public void callSoldier(Soldier[] array) {
+		for(Soldier soldier: array ) {
 			soldier.attack();
-		} else if (soldier3 == null && soldier4 == null) {
-			soldier.attack();
-			soldier2.attack();
-		} else if (soldier4 == null) {
-			soldier.attack();
-			soldier2.attack();
-			soldier3.attack();
-		} else {
-			soldier.attack();
-			soldier2.attack();
-			soldier3.attack();
-			soldier4.attack();
 		}
-		attack();
 	}
 
 }

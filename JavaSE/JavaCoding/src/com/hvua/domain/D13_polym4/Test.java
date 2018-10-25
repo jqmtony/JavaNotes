@@ -7,11 +7,10 @@ public class Test {
 		Soldier step = new stepSoldier();
 		Soldier boom = new boomSoldier();
 		Soldier hoSoldier = new hoseSoldier();
-//		Soldier soldier = new Soldier("È«²¿Ê¿±ø£¡");
+		Soldier[] soldiers = new Soldier[3];
 		
-//		leader.callSoldier(null,null,null,null);
-		leader.callSoldier(step,boom,hoSoldier,null); 
-//		leader.callSoldier(boom,null,null,null);
-		
+		soldiers[0]=step;
+		soldiers[1]=boom;
+		leader.callSoldier(soldiers);
 	}
 }
