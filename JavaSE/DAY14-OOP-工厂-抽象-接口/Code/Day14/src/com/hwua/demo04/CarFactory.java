@@ -6,7 +6,7 @@ public class CarFactory {
 		Car car = null;
 		switch (type) {
 		case "tractor":
-			car = Tractor.getInstance();
+			car = Tractor.getInstance(); // car = new Tractor();
 			break;
 
 		default:
