@@ -1,5 +1,7 @@
 package com.hvua.domain.DAY15_implements.daoImpl;
 
-public class RecordDaoImpl {
+import com.hvua.domain.DAY15_implements.dao.RecordDao;
+
+public class RecordDaoImpl implements RecordDao{
 
 }

@@ -34,18 +34,29 @@
 分包建立接口
 
 com.hwua.model/bean  - > 实体
+私有化属性；get和set方法；有参和无参构造方法；toString输出；
 
 com.hwua.service/biz - >  业务接口包
+接口：公开属性和方法，user login, boolean:check name exists, boolean:register
+
 com.hwua.service/bizimpl - >  业务接口实现类包
+接口实现方法重写：user login, boolean:check name exists, boolean:register
+creatUserID
 
 com.hwua.dao - > 数据操作接口包
+接口：getUser, saveUser
+
 com.hwua.daoimp - > 数据操作接口实现包.
+接口实现方法重写：getUser, saveUser
 
 com.hwua.util/tools -> 包含在整个项目里面会在很多地方使用的工具.工具包
+数据库：dataset --> 创建数组、static实例化、static初始化
+viewTools：printLine
 
 com.hwua.test - > 进行功能模块测试的包
 
 com.hwua.app - > 程序的入口包
+main: 不同view之前的跳转
 
 
 额外补充:
