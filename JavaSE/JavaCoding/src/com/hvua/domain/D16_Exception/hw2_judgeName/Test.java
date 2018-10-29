@@ -6,19 +6,23 @@ public class Test {
 	public static void main(String[] args) throws NameException {
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("输入名字");
-		String name = scan.next();
-		System.out.println("输入年龄");
-		int age = scan.nextInt();
-
 		Student student = new Student();
-
-		if (student.setName(name)) {
-			student.setAge(age);
-			System.out.println(student);
-		} else {
-			throw new NameException();
+		while (true) {
+			System.out.println("输入名字");
+			String name = scan.next();
+			System.out.println("输入年龄");
+			int age = scan.nextInt();
+			try {
+				if (student.setName(name)) {
+					student.setAge(age);
+					System.out.println(student);
+					break;
+				} else {
+					throw new NameException();
+				}
+			} catch (Exception e) {
+				System.out.println("名字要大于2个字符：");
+			}
 		}
-
 	}
 }
