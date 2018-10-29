@@ -20,7 +20,9 @@
 - DAY7(10.16): 数组Array、双色球Case
 - DAY8(10.17): 方法Method、引用方法、重构Case、飞行棋Case(
 - DAY9(10.18): StudyShareing-Sublime\Eclipse\CountApprearance、6道练习题、基础知识题
-- DAY10(10.18): 面向对象-OOP、位运算、类和对象
-- DAY11(10.18): OOP-构造方法、this关键字、static静态与非静态方法、封装
-- DAY12(10.18): OOP-继承-equals-Final-toString
-- DAY13(10.18): OOP-多态-转型-OCP-动态绑定
+- DAY10(10.19): 面向对象-OOP、位运算、类和对象
+- DAY11(10.22): OOP-构造方法、this关键字、static静态与非静态方法、封装
+- DAY12(10.23): OOP-继承-equals-Final-toString
+- DAY13(10.24): OOP-多态-转型-OCP-动态绑定
+- DAY14(10.25): OOP-抽象类、接口；config.properties读取；工厂通过pro调用类.方法； 用工厂设置建立两个单例；
+- DAY15(10.26): 理解工厂单例、接口；Java基础第2阶段测试；DVDManager项目练手（用三层架构）
