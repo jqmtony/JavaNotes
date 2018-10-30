@@ -1,11 +1,12 @@
-10/30
+10/30,ArrayList
 0900-0917 王东旭，list接口ArrayList
 0925-1007 Math.round()/florr()/random()
 1030-1139 类图（了解）、类关系（掌握）
 1330-1445 Colletion集合、List：ArrayList
 1515-1600 ArrayList实现Stack和Queue
 1633-1750 ArrayList实现次数统计和排序输出
-1856-2017
+1856-2017 ArrayList实现双色球
+2243-0049 ArrayList实现双色球
 
 starUML，画一下类图
 udacity，stackoverflow
