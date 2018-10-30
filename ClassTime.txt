@@ -1,3 +1,18 @@
+10/30
+0900-0917 王东旭，list接口ArrayList
+0925-1007 Math.round()/florr()/random()
+1030-1139 类图（了解）、类关系（掌握）
+1330-1445 Colletion集合、List：ArrayList
+1515-1600 ArrayList实现Stack和Queue
+1633-1750 ArrayList实现次数统计和排序输出
+1856-2017
+
+starUML，画一下类图
+udacity，stackoverflow
+comparable排序
+arrayList实现复习
+ctrlO
+
 10/29
 0900-0920 陈良豪，图形识别
 0928-1000 策略模式
@@ -10,7 +25,7 @@
 2229-2251 健康与否治疗与否异常
 2314-0000 预习Lis接口-ArrayList,LinkedList
 
-10/28
+10/28，周日
 0004-0036 部分复习
 1245-1407 DVDManager-User.Login
 1424-1620 DVDManager-User.Register
