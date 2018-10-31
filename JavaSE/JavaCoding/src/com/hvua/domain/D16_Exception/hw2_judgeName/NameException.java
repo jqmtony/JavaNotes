@@ -20,7 +20,7 @@ public class NameException extends Exception {
 	 */
 	@Override
 	public String getMessage() {
-		return "名字不能小于2个字节";
+		return "名字不能小于2个字节**";
 	}
 
 }
