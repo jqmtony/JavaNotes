@@ -1,4 +1,4 @@
-package D18_LinkedList;
+package D18_LinkedList_SetMap;
 
 import java.util.LinkedList;
 
@@ -10,7 +10,7 @@ public class Stack<E> {
 	public Stack() {
 		linkedList = new LinkedList<>();
 	}
-	
+
 	public int size() {
 		size = linkedList.size();
 		return size;
@@ -20,6 +20,7 @@ public class Stack<E> {
 	public void addStack(E e) {
 		linkedList.add(e);
 	}
+
 	// 拿出值，先进后出，所以从后面拿
 	public E popStack() {
 		return linkedList.removeLast();
@@ -27,8 +28,7 @@ public class Stack<E> {
 
 	@Override
 	public String toString() {
-		return "Stack [linkedList=" + linkedList + " Size: "+linkedList.size()+"]";
+		return "Stack [linkedList=" + linkedList + " Size: " + linkedList.size() + "]";
 	}
 
-	
 }
