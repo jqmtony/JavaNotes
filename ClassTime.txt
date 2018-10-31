@@ -1,3 +1,21 @@
+10/31,DAY18-LinkedList-Set-Map-Collection
+0915-1000 ArrayList实现双色球，AL red
+1023-1149 LinkedList
+1214-1300 LinkedList实现Queue和Stack
+1330-1430 Set, Map-hashMap,treeMap
+1447-1700 Map统计随机数出现次数、Map引用Person按age排序
+
+实现一遍MapSort
+
+comparable排序、测试iterator
+thrwo nameException
+arrayList实现复习
+ctrlO:ArrayList, LinkedList
+starUML，画一下类图
+udacity，stackoverflow
+http://www.planetb.ca/syntax-highlight-word
+Zeal, java docs 
+
 10/30,ArrayList
 0900-0917 王东旭，list接口ArrayList
 0925-1007 Math.round()/florr()/random()
@@ -7,12 +25,6 @@
 1633-1750 ArrayList实现次数统计和排序输出
 1856-2017 ArrayList实现双色球
 2243-0049 ArrayList实现双色球
-
-starUML，画一下类图
-udacity，stackoverflow
-comparable排序
-arrayList实现复习
-ctrlO
 
 10/29
 0900-0920 陈良豪，图形识别
@@ -63,6 +75,8 @@ ctrlO
 1622-1720  主人开关电器case
 1815-1926  多态作业，军官发号调用不同士兵发动不同攻击
 1936-2005  多态作业，同上
+10/24
+0915-
 
 10/23,继承
 0915-1044 继承，练习，Person类，super和this的区别

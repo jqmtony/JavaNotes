@@ -20,8 +20,8 @@ public class Test {
 				} else {
 					throw new NameException();
 				}
-			} catch (Exception e) {
-				System.out.println("名字要大于2个字符：");
+			} catch (NameException e) {
+				System.out.println("eeeeeeeeeeee");
 			}
 		}
 	}

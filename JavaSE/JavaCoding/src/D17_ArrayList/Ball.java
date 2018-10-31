@@ -31,6 +31,12 @@ public class Ball {
 		reds = new int[6];
 		for (int i = 0; i < reds.length; i++) {
 			reds[i] = random.nextInt(33) + 1;
+			for (int j = 0; j < i; j++) {
+				if(reds[j]==reds[j+1]) {
+					i--;
+					continue;
+				}
+			}
 		}
 		return reds;
 	}
