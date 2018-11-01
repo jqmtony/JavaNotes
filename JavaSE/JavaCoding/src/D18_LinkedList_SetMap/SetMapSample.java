@@ -14,12 +14,12 @@ import java.util.Map.Entry;
 
 public class SetMapSample {
 	public static void main(String[] args) {
-		getRedBall(); // [2, 4, 8, 22, 23, 25]
+		// 输出：[2, 4, 8, 22, 23, 25]
+//		getRedBall();
 		System.out.println("********************");
 		/**
 		 * 使用HashMap<String, Person>实现：1.key排序 2.根据年龄排序
 		 */
-		HashMap<String, Person> map = new HashMap<>();
 		Person p1 = new Person(1, 17, "张三");
 		Person p2 = new Person(2, 16, "李四");
 		Person p3 = new Person(3, 15, "王五");
@@ -27,6 +27,21 @@ public class SetMapSample {
 		Person p5 = new Person(5, 19, "孙七");
 		Person p6 = new Person(6, 20, "周八");
 
+		ArrayList<Person> arrayList = new ArrayList<>();
+		arrayList.add(p1);
+		arrayList.add(p2);
+		arrayList.add(p3);
+		arrayList.add(p4);
+		arrayList.add(p5);
+		arrayList.add(p6);
+
+		System.out.println("按年龄顺序输出，测试compare");
+		Collections.sort(arrayList);
+		for (Person person : arrayList) {
+			System.out.println(person);
+		}
+		
+		HashMap<String, Person> map = new HashMap<>();
 		map.put("B", p1);
 		map.put("A", p2);
 		map.put("Z", p3);
@@ -34,6 +49,14 @@ public class SetMapSample {
 		map.put("H", p5);
 		map.put("C", p6);
 
+	}
+
+	/**
+	 * hashMap排序方法
+	 * 
+	 * @param map
+	 */
+	public static void sortMap(HashMap<String, Person> map) {
 		// key排序，hash是无需的，利用tree排序，就是把hash的东西给tree，
 		// 输出treeMap自然就是有序的了
 		TreeMap<String, Person> tMap = new TreeMap<>(new Comparator<String>() {
@@ -58,10 +81,10 @@ public class SetMapSample {
 			@Override
 			public int compare(Entry<String, Person> o1, Entry<String, Person> o2) {
 				// TODO Auto-generated method stub
-				return o1.getValue().getAge()-o2.getValue().getAge();
+				return o1.getValue().getAge() - o2.getValue().getAge();
 			}
 		});
-		for(Entry<String, Person> entry: list){
+		for (Entry<String, Person> entry : list) {
 			System.out.println(entry);
 		}
 	}
