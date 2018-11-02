@@ -6,8 +6,10 @@ arrayList实现复习
 1035-1130 D19_CustomerContactsUser
 1204-1225 comparator内部/外部比较器
 1330-1418 fun:loginView
-1439-1548 fun:addCustomer,showCustomer
-1616-1714 fun:addLinkman,CustomerbindLinkman
+1439-1548 fun:addCustomer, showCustomer
+1616-1714 fun:addLinkman, CustomerBindLinkman
+1900-1930 吸收理解CustomerContactsUser
+2330-
 
 10/31,DAY18-LinkedList-Set-Map-Collection
 0915-1000 ArrayList实现双色球，AL red

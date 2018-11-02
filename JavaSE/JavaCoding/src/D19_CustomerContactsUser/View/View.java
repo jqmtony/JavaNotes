@@ -1,11 +1,6 @@
 package D19_CustomerContactsUser.View;
 
 import java.util.Scanner;
-
-import javax.rmi.CORBA.Util;
-
-import com.hvua.domain.DAY15_implements.view.showDvdView;
-
 import D19_CustomerContactsUser.Util.UtilTools;
 
 public abstract class View {
@@ -47,9 +42,8 @@ public abstract class View {
 	 * 并且输出页面名字（有格式的，也就是创造工具类的方法）
 	 */
 	public View showCurrView() {
-		UtilTools.showHeadLine(viewName){
+		UtilTools.showHeadLine(viewName);
 			return showView();
-		}
 	}
 
 }

@@ -1,7 +1,8 @@
 package D19_CustomerContactsUser.Util;
 
 public class UtilTools {
-	public void showHeadLine() {
 
+	public static void showHeadLine(String viewName) {
+		System.out.println("----------------------" + viewName);
 	}
 }
