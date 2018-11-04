@@ -1,6 +1,8 @@
 package D19_CustomerContactsUser.View;
 
 import java.util.Scanner;
+
+import D19_CustomerContactsUser.Bean.User;
 import D19_CustomerContactsUser.Util.UtilTools;
 
 public abstract class View {
@@ -13,6 +15,10 @@ public abstract class View {
 	 * 页面名称
 	 */
 	protected String viewName;
+	/**
+	 * 当前用户
+	 */
+	protected User currentUser;
 	/**
 	 * 提供Scanner
 	 */

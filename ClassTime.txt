@@ -1,11 +1,16 @@
-comparable排序
-arrayList实现复习
-集合遍历的各种方式
-为什么会存在线程没有执行完的情况
-Thread和Runable的差别
-测试猴子吃桃
+11/4,Sunday
+0846-0930 复习线程,更新xmind
+0931-1018 Thread Demo Rewrite
+1252-1325 Thread:AppleOrBanana
+1326-1451 CRM:login
+1504-1526 CRM:login
+1600-1642 CRM:addCustomer
+1650-1722 想问题：多线程香蕉苹果、CRM绑定联系人
+1730-1830 CRM:updateCustomer
+2300-0003 CRM:add/delCus, add/del/showLinkMan
+0044-0134 DeadLockTest，预习
 
-11/2
+11/2，D20
 0920-1020 
 
 11/1
@@ -16,7 +21,6 @@ Thread和Runable的差别
 1439-1548 fun:addCustomer, showCustomer
 1616-1714 fun:addLinkman, CustomerBindLinkman
 1900-1930 吸收理解CustomerContactsUser
-2330-
 
 10/31,DAY18-LinkedList-Set-Map-Collection
 0915-1000 ArrayList实现双色球，AL red
