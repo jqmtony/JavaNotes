@@ -1,3 +1,15 @@
+11/5
+0925-1020 IO：File类
+1103-1140 xmind
+1330-1432 IO：字节流：InputStream, OutputStream
+1451-1538 exercise
+1552-1637 IO：字符流、缓冲流
+1650-1726 Java第一阶段考试
+1728-1814 Java第一阶段考试，讲解
+1846-2027 hw：读取章节和对应内容
+*
+实现一遍Demo02/Demo07
+
 11/4,Sunday
 0846-0930 复习线程,更新xmind
 0931-1018 Thread Demo Rewrite

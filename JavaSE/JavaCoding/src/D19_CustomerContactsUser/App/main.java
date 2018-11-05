@@ -1,4 +1,5 @@
 package D19_CustomerContactsUser.App;
+
 import D19_CustomerContactsUser.View.View;
 import D19_CustomerContactsUser.View.welcomeView;
 
@@ -10,6 +11,5 @@ public class main {
 		while(view!=null) {
 			view = view.showCurrView();
 		}
-		
 	}
 }
