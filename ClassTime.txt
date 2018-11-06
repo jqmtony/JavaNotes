@@ -1,3 +1,11 @@
+11/6
+916-1000 输入输出流
+1017-1130 Server,Client
+1330-1443 chatServer,chatClient
+1510-1540 chatServer,chatClient
+1600-1710 java爬虫，HtmlClent API
+1808-2022 理解多人聊天系统
+
 11/5
 0925-1020 IO：File类
 1103-1140 xmind

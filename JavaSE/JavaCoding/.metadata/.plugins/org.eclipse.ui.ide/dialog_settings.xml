@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Administrator\Desktop\demo03"/>
+		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes\JavaSE\JavaCoding\src\D21_IO_Thread"/>
 		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes\JavaSE\JavaCoding\src"/>
 		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes\JavaSE"/>
 		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes"/>
@@ -9,5 +11,7 @@
 	<section name="ResourceNavigator">
 		<item value="Aggregate for window 1539825399331" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
