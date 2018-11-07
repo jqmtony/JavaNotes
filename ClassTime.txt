@@ -1,3 +1,19 @@
+11/7
+安装Eclipse插件：http://kesin.oschina.io/update-site/4.5/
+【重写chatServer和chatClient】
+【重写lock和condition打印ABAB】
+【jason解析天气】
+【sharePPT】
+【作业：麦当劳线程】
+0925-1038 学会使用Gitee码云
+1100-1141 Lock.lock方法，Condition.await/signal;
+1302-1332 尝试重写chatServer和chatClient
+1335-1439 blockingQueue，线程池卖票
+1440-1603 装饰（饮料咖啡配料）、Jason解析天气
+1630-1654 原生Jason测试
+1831-2030
+
+
 11/6
 916-1000 输入输出流
 1017-1130 Server,Client
