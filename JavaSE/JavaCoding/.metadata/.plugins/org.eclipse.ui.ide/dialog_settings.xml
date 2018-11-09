@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes\JavaSE\DAY22-Socket-Server-Client\Code\Day22"/>
+		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes\JavaSE\JavaCoding\McD"/>
 		<item value="C:\Users\Administrator\Desktop\demo03"/>
 		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes\JavaSE\JavaCoding\src\D21_IO_Thread"/>
 		<item value="C:\Users\Administrator\Documents\GitHub\JavaNotes\JavaSE\JavaCoding\src"/>

@@ -1,0 +1,18 @@
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class chatServer {
+	public static void main(String[] args) {
+		// 服务器自身端口
+		try {
+			ServerSocket server = new ServerSocket(2048);
+			Socket soClient = server.accept();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 接口客户端的访问
+		
+	}
+}

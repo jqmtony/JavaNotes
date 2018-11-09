@@ -1,6 +1,16 @@
 【重写chatServer和chatClient】
 【jason解析天气】
-【sharePPT】
+【mysql是不是放在data前面就可以？怎么远程传输】
+
+11/8
+0900-0930 李华分享，近期作业代码理解
+0930-1034 mySql安装
+1050-1146 mySql安装各种报错
+1216-1321 学习分享PPT：麦当劳业务理解和代码实现
+1334-1427 mySql基本操作：库
+1454-1541 mySql基本操作：表
+1611-1652 mySql基本操作：增删改查
+1840-1920
 
 11/7，DAY23-Lock-Condition-装饰-Json
 0925-1038 Eclipse安装Gitee码云插件：http://kesin.oschina.io/update-site/4.5/
