@@ -1,6 +1,12 @@
 【重写chatServer和chatClient】
 【jason解析天气】
 【mysql是不是放在data前面就可以？怎么远程传输】
+【mySQL表格语句整理和Test】
+11/9
+sql图像化界面：navicat premium
+0920-1030 mySQL约束
+1053-1143
+1100-1533 
 
 11/8
 0900-0930 李华分享，近期作业代码理解
