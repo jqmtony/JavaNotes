@@ -2,6 +2,10 @@
 【jason解析天气】
 【mysql是不是放在data前面就可以？怎么远程传输】
 【mySQL表格语句整理和Test】
+
+11/11
+1906-
+
 11/9
 sql图像化界面：navicat premium
 0920-1030 mySQL约束
