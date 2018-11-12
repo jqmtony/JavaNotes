@@ -3,11 +3,17 @@
 【mysql是不是放在data前面就可以？怎么远程传输】
 【mySQL表格语句整理和Test】
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 461bdfc1fe0fc1206b59b17724d024b1e7e02eaa
 
 11/11
 1906-
 
+<<<<<<< HEAD
+>>>>>>> 461bdfc1fe0fc1206b59b17724d024b1e7e02eaa
+=======
 >>>>>>> 461bdfc1fe0fc1206b59b17724d024b1e7e02eaa
 11/9
 sql图像化界面：navicat premium
