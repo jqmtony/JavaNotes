@@ -2,12 +2,14 @@
 【jason解析天气】
 【mysql是不是放在data前面就可以？怎么远程传输】
 【mySQL表格语句整理和Test】
+
 11/12,DAY3-mySQL-查询-简单链接子合并
 1000-1104 select,as nickname
 1118-1144 where,in
 1330-1425 分组查询group by
 1445-1608 practice;连接查询
 1642-1734 正则表达
+
 
 11/11
 1906-
