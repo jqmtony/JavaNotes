@@ -1,5 +1,3 @@
-【mySQL直接可以用的表建立什么的】github或者论坛上看一下有没有现成的，自己尝试造
-
 # MySQL的常用语句
 
 ## 库操作
@@ -11,6 +9,8 @@ create database dbname
 drop database dbname
 # 查看
 show database dbname
+# 修改名字
+sp_renamedb 'old_name', 'new_name'
 ```
 
 ## 表操作
@@ -20,6 +20,9 @@ show database dbname
 create table tA(id int not null, name varchar(50) not null, age int(10) not null)
 # 复制已有的表（并创建新表）
 create table newTName as select id,name,age from oldTname
+# 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)
+insert into b(a, b, c) select d,e,f from b in ‘具体数据库’ where 条件
+..from b in '"&Server.MapPath(".")&"\data.mdb" &"' where..
 # 增加一个列
 alter table tName add grade int(10);
 # 添加主键
@@ -90,51 +93,45 @@ select min(filed1) as minName from tName
 
 ```
 
+## 高级查询运算
+
+SQL中union（并集）、except（差集）、intersect（交集）用法，然而 mysql 不支持except 和 intersect
+
+### UNION
+
+```mysql
+# UNION，无重复行的合并表
+select * from tName1 Union select * from tName2
+# UNION ALL
+select * from tName1 Union All select * from tName2
+```
+
+### JOIN（连接查询）
+
+在使用内连接是左右两张表是没有主次之分的。当我们使用外连接时，什么方式连接什么表就是主表，另外一张表就是从表也就是次表。
+
+```mysql
+# 外链接
+# 外连接查询(表名1：a 表名2：b)
+select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
+# 左外（可模拟右外）
+select * from tName1 left join tName2 
+on tName1.field1 = tName2.filed2
+# 右外
+select * from tName1 right join tName2 
+on tName1.field1 = tName2.filed2
+# 内连接
+select * tName1 inner join tName2 
+where tName1.field1 = tName2.filed2
+# 自然链接
+select * from tName1 natural join tName2
+```
+
+### BETWEEN
 
 
-排序**：select * from table1 order by field1,field2 [desc]
-**总数**：select count as totalcount from table1
-**求和**：select sum(field1) as sumvalue from table1
-**平均**：select avg(field1) as avgvalue from table1
-**最大**：select max(field1) as maxvalue from table1
-**最小**：select min(field1) as minvalue from table1
-**11、说明：几个高级查询运算词A： UNION 运算符** 
-UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。 
-**B： EXCEPT 运算符 EXCEPT** 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。 
-**C： INTERSECT 运算符INTERSECT** 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当 **ALL** 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。 
-**注：**使用运算词的几个查询结果行必须是一致的。 
-**12****、说明：使用外连接** A、**left （outer） join**： 
-左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 
-SQL: select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
-**B：right （outer） join:** 
-右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。 
-**C：full/cross （outer） join**： 
-全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。
-**12****、分组:Group by:**  一张表，一旦分组 完成后，查询后只能得到组相关的信息。
-**组相关的信息：**（统计信息） count,sum,max,min,avg **分组的标准)****在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据在selecte统计函数中的字段，不能和普通的字段放在一起；**
 
-**13、对数据库进行操作：分离数据库**： **sp_detach_db; 附加数据库**：**sp_attach_db** 后接表明，附加需要完整的路径名
-**14.****如何修改数据库的名称:**
-sp_renamedb 'old_name', 'new_name'
 
- 
-
-**二、提升**
-
-**1、说明：复制表(只复制结构,源表名：a 新表名：b) (Access可用)法一：**select * into b from a where 1<>1（仅用于SQlServer）
-**法二：**select top 0 * into b from a
-**2、说明：拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)**insert into b(a, b, c) select d,e,f from b;
-
-**3、说明：跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)**insert into b(a, b, c) select d,e,f from b in ‘具体数据库’ where 条件
-例子：..from b in '"&Server.MapPath(".")&"\data.mdb" &"' where..
-
-**4、说明：子查询(表名1：a 表名2：b)**select a,b,c from a where a IN (select d from b ) 或者: select a,b,c from a where a IN (1,2,3)
-
-**5、说明：显示文章、提交人和最后回复时间**select a.title,a.username,b.adddate from table a,(select max(adddate) adddate from table where table.title=a.title) b
-
-**6、说明：外连接查询(表名1：a 表名2：b)**select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
-
-**7、说明：在线视图查询(表名1：a )**select * from (SELECT a,b,c FROM a) T where t.a > 1;
 
 **8、说明：between的用法,between限制查询数据范围时包括了边界值,not between不包括**select * from table1 where time between time1 and time2
 select a,b,c, from table1 where a not between 数值1 and 数值2
@@ -725,3 +722,6 @@ where not exists(
 select * from author where id=b.id)
 go
 ```
+
+# 方便取用的初始化操作
+
