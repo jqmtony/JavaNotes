@@ -1,11 +1,20 @@
 【重写chatServer和chatClient】
 【jason解析天气】
+【配置文件】
 
 【mySQL表格语句整理和Test】，mysql的source拿出来，从里面直接整理语句就好
 【mySQL直接可以用的表建立什么的】github或者论坛上看一下有没有现成的，自己尝试造
 
+【复习之前的Demo】
 【链外网，掘进juejin.im】
 =========================
+11/14
+930-1012 JDBC
+1033-1119 JDBC
+1340-1500 mysql.logs,upd my.ini
+1510-1555 daoImp操作mysql:preparedStatment,executeUpdate
+1604-1620 daoImp操作mysql:preparedStatment,executeUpdate
+1650-1711 daoImp操作mysql:statementQuery
 
 11/13
 930-1000 函数
@@ -13,7 +22,7 @@
 1330-1441 索引 index
 1505-1611 update JSE.xmind，触发器 trigger
 1641-1734 update JSE.xmind，视图
-1840-2000 
+1840-2000 update JSE.xmind
 
 11/12,DAY3-mySQL-查询-简单链接子合并
 1000-1104 select,as nickname
