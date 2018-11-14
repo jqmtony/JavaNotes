@@ -8,13 +8,14 @@
 【复习之前的Demo】
 【链外网，掘进juejin.im】
 =========================
-11/14
+11/14,DAY5-JDBC-mysqlConJ-updStatements
 930-1012 JDBC
 1033-1119 JDBC
 1340-1500 mysql.logs,upd my.ini
 1510-1555 daoImp操作mysql:preparedStatment,executeUpdate
 1604-1620 daoImp操作mysql:preparedStatment,executeUpdate
 1650-1711 daoImp操作mysql:statementQuery
+1834-
 
 11/13
 930-1000 函数
