@@ -25,7 +25,19 @@
 
 # COURSE
 
-**11/15，DAY6-JDBC-XXManagerSystem**
+**11/16**
+
+```mysql
+0941-1016 autoCommit事务，rollback
+1033-1120 autoCommit事务权限等级
+1241-1315 SystemManager:Use
+1335-1417 
+1450-1520
+1535-1630
+1637-1730
+```
+
+11/15，DAY6-JDBC-XXManagerSystem**
 
 ```reStructuredText
 0932-1002 装饰模式实现连接池的取出归还.course

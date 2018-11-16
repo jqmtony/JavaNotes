@@ -1,5 +1,7 @@
 package ManagerSystem.App;
 
+import java.sql.SQLException;
+
 import ManagerSystem.View.View;
 import ManagerSystem.View.WelcomeView;
 
@@ -9,7 +11,7 @@ import ManagerSystem.View.WelcomeView;
  *
  */
 public class main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		View view = new WelcomeView();
 		while(view!=null) {
 			view = view.showView();

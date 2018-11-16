@@ -1,5 +1,7 @@
 package ManagerSystem.Service;
 
+import java.sql.SQLException;
+
 import ManagerSystem.Domain.User;
 
 /**
@@ -9,7 +11,7 @@ import ManagerSystem.Domain.User;
  */
 public interface UserService {
 
-	User getUser(String userName, int userPwd);
+	User loginUser(String userName, String userPwd) throws SQLException;
 
 	
 }

@@ -1,6 +1,6 @@
 package ManagerSystem.View;
 
-import ManagerSystem.Utils.getInput;
+import ManagerSystem.Utils.InputUtils;
 
 public class WelcomeView extends View {
 	/**
@@ -17,7 +17,7 @@ public class WelcomeView extends View {
 	@Override
 	public View showView() {
 		System.out.println("1.µÇÂ¼ 2.×¢²á");
-		int chooseNum = getInput.nextInt();
+		int chooseNum = InputUtils.nextInt();
 		switch (chooseNum) {
 		case 1:
 			nextView =new LoginView();

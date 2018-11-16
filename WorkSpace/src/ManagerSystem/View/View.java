@@ -1,5 +1,7 @@
 package ManagerSystem.View;
 
+import java.sql.SQLException;
+
 import ManagerSystem.Domain.User;
 
 public abstract class View {
@@ -19,8 +21,9 @@ public abstract class View {
 
 	/**
 	 * 页面内容在showView里面执行
+	 * @throws SQLException 
 	 */
-	public abstract View showView();
+	public abstract View showView() throws SQLException;
 
 	/**
 	 * 跳转页面通过return nextView实现
