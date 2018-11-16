@@ -19,13 +19,24 @@
 - CRM:绑定联系人和客户ID
 - 工厂设置创建单例
 - 重写chatServer和chatClient
-- jason解析天气
+- jason解析天气：Integer.parseInt
 - 复习配置文件
 - 复习之前的Demo
 
-# CLASS TIME
+# COURSE
 
-空
+**11/15，DAY6-JDBC-XXManagerSystem**
+
+```reStructuredText
+0932-1002 装饰模式实现连接池的取出归还.course
+1022-1047 装饰模式实现连接池的取出归还.java
+1053-1134 DBCP
+1310-1320 JSon Review
+1335-1438 XXManager:User
+1456-1600 XXManager:User
+1640-1730 XXManager练习
+1838-2000 SystemManager:User(View,Login)
+```
 
 **11/14,DAY5-JDBC-mysqlConJ-updStatements**
 

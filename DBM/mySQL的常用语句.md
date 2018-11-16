@@ -60,6 +60,15 @@ show create view vName[\G]
 select * from vName
 ```
 
+## 设置约束
+
+```mysql
+# 唯一性约束
+ALTER TABLE ·t_user· ADD unique(`username`)
+```
+
+
+
 ## 基本语句
 
 ### 增删改查
