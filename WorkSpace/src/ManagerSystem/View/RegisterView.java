@@ -3,7 +3,7 @@ package ManagerSystem.View;
 public class RegisterView extends View {
 
 	public RegisterView( ) {
-		super("µÇÂ¼Ò³Ãæ");
+		super("×¢²áÒ³Ãæ");
 	}
 
 	@Override

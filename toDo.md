@@ -1,4 +1,4 @@
-# VIEW
+# DIFFer
 
 - MORE
   - 优质的blog或github等（谈资，有意识）
@@ -8,36 +8,45 @@
   - bilibili视频，程序员相关
   - LeetCode
 
-- Person：张昊、张敏
 - 工具
-  - 代码粘贴至Word特殊化格式](http://www.planetb.ca/syntax-highlight-word)
+  - [代码粘贴至Word特殊化格式](http://www.planetb.ca/syntax-highlight-word)
   - StackOverFlow
 
 # REVIEW
 
 - starUML，画一下类图，感受一下，学习一下
+- 复习之前的Demo
+
 - CRM:绑定联系人和客户ID
 - 工厂设置创建单例
-- 重写chatServer和chatClient
-- jason解析天气：Integer.parseInt
-- 复习配置文件
-- 复习之前的Demo
+- jason解析：Integer.parseInt，JSON.toJSONString（查询车辆会用到）
+- 画图（租车系统）>>> 创建包
+- try catch 和 throw 的差别
 
 # COURSE
 
-**11/16**
+**11/18**
+
+```reStructuredText
+1315-1437 SystemManager:Login（实现登录模块，非socket）
+1520-1558 复看chatServer和chatClient
+1613-1650 思考租车系统的业务逻辑和整体架构
+
+```
+
+**11/16，周五，DAY7-JDBC-autoCommit-isoltionMode**
 
 ```mysql
 0941-1016 autoCommit事务，rollback
-1033-1120 autoCommit事务权限等级
+1033-1120 autoCommit事务，isolation的4个等级
 1241-1315 SystemManager:Use
-1335-1417 
-1450-1520
-1535-1630
-1637-1730
+1335-1417 set autoCommit = off; start transaction;
+1450-1520 操作事务，隔离级别测试
+1535-1630 操作事务，隔离级别测试
+1637-1730 二嗨租车项目说明
 ```
 
-11/15，DAY6-JDBC-XXManagerSystem**
+**11/15，DAY6-JDBC-XXManagerSystem**
 
 ```reStructuredText
 0932-1002 装饰模式实现连接池的取出归还.course
@@ -63,7 +72,7 @@
 2144-2213 mySQL的常用语句.md
 ```
 
-**11/13**
+**11/13，DAY2-mySQL-增删改查**
 
 ```mysql
 930-1000 函数
@@ -114,7 +123,7 @@ sql图像化界面：navicat premium
 1831-2030 D23_McDonalSerLine
 2147-2340 D23_McDonalSerLine，实现:)
 
-**11/6**
+**11/6，DAY22-Socket-Server-Client**
 916-1000 输入输出流
 1017-1130 Server,Client
 1330-1443 chatServer,chatClient

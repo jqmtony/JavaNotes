@@ -11,10 +11,15 @@ import ManagerSystem.View.WelcomeView;
  *
  */
 public class main {
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) {
 		View view = new WelcomeView();
 		while(view!=null) {
-			view = view.showView();
+			try {
+				view = view.showView();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }

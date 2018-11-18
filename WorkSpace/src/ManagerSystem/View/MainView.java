@@ -8,6 +8,7 @@ public class MainView extends View {
 
 	@Override
 	public View showView() {
+		System.out.println(currentUser.getUserAccount()+" ª∂”≠ªÿ¿¥£°");
 		return null;
 	}
 

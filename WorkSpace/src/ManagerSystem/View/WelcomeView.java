@@ -16,19 +16,24 @@ public class WelcomeView extends View {
 	 */
 	@Override
 	public View showView() {
-		System.out.println("1.登录 2.注册");
-		int chooseNum = InputUtils.nextInt();
-		switch (chooseNum) {
-		case 1:
-			nextView =new LoginView();
-			break;
-		case 2:
-			nextView = new RegisterView();
-			break;
-		default:
+		int chooseNum = 0;
+		// 解决输入内容不符合要求的异常，避免程序中断
+		while(true) {
+			System.out.println("1.登录 2.注册");
+			chooseNum = InputUtils.nextInt();
+			switch (chooseNum) {
+			case 1:
+				nextView =new LoginView();
+				break;
+			case 2:
+				nextView = new RegisterView();
+				break;
+			default:
+				System.out.println("没有该选项，请重新输入！");
+				continue;
+			}
 			break;
 		}
-
 		return nextView;
 	}
 

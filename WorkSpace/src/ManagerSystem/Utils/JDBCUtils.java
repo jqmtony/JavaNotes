@@ -34,10 +34,10 @@ public class JDBCUtils {
 		try {
 			sProperties.load(is);
 			// -- 3.读取配置文件
-			driver = sProperties.getProperty("driver");
+			driver = sProperties.getProperty("driverClassName");
 			url = sProperties.getProperty("url");
-			user = sProperties.getProperty("user");
-			pwd = sProperties.getProperty("pwd");
+			user = sProperties.getProperty("username");
+			pwd = sProperties.getProperty("password");
 		} catch (IOException e) {
 			System.out.println("读取配置文件失败!");
 		}
