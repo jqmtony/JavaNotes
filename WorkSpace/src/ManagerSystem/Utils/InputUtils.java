@@ -5,6 +5,7 @@ package ManagerSystem.Utils;
  *
  */
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputUtils {
@@ -19,7 +20,7 @@ public class InputUtils {
 	 * @return
 	 */
 	public static int nextInt() {
-		return mScanner.nextInt();
+		return  mScanner.nextInt();
 	}
 
 	/**

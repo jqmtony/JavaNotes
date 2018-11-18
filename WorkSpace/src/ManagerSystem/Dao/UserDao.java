@@ -6,7 +6,7 @@ import ManagerSystem.Domain.User;
 
 public interface UserDao {
 
-	User getUser(String...params) throws SQLException;
+	User getUser(String... params) throws SQLException;
 
 
 }

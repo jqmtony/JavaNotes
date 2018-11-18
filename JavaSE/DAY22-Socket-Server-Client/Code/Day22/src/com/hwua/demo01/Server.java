@@ -30,6 +30,7 @@ public class Server {
 				Socket so = server.accept(); 
 				//-- 利用Socket对象可以打印访问的客户端的信息
 				System.out.println(so.getInetAddress());
+				System.out.println(so.getInetAddress().getHostAddress());
 				
 				//-- 通过Socket获取输出流对象.没有直接获取字符流的API只能获取直接流
 				OutputStream os = so.getOutputStream();

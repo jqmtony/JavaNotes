@@ -24,14 +24,13 @@ public abstract class View {
 	 * @throws SQLException 
 	 */
 	public abstract View showView() throws SQLException;
-
 	/**
 	 * 跳转页面通过return nextView实现
 	 */
 	protected View nextView;
 	/**
-	 * 当前用户，之所以要提供是因为所有页面是通的，你登录了就可以访问所有的页面
+	 * 当前用户，之所以要提供是因为所有页面是通的，你登录了就可以访问所有的页面，所以一定是静态（全局可用）
 	 *
 	 */
-	protected User currentUser;
+	public static User currentUser;
 }

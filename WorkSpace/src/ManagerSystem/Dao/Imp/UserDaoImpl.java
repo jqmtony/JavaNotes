@@ -7,9 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.protocol.Resultset;
-
-import DBM_Day6_JDBC.JDBCUtils;
+import DBM.Day6.JDBC.JDBCUtils;
 import ManagerSystem.Dao.UserDao;
 import ManagerSystem.Domain.User;
 
@@ -28,9 +26,9 @@ public class UserDaoImpl implements UserDao, resultSetHandler {
 	@Override
 	public User getUser(String... params) throws SQLException {
 		// 访问数据库
-		Connection connection = JDBCUtils.getConnection();
+		Connection connection = ManagerSystem.Utils.JDBCUtils.getConnection();
 		// 将参数传入数据库：userID,userAccount,userName,userPwd
-		String sql = "select * from user where userName = ? and userPwd = ? ";
+		String sql = "select * from user where userName = ? and userPwd = ? ; ";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		int paramsCount = preparedStatement.getParameterMetaData().getParameterCount();
 		for (int i = 0; i < paramsCount; i++) {
@@ -44,6 +42,10 @@ public class UserDaoImpl implements UserDao, resultSetHandler {
 		if(userList.size()<=0) {
 			return null;
 		}
+		// 关闭结果集，关闭预处理
+		JDBCUtils.closeResultSet(rSet);
+		JDBCUtils.closePreparedStatement(preparedStatement);
+		
 		return userList.get(0);
 	}
 
@@ -56,9 +58,9 @@ public class UserDaoImpl implements UserDao, resultSetHandler {
 		List<User> userList = new ArrayList<>();
 		// 将表中的数据按字段名一个一个取出来
 		while (rSet.next()) {
-			User user = new User();
-			user.setUserName(rSet.getString("用户名"));
-			user.setUserPwd(rSet.getString("密码"));
+			User user = new User(rSet.getShort("userID"),rSet.getString("userAccount"),rSet.getString("userName"),rSet.getString("userPwd"));
+			// 一定要记得保存到UserList里面阿！！！
+			userList.add(user);
 		}
 		return userList;
 	}

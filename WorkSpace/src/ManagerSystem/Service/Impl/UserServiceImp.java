@@ -3,6 +3,7 @@ package ManagerSystem.Service.Impl;
 import java.sql.SQLException;
 
 import ManagerSystem.Dao.UserDao;
+import ManagerSystem.Dao.Imp.UserDaoImpl;
 import ManagerSystem.Domain.User;
 import ManagerSystem.Service.UserService;
 
@@ -13,7 +14,10 @@ import ManagerSystem.Service.UserService;
  *
  */
 public class UserServiceImp implements UserService {
-	private UserDao ud;
+	UserDao ud;
+	public UserServiceImp() {
+		ud = new UserDaoImpl();
+	}
 
 	/**
 	 * LoginUser，用户登录业务层
@@ -21,8 +25,15 @@ public class UserServiceImp implements UserService {
 	 * @throws SQLException 
 	 */
 	@Override
-	public User loginUser(String userName, String userPwd) throws SQLException {
-		return ud.getUser(userName,userPwd);
+	public User loginUser(String userName, String userPwd)  {
+		User user = null;
+		try {
+			user = ud.getUser(userName,userPwd);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
 	}
 
 }
