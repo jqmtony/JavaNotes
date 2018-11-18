@@ -20,7 +20,6 @@
 - CRM:绑定联系人和客户ID
 - 工厂设置创建单例
 - jason解析：Integer.parseInt，JSON.toJSONString（查询车辆会用到）
-- 画图（租车系统）>>> 创建包
 - try catch 和 throw 的差别
 
 # COURSE
@@ -31,7 +30,7 @@
 1315-1437 SystemManager:Login（实现登录模块，非socket）
 1520-1558 复看chatServer和chatClient
 1613-1650 思考租车系统的业务逻辑和整体架构
-
+0007-0040 画业务逻辑图（租车系统）
 ```
 
 **11/16，周五，DAY7-JDBC-autoCommit-isoltionMode**
