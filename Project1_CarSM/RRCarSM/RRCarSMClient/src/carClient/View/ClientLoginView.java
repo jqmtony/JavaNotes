@@ -1,5 +1,9 @@
 package carClient.View;
 
+import java.io.IOException;
+
+import com.alibaba.fastjson.JSON;
+
 import carClient.Entity.User;
 import carClient.Utils.RegexUtils;
 
@@ -10,15 +14,22 @@ public class ClientLoginView extends ClientView {
 	}
 
 	@Override
-	public ClientView showCurrentView() {
+	public ClientView showCurrentView() throws IOException {
 		// 获取参数
 		User user = new User();
 		user.setUserName(RegexUtils.getUserName());
-		user.setUserPwd(RegexUtils.getUserPwd());
+		user.setPassWord(RegexUtils.getUserPwd());
 		// 发送请求
-		String request = 
-		// 是否存在User，存在就进主页面，不存在就进注册页面
-		
+		String request = "Login#"+user.getUserName()+"#"+user.getPassWord();
+		// 获取相应
+		String response = getServerResponse.getResponse(request);
+		// 判断跳转
+		if(response.equals("success")) {
+			currentUser = user;
+			nextView = new ClientViewCars();
+		}else {
+			nextView = new ClientRegisterView();
+		}
 		return nextView;
 	}
 

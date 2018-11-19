@@ -15,7 +15,8 @@ import java.net.Socket;
  * @author 李文娟
  *
  */
-public class ServerRequestAndReponse {
+public class sendClientRequest {
+	ServerSocket server;
 	/**
 	 * 启动服务器
 	 * 
@@ -23,19 +24,19 @@ public class ServerRequestAndReponse {
 	 */
 	public void startServer(int port) {
 		try {
-			ServerSocket server = new ServerSocket(1024);
+			server = new ServerSocket(port);
 			while(true) {
 				System.out.println("服务器启动成功,等待客户端绑定...");
 				// 获取Socket
 				Socket so = server.accept(); 
 				System.out.println(so.getInetAddress().getHostAddress()+"已连接到服务器！");
-				// 输出流 >>> 写给Client
-				PrintWriter pw = new PrintWriter(so.getOutputStream(),true);
-				pw.println("你好!");
 				// 输入流 >>> 读取Client
 				BufferedReader br = new BufferedReader(new InputStreamReader(so.getInputStream(), "GBK"));
 				String line = br.readLine();
 				System.out.println("收到客户端信息:\t" + line);
+				// 输出流 >>> 写给Client
+				PrintWriter pw = new PrintWriter(so.getOutputStream(),true);
+				pw.println("你好!");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

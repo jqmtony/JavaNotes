@@ -1,15 +1,16 @@
 package carServer.App;
 
-import carServer.Utils.ServerRequestAndReponse;
+import carServer.Utils.ServerPool;
 
 /**
  * 执行后，服务器开始运行
+ * 
  * @author 李文娟
  *
  */
 public class main {
 	public static void main(String[] args) {
-		ServerRequestAndReponse myServer=new ServerRequestAndReponse();
-		myServer.startServer(3333);
+		ServerPool serverPool = new ServerPool();
+		serverPool.start();
 	}
 }

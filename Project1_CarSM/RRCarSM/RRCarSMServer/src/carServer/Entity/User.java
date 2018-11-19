@@ -1,4 +1,4 @@
-package carClient.Entity;
+package carServer.Entity;
 
 import java.io.Serializable;
 
@@ -97,6 +97,7 @@ public class User implements Serializable{
     public void setType(int type) {
         this.type = type;
     }
+
     @Override
     public String toString() {
         return "User{" +

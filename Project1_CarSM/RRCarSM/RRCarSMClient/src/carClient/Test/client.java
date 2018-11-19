@@ -27,15 +27,6 @@ public class client {
 		try {
 			Socket so = new Socket("127.0.0.1", 1024);
 			
-			//-- 1.获取输入流.用于接收服务端发过来的信息
-			InputStream is = so.getInputStream();
-			//-- 2.对字节流进行包装得到字符流.再装饰得到缓冲流
-			InputStreamReader isr = new InputStreamReader(is,"GBK");
-			BufferedReader br = new BufferedReader(isr);
-			//-- 3.利用缓冲流API来进行读取
-			String line = br.readLine();
-			System.out.println("收到服务端信息:\t" + line);
-			
 			//-- 4.获取输出流.写信息给服务端
 			OutputStream os = so.getOutputStream();
 			//-- 5.装饰成打印流
@@ -46,6 +37,15 @@ public class client {
 			String temp = scan.next();
 			//-- 7.把信息发送给服务端
 			pw.println(temp);
+
+			//-- 1.获取输入流.用于接收服务端发过来的信息
+			InputStream is = so.getInputStream();
+			//-- 2.对字节流进行包装得到字符流.再装饰得到缓冲流
+			InputStreamReader isr = new InputStreamReader(is,"GBK");
+			BufferedReader br = new BufferedReader(isr);
+			//-- 3.利用缓冲流API来进行读取
+			String line = br.readLine();
+			System.out.println("收到服务端信息:\t" + line);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

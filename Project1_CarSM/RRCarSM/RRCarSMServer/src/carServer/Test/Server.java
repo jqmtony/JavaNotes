@@ -29,18 +29,17 @@ public class Server {
 				System.out.println(so.getInetAddress());
 				System.out.println(so.getInetAddress().getHostAddress());
 				
+				//-- 接收客户端返回的信息
+				BufferedReader br = new BufferedReader(new InputStreamReader(so.getInputStream(), "GBK"));
+				String line = br.readLine();
+				System.out.println("收到客户端信息:\t" + line);
+
 				//-- 通过Socket获取输出流对象.没有直接获取字符流的API只能获取直接流
 				OutputStream os = so.getOutputStream();
 				//-- 对字节流进行装饰得到缓冲流.true代表自动刷新
 				PrintWriter pw = new PrintWriter(os,true);
 				//-- 利用流对象像客户端发送内容
 				pw.println("你好!");
-				
-				
-				//-- 接收客户端返回的信息
-				BufferedReader br = new BufferedReader(new InputStreamReader(so.getInputStream(), "GBK"));
-				String line = br.readLine();
-				System.out.println("收到客户端信息:\t" + line);
 				
 			}
 		} catch (IOException e) {
