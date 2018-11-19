@@ -24,6 +24,17 @@
 
 # COURSE
 
+**11/19**
+
+```reStructuredText
+0930-1038 RRCarSManager，思考client和server以及view的关系
+1056-1140
+1248-1316 
+1408-1544
+1601-1734
+
+```
+
 **11/18**
 
 ```reStructuredText
