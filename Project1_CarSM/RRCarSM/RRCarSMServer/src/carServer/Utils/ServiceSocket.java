@@ -7,6 +7,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.sql.SQLException;
 
+import carServer.Manager.ServiceManager;
+
 public class ServiceSocket {
 	/**
 	 *  获取客户端返回的字符串
@@ -34,7 +36,7 @@ public class ServiceSocket {
      * @throws Exception 
      * @throws SQLException 
      */
-    public static void getResponse(ServiceFactory serviceFactory , Socket socket) throws SQLException, Exception {
+    public static void getResponse(ServiceManager serviceFactory , Socket socket) throws SQLException, Exception {
     	
         String result = serviceFactory.getService(getResponse(socket));
         

@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import carServer.Manager.ServiceManager;
+
 public class ServerPool {
 	/**
 	 * 提供线程池用来管理客户端的连接线程.避免每次新建线程所造成的系统资源浪费
@@ -49,7 +51,7 @@ public class ServerPool {
 		/**
 		 * 当前客户端的服务
 		 */
-		private ServiceFactory serviceFactory;
+		private ServiceManager serviceFactory;
 
 		/**
 		 * 用来运行当前客户端服务的线程

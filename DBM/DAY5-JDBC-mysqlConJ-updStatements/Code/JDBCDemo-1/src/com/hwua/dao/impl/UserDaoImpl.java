@@ -104,7 +104,7 @@ public class UserDaoImpl implements UserDao {
 	public static boolean updateObject(String sql,Object... params) throws SQLException {
 		// -- 1 建立连接
 		Connection conn = JDBCUtils.getConnection();
-
+		System.out.println(conn);
 		// -- 3.通过Connection来获取PreparedStatement Ctrl + 1
 		PreparedStatement preparedStatement = conn.prepareStatement(sql);
 		// -- 4.替换占位符
@@ -121,8 +121,8 @@ public class UserDaoImpl implements UserDao {
 
 	public static void main(String[] args) {
 		try {
-			String sql = "insert into _user values(?,?,?)";
-			updateObject(sql,5,"孙七",0);
+			String sql = "insert into score values(?,?,?)";
+			updateObject(sql,99,99,99);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

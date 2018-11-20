@@ -16,24 +16,16 @@ import java.util.Scanner;
  *
  */
 public class getServerResponse {
+	public static Socket socket;
 
 	public String getResponse(String request) throws IOException {
-		// 访问server
-		Socket socket = new Socket("127.0.0.1", 2222);
-		// 输出流 >>> 写给server
+		socket = new Socket("127.0.0.1", 2222);
+		// 输出
 		PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
-		System.out.println("请输入发送给服务端的信息：");
 		pw.println(request);
-		// 输入流 >>> 读取server
+		// 输入
 		BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream(), "GBK"));
-		StringBuffer response = new StringBuffer();
-		response.append(br.readLine());
-		// 关闭流和socket
-		pw.close();
-		br.close();
-		socket.close();
-		
-		return response.toString();
+		String response = new String(new StringBuffer(br.readLine()));
+		return response;
 	}
-
 }
