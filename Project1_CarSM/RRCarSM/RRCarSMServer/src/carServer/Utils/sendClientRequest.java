@@ -31,11 +31,11 @@ public class sendClientRequest {
 				System.out.println("服务器启动成功,等待客户端绑定...");
 				// 获取Socket
 				Socket so = server.accept(); 
-				System.out.println(so.getInetAddress().getHostAddress()+"已连接到服务器！");
+				System.out.println(so.getInetAddress()+"已连接到服务器！");
 				// 输入
 				BufferedReader br = new BufferedReader(new InputStreamReader(so.getInputStream(), "GBK"));
 				String request = br.readLine();
-//				System.out.println("收到客户端信息:\t" + request);
+				System.out.println("收到客户端信息:\t" + request);
 				// 将request给控制中心取处理，并拿到返回值
 				ServiceManager sManager = new ServiceManager();
 				String response = sManager.getService(request);
@@ -47,6 +47,11 @@ public class sendClientRequest {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * 测试类
+	 * @param args
+	 * @throws SQLException
+	 */
 	public static void main(String[] args) throws SQLException {
 		sendClientRequest sendClientRequest = new sendClientRequest();
 		sendClientRequest.startServer(2222);

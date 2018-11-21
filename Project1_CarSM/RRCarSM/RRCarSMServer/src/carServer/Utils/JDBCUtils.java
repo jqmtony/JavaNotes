@@ -90,10 +90,14 @@ public class JDBCUtils {
 		System.out.println("关闭连接成功!~");
 
 	}
-
+/**
+ * 测试类
+ * @param args
+ */
 	public static void main(String[] args) {
 		JDBCUtils u = new JDBCUtils();
 		Connection conn = JDBCUtils.getConnection();
+		System.out.println(conn);
 		if (conn != null) {
 			u.closeConnection(conn);
 		}
@@ -112,4 +116,5 @@ public class JDBCUtils {
 		}
 		
 	}
+
 }

@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import carServer.Entity.Car;
 import carServer.Entity.User;
 
 
@@ -18,4 +19,5 @@ public interface resultSetHandler {
 	 * @throws SQLException 
 	 */
 	public List<User> userLoginHandler(ResultSet rSet) throws SQLException;
+
 }

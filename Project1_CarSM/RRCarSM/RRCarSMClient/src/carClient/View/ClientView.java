@@ -39,6 +39,8 @@ public abstract class ClientView {
 	 * 用户一旦登录，所有页面可获得其信息并输出
 	 */
 	protected User currentUser;
-
+	/**
+	 * 声明Socket
+	 */
 	
 }

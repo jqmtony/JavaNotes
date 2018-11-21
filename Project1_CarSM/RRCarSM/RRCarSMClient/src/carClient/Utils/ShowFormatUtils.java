@@ -16,4 +16,11 @@ public class ShowFormatUtils {
 		System.out.println("欢迎访问二嗨租车");
 		System.out.println("===================");
 	}
+	public static void showCarQueryHeader() {
+		String line = "==============================";
+		System.out.println(line+line+line+"\n编号 \t 类型 \t 简介 \t 品牌 \t 车型 \t 市场价 \t\t 租赁价 \t 每日租金\t0可借1不可借 \t0上架1未上架");
+	}
+	public static void main(String[] args) {
+		showCarQueryHeader();
+	}
 }

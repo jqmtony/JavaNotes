@@ -1,74 +1,37 @@
 package carClient.Entity;
 
 import java.io.Serializable;
-
+/**
+ * 查询车所需要的字段值
+ * @author 李文娟
+ *
+ */
 public class Car implements Serializable{
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -4171634123367820406L;
-	/**
-	 * 汽车编号
-	 */
-	private String carId;
-	/**
-	 * 车牌号
-	 */
-    private String carNumber;
-    /**
-     * 品牌编号
-     */
-    private String brandId;
-    /**
-     * 汽车名称
-     */
-    private String model;
-    /**
-     * 汽车颜色
-     */
-    private String color;
-    /**
-     * 类别编号
-     */
-    private String categoryId;
-    /**
-     * 汽车简介
-     */
-    private String carComments;
-    /**
-     * 汽车市场价
-     */
-    private double price;
-    /**
-     * 汽车每日租金
-     */
-    private double rent;
-    /**
-     * 汽车状态
-     */
-    private int status;
-    /**
-     * 汽车是否上架
-     */
-    private int useable;
 	
-    public String getCarId() {
-		return carId;
+	private int id;
+	private String model;
+	private String t_comments;
+	private String brand_name;
+	private String category_name;
+	// 汽车价格
+	private double price;
+	// 租车价格（每天）
+	private double rent;
+	// 是否借出：0可借，1不可借
+	private int status;
+	// 是否上架：0上架，1未上架
+	private int useable;
+	
+	/**
+	 * get set
+	 * @return
+	 */
+	public int getId() {
+		return id;
 	}
-	public void setCarId(String carId) {
-		this.carId = carId;
-	}
-	public String getCarNumber() {
-		return carNumber;
-	}
-	public void setCarNumber(String carNumber) {
-		this.carNumber = carNumber;
-	}
-	public String getBrandId() {
-		return brandId;
-	}
-	public void setBrandId(String brandId) {
-		this.brandId = brandId;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getModel() {
 		return model;
@@ -76,23 +39,23 @@ public class Car implements Serializable{
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public String getColor() {
-		return color;
+	public String getT_comments() {
+		return t_comments;
 	}
-	public void setColor(String color) {
-		this.color = color;
+	public void setT_comments(String t_comments) {
+		this.t_comments = t_comments;
 	}
-	public String getCategoryId() {
-		return categoryId;
+	public String getBrand_name() {
+		return brand_name;
 	}
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
+	public void setBrand_name(String brand_name) {
+		this.brand_name = brand_name;
 	}
-	public String getCarComments() {
-		return carComments;
+	public String getCategory_name() {
+		return category_name;
 	}
-	public void setCarComments(String carComments) {
-		this.carComments = carComments;
+	public void setCategory_name(String category_name) {
+		this.category_name = category_name;
 	}
 	public double getPrice() {
 		return price;
@@ -118,28 +81,43 @@ public class Car implements Serializable{
 	public void setUseable(int useable) {
 		this.useable = useable;
 	}
-	public Car(String carNumber, String brandId, String model, String color, String categoryId,
-			String carComments, double price, double rent, int status, int useable) {
-		this.carNumber = carNumber;
-		this.brandId = brandId;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	/**
+	 * 输出格式，也就是List<Car>的输出格式
+	 */
+	@Override
+	public String toString() {
+		return "\n"+id+"\t"+model+"\t"+t_comments+"\t"+brand_name+"\t"+category_name+"\t"+price+"\t"+rent+"\t"+status+"\t"+useable;
+	}
+	
+	/**
+	 * 有参构造
+	 * @param id
+	 * @param model
+	 * @param t_comments
+	 * @param brand_name
+	 * @param category_name
+	 * @param price
+	 * @param rent
+	 * @param status
+	 * @param useable
+	 */
+	public Car(int id, String model, String t_comments, String brand_name, String category_name, double price,
+			double rent, int status, int useable) {
+		super();
+		this.id = id;
 		this.model = model;
-		this.color = color;
-		this.categoryId = categoryId;
-		this.carComments = carComments;
+		this.t_comments = t_comments;
+		this.brand_name = brand_name;
+		this.category_name = category_name;
 		this.price = price;
 		this.rent = rent;
 		this.status = status;
 		this.useable = useable;
 	}
-	public Car() {
-	}
+
 	
-	@Override
-	public String toString() {
-		return carId + "\t" + carNumber + "\t" + brandId + "\t" + model
-				+ "\t" + color + "\t" + categoryId + "\t" + carComments + "\t"
-				+ price + "\t" + rent + "\t" + status + "\t" + useable ;
-	}
-    
-    
 }

@@ -2,11 +2,11 @@ package carServer.Manager;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 import carServer.Entity.Car;
-import carServer.Entity.Record;
 import carServer.Entity.User;
+import carServer.Service.CarService;
 import carServer.Service.UserService;
+import carServer.Service.Impl.CarServiceImp;
 import carServer.Service.Impl.UserServiceImp;
 import carServer.Utils.JSONUtils;
 
@@ -19,15 +19,16 @@ import carServer.Utils.JSONUtils;
 public class ServiceManager {
 	UserService userService;
 	CarService carService;
+	ArrayList<Car> listCarArray;
+	public ServiceManager() {
+		userService = new UserServiceImp();
+		carService = new CarServiceImp();
+	}
 
 	public String getService(String request) throws SQLException {
 		System.out.println(request);
 		String[] array = request.split("#");
-		String response = null;
-		// 遍历request内容
-		for (String string : array) {
-			System.out.println(string);
-		}
+		String response = "====[控制中心进入switch前]： response";
 		switch (array[0]) {
 		/**
 		 * 用户服务
@@ -36,10 +37,8 @@ public class ServiceManager {
 			User user;
 			switch (array[1]) {
 			case "Login":
-				userService = new UserServiceImp();
 				user = userService.loginUser(array[2], array[3]);
 				System.out.println("[ServiceManager/Login返回值]\t"+user);
-				// 告知用户处理结果
 				if(user!=null) {
 					response = "登录成功";
 				}else {
@@ -61,20 +60,34 @@ public class ServiceManager {
 			default:
 				break;
 			}
+			break;
 		/**
 		 * 汽车类
 		 */
 		case "Car":
-			Car car;
 			switch (array[1]) {
+			// 查看所有车辆：Car#ListCar
 			case "ListCar":
-				ArrayList<Car> listCarArray=
+				listCarArray = carService.listCar();
 				break;
 			case "getCarPrice":
+				if(array[2].equals("1")) {
+					// 顺序：Car#getCarPrice#1
+					listCarArray = carService.listCarByPrice();
+				}else if(array[2].equals("2")) {
+					// 逆序：Car#getCarPrice#2
+					listCarArray = carService.listCarByPriceDESC();
+				}else {
+					System.out.println("选择1按照价格[升序]排序，选择2按照价格[降序]排序！");
+				}
 				break;
 			case "getCarCategory":
+				// 按类型搜索：Car#getCarCategory#舒适型
+				listCarArray = carService.listCarByCategory(array[2]);
 				break;
 			case "getCarBrand":
+				// 按类型搜索：Car#getCarBrand#大众
+				listCarArray = carService.listCarByBrand(array[2]);
 				break;
 			case "rentCar":
 				break;
@@ -83,11 +96,13 @@ public class ServiceManager {
 			default:
 				break;
 			}
+			System.out.println("====[控制中心打印listCarArray]"+listCarArray);
+			response = JSONUtils.listToJSONString(listCarArray);
+			break;
 		/**
 		 * 记录类，6 查看租车记录
 		 */
 		case "Record":
-			Record record;
 			switch (array[1]) {
 			case "listRecord":
 				break;
@@ -98,11 +113,12 @@ public class ServiceManager {
 			default:
 				break;
 			}
+			break;
 		default:
 			break;
 	}
 		// 打印response的值，预览
-		System.out.println("[ServiceManger, response的值]\t"+response);
+		System.out.println("====[控制中心response]\t"+response);
 		return response;
 	}
 
@@ -113,11 +129,13 @@ public class ServiceManager {
 	 */
 	public static void main(String[] args) {
 		ServiceManager sManager = new ServiceManager();
-		User user = new User(0, "testRegister", "testRegister", "female", "123", "123456", "上海", 1);
-		String userRequest = JSONUtils.objectToJSONString(user);
-		String string = "User#Register#"+userRequest;
+		String request = "Car#ListCar";
+		String request1 ="Car#getCarPrice#1";
+		String request2 ="Car#getCarPrice#2";
+		String request3 = "Car#getCarCategory#舒适型";
+		String request4 = "Car#getCarBrand#大众";
 		try {
-			sManager.getService(string);
+			sManager.getService(request);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
