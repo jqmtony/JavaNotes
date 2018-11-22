@@ -1,151 +1,149 @@
 package carServer.Entity;
 
 import java.io.Serializable;
+/**
+ * 车辆的租赁与归还所需要的字段
+ * @author 李文娟
+ *
+ */
 import java.util.Date;
 
-public class Record implements Serializable{
-	/**
-	 * 
-	 */
+public class Record implements Serializable {
 	private static final long serialVersionUID = -4330522307971975280L;
-	//租赁编号，唯一，自增
-	private Integer id;
-	//汽车编号
-	private Integer carId;
-	//汽车名称
-	private String carName;
-	//用户编号
-	private Integer userId;
-	//用户名称
-	private String userName;
-	//每日租金
-	private double dayprice;
-	//总租金
-	private double totalprice;
-	//备注
-	private String detail;
-	//品牌
-	private String brand;
-	//类型
-	private String type;
-	//借车时间
-	private Date fordate;
-	//还车时间
-	private Date enddate;
-	public void setEnddate(Date enddate) {
-		this.enddate = enddate;
-	}
-	public Date getEnddate() {
-		return enddate;
-	}
-	public Integer getId() {
-		return id;
+	// 编号
+	private int record_id;
+	// 汽车名称
+	private String car_number;
+	// 每日租金
+	private double rent;
+	// 总租金
+	private double payment;
+	// 备注
+	private String t_comments;
+	// 品牌
+	private String brand_name;
+	// 类型
+	private String category_name;
+	// 借车时间
+	private Date start_date;
+	// 还车时间
+	private Date return_date;
+
+	/**
+	 * get set
+	 * 
+	 * @return
+	 */
+	public int getRecord_id() {
+		return record_id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setRecord_id(int record_id) {
+		this.record_id = record_id;
 	}
 
-	public Integer getCarId() {
-		return carId;
+	public double getRent() {
+		return rent;
 	}
 
-	public void setCarId(Integer carId) {
-		this.carId = carId;
+	public void setRent(double rent) {
+		this.rent = rent;
 	}
 
-	public String getCarName() {
-		return carName;
+	public double getPayment() {
+		return payment;
 	}
 
-	public void setCarName(String carName) {
-		this.carName = carName;
+	public void setPayment(double payment) {
+		this.payment = payment;
 	}
 
-	public Integer getUserId() {
-		return userId;
+	public String getT_comments() {
+		return t_comments;
 	}
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setT_comments(String t_comments) {
+		this.t_comments = t_comments;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getBrand_name() {
+		return brand_name;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setBrand_name(String brand_name) {
+		this.brand_name = brand_name;
 	}
 
-	public double getDayprice() {
-		return dayprice;
+	public String getCategory_name() {
+		return category_name;
 	}
 
-	public void setDayprice(double dayprice) {
-		this.dayprice = dayprice;
+	public void setCategory_name(String category_name) {
+		this.category_name = category_name;
 	}
 
-	public double getTotalprice() {
-		return totalprice;
+	public Date getStart_date() {
+		return start_date;
 	}
 
-	public void setTotalprice(double totalprice) {
-		this.totalprice = totalprice;
+	public void setStart_date(Date start_date) {
+		this.start_date = start_date;
 	}
 
-	public String getDetail() {
-		return detail;
+	public Date getReturn_date() {
+		return return_date;
 	}
 
-	public void setDetail(String detail) {
-		this.detail = detail;
+	public void setReturn_date(Date return_date) {
+		this.return_date = return_date;
 	}
 
-	public String getBrand() {
-		return brand;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
-	public void setBrand(String brand) {
-		this.brand = brand;
+	public String getCar_number() {
+		return car_number;
 	}
 
-	public String getType() {
-		return type;
+	public void setCar_number(String car_number) {
+		this.car_number = car_number;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public Record() {
+		// TODO Auto-generated constructor stub
 	}
-
-	public Date getFordate() {
-		return fordate;
-	}
-
-	public void setFordate(Date fordate) {
-		this.fordate = fordate;
-	}
-
-
-	public Record(Integer id, Integer carId, String carName, Integer userId, String userName, double dayprice,
-			double totalprice, String detail, String brand, String type, Date fordate,Date enddate) {
+	/**
+	 * 有参构造
+	 * @param record_id
+	 * @param car_number
+	 * @param rent
+	 * @param payment
+	 * @param t_comments
+	 * @param brand_name
+	 * @param category_name
+	 * @param start_date
+	 * @param return_date
+	 */
+	public Record(int record_id, String car_number, double rent, double payment, String t_comments, String brand_name,
+			String category_name, Date start_date, Date return_date) {
 		super();
-		this.id = id;
-		this.carId = carId;
-		this.carName = carName;
-		this.userId = userId;
-		this.userName = userName;
-		this.dayprice = dayprice;
-		this.totalprice = totalprice;
-		this.detail = detail;
-		this.brand = brand;
-		this.type = type;
-		this.fordate = fordate;
-		this.enddate=enddate;
+		this.record_id = record_id;
+		this.car_number = car_number;
+		this.rent = rent;
+		this.payment = payment;
+		this.t_comments = t_comments;
+		this.brand_name = brand_name;
+		this.category_name = category_name;
+		this.start_date = start_date;
+		this.return_date = return_date;
 	}
 
-	public Record(){
-		
+	@Override
+	public String toString() {
+		return "Record [record_id=" + record_id + ", car_number=" + car_number + ", rent=" + rent + ", payment="
+				+ payment + ", t_comments=" + t_comments + ", brand_name=" + brand_name + ", category_name="
+				+ category_name + ", start_date=" + start_date + ", return_date=" + return_date + "]/n";
 	}
-	
+
 }

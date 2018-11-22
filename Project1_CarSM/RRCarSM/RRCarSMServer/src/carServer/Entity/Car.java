@@ -118,6 +118,4 @@ public class Car implements Serializable{
 		this.status = status;
 		this.useable = useable;
 	}
-
-	
 }

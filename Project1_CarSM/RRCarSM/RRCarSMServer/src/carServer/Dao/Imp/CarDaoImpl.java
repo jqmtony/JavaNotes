@@ -24,7 +24,7 @@ public class CarDaoImpl implements CarDao {
 		connection = JDBCUtils.getConnection();
 		rSetUtils = new rSetUtils();
 	}
-	
+
 	// 查询所有车辆，三表查询（car、brand、category）
 	@Override
 	public ArrayList<Car> getCarList() throws SQLException {
@@ -35,7 +35,7 @@ public class CarDaoImpl implements CarDao {
 		}
 		return carArrayList;
 	}
-	
+
 	// 按价格排序
 	@Override
 	public ArrayList<Car> getCarListByPrice() throws SQLException {
@@ -46,6 +46,7 @@ public class CarDaoImpl implements CarDao {
 		}
 		return carArrayList;
 	}
+
 	@Override
 	public ArrayList<Car> getCarListByPriceDESC() throws SQLException {
 		String sql = "select a.id,a.model,a.t_comments,b.brand_name,c.category_name,a.price, a.rent, a.status, a.useable from car a join car_brand b on a.brand_id=b.id join car_category c on a.category_id = c.id order by a.price DESC";
@@ -55,24 +56,35 @@ public class CarDaoImpl implements CarDao {
 		}
 		return carArrayList;
 	}
+
 	// 按类型查询
 	@Override
 	public ArrayList<Car> getCarListByCategory(String carCategory) throws SQLException {
-		String sql =  "select a.id,a.model,a.t_comments,b.brand_name,c.category_name,a.price, a.rent, a.status, a.useable from car a join car_brand b on a.brand_id=b.id join car_category c on a.category_id = c.id";
-		carArrayList = rSetUtils.getCarListByCategory(sql,carCategory);
+		String sql = "select a.id,a.model,a.t_comments,b.brand_name,c.category_name,a.price, a.rent, a.status, a.useable from car a join car_brand b on a.brand_id=b.id join car_category c on a.category_id = c.id";
+		carArrayList = rSetUtils.getCarListByCategory(sql, carCategory);
 		if (carArrayList.size() <= 0) {
 			return null;
 		}
 		return carArrayList;
 	}
+
 	// 按品牌查找
 	@Override
 	public ArrayList<Car> getCarListByBrand(String carBrand) throws SQLException {
-		String sql =  "select a.id,a.model,a.t_comments,b.brand_name,c.category_name,a.price, a.rent, a.status, a.useable from car a join car_brand b on a.brand_id=b.id join car_category c on a.category_id = c.id";
-		carArrayList = rSetUtils.getCarListByBrand(sql,carBrand);
+		String sql = "select a.id,a.model,a.t_comments,b.brand_name,c.category_name,a.price, a.rent, a.status, a.useable from car a join car_brand b on a.brand_id=b.id join car_category c on a.category_id = c.id";
+		carArrayList = rSetUtils.getCarListByBrand(sql, carBrand);
 		if (carArrayList.size() <= 0) {
 			return null;
 		}
 		return carArrayList;
 	}
+
+	/**
+	 * 测试类
+	 * @throws SQLException 
+	 */
+	public static void main(String[] args) throws SQLException {
+		CarDaoImpl carDaoImpl = new CarDaoImpl();
+	}
+
 }

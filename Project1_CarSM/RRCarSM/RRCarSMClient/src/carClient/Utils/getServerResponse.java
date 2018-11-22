@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 /**
@@ -17,9 +18,11 @@ import java.util.Scanner;
  */
 public class getServerResponse {
 	public static Socket socket;
+	public getServerResponse() throws UnknownHostException, IOException {
+		socket = new Socket("127.0.0.1", 2222);
+	}
 
 	public String getResponse(String request) throws IOException {
-		socket = new Socket("127.0.0.1", 2222);
 		// Êä³ö
 		PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
 		pw.println(request);

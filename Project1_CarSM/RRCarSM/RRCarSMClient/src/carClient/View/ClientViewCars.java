@@ -1,6 +1,7 @@
 package carClient.View;
 
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,8 @@ public class ClientViewCars extends ClientView {
 	String request;
 	String response;
 	List<Car> listCarArray;
-	public ClientViewCars() {
+
+	public ClientViewCars() throws UnknownHostException, IOException {
 		super("查询主界面");
 		listCarArray = new ArrayList<>();
 		getServerResponse = new getServerResponse();
@@ -33,21 +35,28 @@ public class ClientViewCars extends ClientView {
 	@Override
 	public ClientView showCurrentView() throws IOException {
 		String chooseFun = InputUtils.myInputString();
-		// 判断选择
-		switch (chooseFun) {
-		case "2+1":
-			request = "Car#getCarPrice#1";
+		String[] params = chooseFun.split("\\+");
+		switch (params[0]) {
+		// 价格查询
+		case "2":
+			switch (params[1]) {
+			case "1":
+				request = "Car#getCarPrice#1";
+				break;
+			case "2":
+				request = "Car#getCarPrice#2";
+				break;
+			default:
+				break;
+			}
 			break;
-		case "2+2":
-			request = "Car#getCarPrice#2";
+		// 类型查询
+		case "3":
+  			request = "Car#getCarCategory#" + params[1];
 			break;
-		case "[^&3]":
-			String[] carCategory = chooseFun.split("+"); 
-			request = "Car#getCarCategory#"+carCategory[1];
-			break;
-		case "[^&4]":
-			String[] carBrand = chooseFun.split("+"); 
-			request = "Car#getCarBrand#"+carBrand[1];
+		// 品牌查询
+		case "4":
+			request = "Car#getCarBrand#" + params[1];
 			break;
 		case "5":
 			request = "Car#ListCar";
@@ -55,21 +64,25 @@ public class ClientViewCars extends ClientView {
 		default:
 			break;
 		}
-		System.out.println("====[ClientViewCars]: request before socket >>"+request);
+		System.out.println("====[ClientViewCars]: request before socket >>" + request);
 		response = getServerResponse.getResponse(request);
 		listCarArray = JSONUtils.JSONStringToList(response, Car.class);
+		// 打印查询结果
 		ShowFormatUtils.showCarQueryHeader();
 		System.out.println(listCarArray);
+		// 跳转页面
 		nextView = new ClientViewCars();
 		return nextView;
 	}
-/**
- * 测试
- * @throws IOException 
- */
+
+	/**
+	 * 测试
+	 * 
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		ClientViewCars clientViewCars = new ClientViewCars();
-		while(clientViewCars!=null) {
+		while (clientViewCars != null) {
 			clientViewCars.showCurrentView();
 		}
 	}

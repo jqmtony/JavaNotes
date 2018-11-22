@@ -16,5 +16,6 @@ public interface CarDao {
 	public ArrayList<Car> getCarListByCategory(String carCategory) throws SQLException;
 
 	public ArrayList<Car> getCarListByBrand(String carBrand) throws SQLException;
+
 	
 }
