@@ -26,3 +26,21 @@
 - DAY13(10.24): OOP-多态-转型-OCP-动态绑定
 - DAY14(10.25): OOP-抽象类、接口；config.properties读取；工厂通过pro调用类.方法； 用工厂设置建立两个单例；
 - DAY15(10.26): 理解工厂单例、接口；Java基础第2阶段测试；DVDManager项目练手（用三层架构）
+- DAY16(10.29): 策略模式、内部类、静态内部类、异常throws, try-catch(exception)
+- DAY17(10.30): Math.round()/floor()/random()、类图、ArrayList
+- DAY18(10.31): LinkedList-Set-Map-Collection、 iterator
+- DAY19(11.1): comparator内部/外部比较器、CustomerContactsUser
+- DAY20(11.2): CustomerContactsUser
+- DAY21(11.5): IO：File类、InputStream、OutputStream
+- DAY22(11.6): Socket-Server-Client、多人聊天系统
+- DAY23(11.7): Lock-Condition-装饰-Json
+
+
+### MySQL
+- DAY1(11.8): mySql安装各种报错、mySql基本操作：增删改查
+- DAY2(11.9): sql图像化界面：navicat premium、环境变量配置、mySQL约束、查询语句
+- DAY3(11.12): mySQL-查询-简单链接子合并、正则表达
+- DAY4(11.13): mySQL-增删改查、函数、视图、触发器trigger
+- DAY5(11.14): JDBC-mysqlConJ-updStatements
+- DAY6(11.15): JDBC-XXManagerSystem
+- DAY7(11.16): autoCommit事务的4个等级、隔离级别测试、二嗨租车项目说明
