@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>星期提醒</title>
+		<script>
+			function show(){
+				var num = Number(prompt("请输入星期数（1~7）："));
+				if(num<=1){
+					alert("新的一周开始啦！");
+				}else if(num<=4){
+					alert("努力工作中！加油！");
+				}else if(num==5){
+					alert("一周要结束咯~");
+				}else{
+					alert("今天就好好休息吧 ☺ ");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn1" onclick="show()">点击我</button>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>这是一个div元素</div>
+</body>
+<script>
+    /*
+        需求：通过js 动态的为div 添加如下样式
+        ① 背景颜色 为  灰色
+        ② 宽度为 300px
+        ③ 高度为 300px
+        ④ 边框为 1px solid red
+        ⑤ 文字大小为 20px
+        ⑥ 文字颜色 为 白色
+        ⑦ 当前块元素居中 margin 0px auto
+     */
+    /*① 获取到指定的元素节点*/
+    var element = document.getElementsByTagName("div")[0];
+    /*② 为指定元素添加样式 */
+    element.style.backgroundColor = "#bdbdbd";
+    element.style.width = "300px";
+    element.style.height = "300px";
+    element.style.border = "1px solid red";
+    element.style.fontSize = "20px";
+    element.style.color = "#ffffff";
+    element.style.margin = "0px auto";
+
+    /*③ 获取指定元素节点的样式值*/
+    var border = element.style.border;
+    var width = element.style.width;
+    var fontSize = element.style.fontSize;
+    alert("边框样式："+border+",宽度样式："+width+",字体大小："+fontSize);
+
+</script>
+</html>

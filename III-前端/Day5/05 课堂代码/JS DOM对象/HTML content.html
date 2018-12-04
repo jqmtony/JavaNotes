@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <a class="baidu" href="https://www.baidu.com">百度一下</a>
+</div>
+</body>
+<script>
+
+    /*var element = document.getElementsByTagName("div")[0];
+    /!*
+        操作节点中的HTML内容
+        ① 获取当前元素节点中的 HTML内容
+        ② 设置当前元素节点中的 HTML内容
+     *!/
+    /!*① 获取*!/
+    var htmlContent = element.innerHTML;
+    alert(htmlContent);
+    /!*② 设置 修改*!/
+    element.innerHTML = "新的HTML内容";*/
+
+
+
+    /*
+    /!*
+        操作节点中的 文本内容
+        ① 获取当前元素节点中的  文本内容
+        ② 设置当前元素节点中的  文本内容
+     *!/
+   var element = document.getElementsByTagName("html")[0];
+    /!*① 获取*!/
+    var textContent = element.innerText;
+
+    /!*② 设置 文本*!/
+    element.innerText = "<body>我有一头小毛驴，从来也不骑</body>";*/
+
+
+
+    /*
+        操作节点中的  属性
+        ① 获取当前元素节点中的  属性值
+        ② 设置当前元素节点中的  属性值
+     */
+    var element = document.getElementsByClassName("baidu")[0];
+    /*① 获取属性值*/
+    var className = element.className;
+    var href = element.href;
+    alert("class属性的值："+className);
+    alert("href属性的值："+href);
+    /*② 设置属性值*/
+    element.href = "https://www.taobao.com";
+    element.className = "taobao";
+</script>
+
+</html>
