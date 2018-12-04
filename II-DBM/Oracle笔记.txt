@@ -1,0 +1,114 @@
+Oracle的数据类型
+1.number(x,y)
+	x 代表总长度
+	y 代表精确到小数点哪一位
+		+ 小数点后
+		- 小数点前
+		0 默认整数
+
+
+1。以数据库管理员的身份登录
+C:\Users\Administrator>sqlplus / as sysdba
+
+SQL*Plus: Release 11.2.0.2.0 Production on 星期四 11月 29 19:37:14 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+连接到:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL>
+
+dba的权限是最高的。
+
+2.创建用户
+create user TC35 identified by 123456;
+
+3.给新建的用户授权
+Oracle的权限有3类：
+1.Connect
+2.Resource
+3.DBA
+SQL> grant dba to TC35;
+授权成功。
+
+4.切换到这个用户
+SQL> conn TC35;
+输入口令:
+已连接。
+
+5.建立表空间
+
+create tablespace 表空间名称 datafile ‘物理存储路径’  size 初始大小 autoextend on next 5M maxsize 500m
+
+物理存储路径中如果涉及文件夹，该文件夹必须存在。
+E:\TC35\DB.dbf .即TC35文件夹必须要实际存在。
+
+autoextend on next X 每次增长大小
+maxsize 最大大小
+
+SQL> create tablespace TC35 datafile 'E:\TC35\datase.dbf' size 20m autoextend on next 5m maxsize 500m;
+
+表空间已创建。
+
+文件的后缀是dbf
+
+6.查看用户的默认表空间
+
+SQL> select default_tablespace from user_users;
+
+DEFAULT_TABLESPACE
+------------------------------------------------------------
+SYSTEM
+
+
+7.修改用户的默认表空间
+alter user 用户名 default tablespace TC35;
+
+SQL> alter user TC35 default tablespace TC35;
+
+用户已更改。
+
+SQL> select default_tablespace from user_users;
+
+DEFAULT_TABLESPACE
+------------------------------------------------------------
+TC35
+
+SQL>
+
+
+8.建立表
+
+MySQL是没有check约束的。但是Oracle有。检查约束
+
+
+create table user1(
+uuid number not null,
+uname varchar2(50) unique,
+ugender char(3) default('男')，
+uage number check(age > 18),
+constraint userpk primary key (uuid));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

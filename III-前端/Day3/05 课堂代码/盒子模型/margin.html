@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            width: 300px;
+            height: 300px;
+            /*margin-left: 50px;
+            margin-top: 50px;*/
+            /*margin: 50px;*/  /*四个方向的外边距*/
+
+            /*margin: 50px 100px;*/ /*分别设置上下   左右的外边距*/
+
+            /*margin: 50px 100px 10px;*/ /*分别设置上  左右  下的外边距*/
+
+            /*margin: 20px 50px 100px 150px;*/  /*分别设置上  左  右  下的外边距*/
+
+            /*margin: 20px auto;*/
+        }
+        div{
+            border: 1px solid red;
+        }
+
+
+        .head,.article,.foot{
+            width: 1000px;
+            margin: 5px auto;
+        }
+
+        .head{
+            height: 60px;
+        }
+
+        .article{
+            border: 1px solid blue;
+        }
+        .left,.right{
+            height: 400px;
+            /*display: inline-block;*/
+        }
+
+        .left{
+            width: 150px;
+        }
+        .right{
+            width: 840px;
+        }
+
+        .foot{
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+        <!--
+            盒子的宽和高：width、height
+            外边距：margin
+            方向：上(top)  右(right)   下(bottom)   左（left）
+            应用场景：用于调整当前元素与其父元素和相邻元素
+        -->
+
+       <!-- <p>这是一个段落</p>-->
+
+        <!--头部-->
+        <div class="head">头部</div>
+
+        <!--内容-->
+        <div class="article">
+            <div class="left">左侧部分</div>
+            <div class="right">右侧部分</div>
+        </div>
+
+        <!--尾部-->
+        <div class="foot">尾部</div>
+</body>
+</html>

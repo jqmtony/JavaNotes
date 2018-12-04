@@ -1,0 +1,60 @@
+.head{
+    height:70px;
+    background-color: #666666;
+}
+
+.head .logo{
+    margin-left: 150px;
+}
+
+.head .logo,.nav,.login div{
+    float: left;
+}
+.head .login{
+    height: 100px;
+    float: right;
+}
+
+.head .loginBtn{
+    width: 80px;
+    height: 30px;
+    border: 1px solid #FAD65C;
+    border-radius: 80px;
+    line-height: 30px;
+    text-align: center;
+    color: #FAD65C;
+    margin-top: 20px;
+}
+
+.head .member{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #FAD65C;
+    background-color: #FAD65C;
+    border-radius: 80px;
+    line-height: 30px;
+    text-align: center;
+    color: #A97D1B;
+    font-weight: bold;
+    margin: 20px 150px 0px 8px;
+}
+.head ul{
+    list-style-type: none;
+    overflow: hidden;
+    height: 70px;
+    margin: 0px;
+    line-height: 70px;
+    padding-left: 15px;
+}
+
+.head li{
+    float: left;
+    font-size: 15px;
+    margin: 0px 20px;
+    color: white;
+
+}
+
+.head li:hover{
+    color: blue;
+}

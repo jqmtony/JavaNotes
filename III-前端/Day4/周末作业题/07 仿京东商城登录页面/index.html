@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿京东登录</title>
+
+    <style>
+
+        /*通用的样式设置*/
+        body,ul,p,h1,h2,h3,h4,h5,h6{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        /*头部样式*/
+        .head{
+            height: 80px;
+           /* border: 1px solid red;*/
+            background: url("image/logo.png") 160px 8px no-repeat;
+            font-size: 25px;
+            text-indent: 340px;
+            line-height: 80px;
+            color: #B2B2B2;
+        }
+
+        .content{
+            height: 478px;
+            background: url("image/banner.png") 160px 0px no-repeat #E93854;
+        }
+
+        .content .form{
+            height: 280px;
+            width: 380px;
+            background-color: white;
+            position: relative;
+            left: 830px;
+            top: 40px;
+        }
+
+        .title{
+            height: 60px;
+        }
+        .title h3{
+            float: left;
+            font-size: 18px;
+            color: #8A8A8A;
+            font-weight: lighter;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        .title div{
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px;
+            color: #E93854;
+            background: url("image/icon5.jpg") 0px 2px no-repeat;
+            text-indent: 1.5em;
+        }
+
+        .text{
+            width: 340px;
+            border: 1px solid #BDBDBD;
+            background: url("image/icon1.jpg") no-repeat;
+            margin: 15px auto;
+        }
+        .text input{
+            height: 37px;
+            width: 300px;
+            margin-left: 38px;
+            border: 0px;
+            border-left:1px solid #BDBDBD ;
+            /*margin: 10px 17px;*/
+        }
+
+        .pwd{
+            width: 340px;
+            border: 1px solid #BDBDBD;
+            background: url("image/icon2.jpg") no-repeat;
+            margin: 15px auto;
+        }
+        .pwd input{
+            height: 37px;
+            width: 300px;
+            margin-left: 38px;
+            border: 0px;
+            border-left:1px solid #BDBDBD ;
+            /*margin: 10px 17px;*/
+        }
+
+        .auto-login{
+            margin: 10px 15px;
+            float: left;
+        }
+
+        .li4{
+            overflow: hidden;
+            font-size: 12px;
+            color: #8A8A8A;
+        }
+        .mima{
+            margin: 10px 15px;
+            float: right;
+        }
+        .login-btn{
+            width: 340px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #E4393C;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            margin: 0px auto;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+    <!--使用img 标签显示图片 效率没有背景图片样式加载的效率高-->
+    <!--头部内容-->
+    <div class="head">
+       <!-- <div class="logo">&lt;!&ndash;<img src="image/logo.png" alt="">&ndash;&gt;</div>-->
+        欢迎登录
+    </div>
+
+    <!--表单内容-->
+    <div class="content">
+        <div class="form">
+            <ul>
+                <li class="title">
+                    <h3>京东会员</h3>
+                    <div><!--<img src="image/icon5.jpg" alt="">-->立即注册</div>
+                </li>
+                <li>
+                    <div class="text">
+                        <!--设置输入框预期填写简短提示信息-->
+                        <input type="text" placeholder="邮箱/手机号/账户名">
+                    </div>
+                </li>
+                <li>
+                    <div class="pwd">
+                        <input type="password">
+                    </div>
+                </li>
+                <li class="li4">
+                    <div class="auto-login"><input type="checkbox">自动登录</div>
+                    <div class="mima">忘记密码?</div>
+                </li>
+                <li>
+                    <div class="login-btn">登&nbsp;录</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--尾部内容-->
+    <div class="foot"></div>
+</body>
+</html>
