@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #warp{
+            display: none;
+            position: relative;
+            top: 160px;
+            left: 520px;
+            width: 300px;
+            height: 120px;
+            border: #BDBDBD;
+            box-shadow: 0px 0px 2px #373B3C;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        h3{
+            margin: 0px;
+            font-size: 15px;
+            color: orangered;
+            text-align: center;
+        }
+
+        .con{
+            text-align: center;
+            padding: 15px;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function show() {
+            var num = document.getElementById("num");
+            var warp = document.getElementById("warp");
+            warp.style.display = "block";
+
+           /* var interval;
+
+            var index = 7;
+            interval = setInterval(function () {
+                num.innerHTML = ""+index;
+                if(index==0){
+                    warp.style.display = "none";
+                    clearInterval(interval);
+                }
+                index--;
+            },1000)*/
+
+            /*需要在3秒后将提示框隐藏*/
+            setTimeout(function () {
+                warp.style.display = "none";
+            },3000)
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="show()">显示提示框</button>
+    <div id="warp">
+        <h3>提示框</h3>
+        <div class="con">下午好，<span id="num">3</span>秒后弹窗关闭</div>
+    </div>
+</body>
+</html>

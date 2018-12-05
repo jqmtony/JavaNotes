@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <script>
+        function show(){
+            alert("同学们大家下午好！上课不许睡觉");
+        }
+        
+        function over() {
+            alert("鼠标经过事件");
+        }
+
+        function out(){
+            alert("鼠标移出事件");
+        }
+
+        function change(){
+            alert("内容改变事件");
+        }
+        function selects() {
+            alert("内容选中事件")
+        }
+        
+        function focus1() {
+            /*alert("获取到焦点事件");*/
+            document.getElementById("focus").style.backgroundColor = "red";
+        }
+        function blur1() {
+            document.getElementById("focus").style.backgroundColor = "blue";
+        }
+        function load1() {
+            alert("页面加载事件")
+        }
+    </script>
+</head>
+<body onload="load1()">
+    <!--鼠标单击事件-->
+    <input onclick="show()" type="button" value="问候">
+    <input onmouseover="over()" type="button" value="鼠标经过">
+    <input onmouseout="out()" type="button" value="鼠标移出">
+    <input onchange="change()" type="text" value="内容改变">
+    <input onselect="selects()" type="text" value="内容选中事件">
+    <input id="focus" onblur="blur1()" onfocus="focus1()" type="text" value="获取焦点事件">
+</body>
+</html>

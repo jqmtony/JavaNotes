@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window 对象 定时器</title>
+
+    <script>
+
+        /*要求：是实现狗狗从左到右 图片的移动功能*/
+        /*background:url("dog.jpg") 0px 100px no-repeat #8bc289;*/
+
+        /*
+            需要使用定时器实现
+            setInterval(需要反复执行的函数或者表达式,周期时间毫秒) ：
+         */
+
+        var index = 0;
+        var i = 1 ;
+
+        var interval ; //定时器对象
+        function start() {
+
+            /*指定周期，调用函数*/
+            interval = setInterval(function () {
+                var element = document.getElementById("body");
+                index = index + i;
+                element.style.background = "url(\"dog.jpg\") "+index+"px 100px no-repeat #8bc289";
+            },2)
+        }
+
+        function stop(){
+            /*通过 clearInterval()方法将 setInterval对象 清除*/
+            clearInterval(interval);
+        }
+        
+        function goHome() {
+            index = 0;
+            /*var element = document.getElementById("body");
+            element.style.background = "url(\"dog.jpg\") 0px 100px no-repeat #8bc289";*/
+        }
+    </script>
+
+
+    <style>
+        body{
+            background:url("dog.jpg") 0px 100px no-repeat #8bc289;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+
+<body id="body">
+    <button onclick="start()">开始</button>
+    <button onclick="stop()">停止</button>
+    <button onclick="goHome()">你给我回来</button>
+</body>
+</html>
