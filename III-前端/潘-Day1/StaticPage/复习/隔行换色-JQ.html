@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery版隔行换色</title>
+    <!--使用JQuery CDN  在线使用 不需要下载到本地-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <style>
+        /*代表有一个class 这个class叫做odd*/
+        .odd{
+            background: gray;
+        }
+        .even{
+            background: orangered;
+        }
+    </style>
+    <script>
+        $(function () {
+            // 1.找到表格 JQuery的核心是选择器
+            $("#tab1 tr:odd").addClass("odd");
+            $("#tab1 tr:even").addClass("even");
+        })
+    </script>
+</head>
+<body>
+    <table border="1px" width="500px" id="tab1">
+        <!--Ctrl + D 复制当前行或选中的内容到下一行-->
+        <tr align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr  align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr  align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr  align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1px" width="500px" id="tab2">
+        <!--Ctrl + D 复制当前行或选中的内容到下一行-->
+        <tr align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr  align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr  align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr  align="center">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+
+    <!--jquery中的 元素滑上 和 滑下-->
+    <script>
+
+        $(function () {
+
+            /*元素的滑上和滑下 效果
+            * ① 滑上 ： slideUp()
+            * ② 滑下 ： slideDown()
+            * */
+           /* $(".first-menu li span").mouseover(function () {
+                /!*滑下*!/
+                $(this).next("ul").slideDown();
+            })
+
+            $(".first-menu li span").mouseout(function () {
+                /!*滑上*!/
+                $(this).next("ul").slideUp();
+            })*/
+
+            $(".first-menu li span").mouseover(function () {
+                /*滑下*/
+                $(this).next("ul").slideToggle(100);
+            })
+
+            $(".first-menu li span").mouseout(function () {
+                /*滑上*/
+                $(this).next("ul").slideToggle(100);
+            })
+
+
+        })
+
+    </script>
+    <style>
+        p{
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--① 纵向菜单列表-->
+<!--
+<button>滑上</button>
+<p>这是一个段落</p>
+-->
+
+
+<div class="cols-list">
+    <ul class="first-menu">
+        <li><span>菜单管理</span>
+            <ul class="second-menu">
+                <li>查询菜单</li>
+                <li>添加菜单</li>
+                <li>删除菜单</li>
+            </ul>
+        </li>
+
+        <li><span>系统管理</span>
+            <ul class="second-menu">
+                <li>查询菜单</li>
+                <li>添加菜单</li>
+                <li>删除菜单</li>
+            </ul>
+        </li>
+
+        <li><span>订单管理</span>
+            <ul class="second-menu">
+                <li>查询菜单</li>
+                <li>添加菜单</li>
+                <li>删除菜单</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

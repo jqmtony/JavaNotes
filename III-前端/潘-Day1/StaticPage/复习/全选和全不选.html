@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选和全部选</title>
+    <style>
+        /*写样式：目的给某个/些元素添加样式*/
+        #t1 {
+            /*让边框显示出来*/
+            /*四个值：上 右 下 左*/
+            margin: 0px auto;
+            width: 400px;
+            height: 400px;
+        }
+
+        /*子元素选择器：#t1所代表的元素内的所有的TR元素*/
+        #t1 td {
+            border: 1px dashed red;
+            text-align: center;
+        }
+    </style>
+    <script>
+
+        function doClick() {
+            var flag = true;
+            //-- 0 获取所有的input
+            var eles = document.getElementsByTagName("input");
+            //-- 1.获取checkbox
+            var cb = document.getElementById("selAll");
+            //-- 2.检查当前checkbox的状态.判断是选中还是没有被选中
+            if (cb.checked) {
+                //-- F12 进入开发模式 通过控制台打印来查看输出
+                console.log("选中");
+                //-- 得到的是一个数组。每一个元素都是input
+                //-- 遍历数组中的所有元素
+                flag = true;
+            } else {
+                console.log("未被选中");
+                flag = false;
+
+            }
+            for (var i = 0; i < eles.length; i++) {
+                //-- 取第i个元素
+                var ele = eles[i];
+                //-- 修改元素的选中状态
+                ele.checked = flag;
+            }
+
+        }
+    </script>
+</head>
+<body>
+<table class="t1" id="t1">
+    <tr>
+        <td>
+            全选
+            <input type="checkbox" id="selAll" onclick="doClick()"/>
+        </td>
+
+        <td>汽车编号</td>
+        <td>汽车品牌</td>
+        <td>汽车名称</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" id="cb1"/>
+        </td>
+        <td>1</td>
+        <td>大众</td>
+        <td>桑塔纳</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" id="cb2"/>
+        </td>
+        <td>2</td>
+        <td>大众</td>
+        <td>桑塔纳</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" id="cb3"/>
+        </td>
+        <td>3</td>
+        <td>大众</td>
+        <td>桑塔纳</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox" id="cb4"/>
+        </td>
+        <td>4</td>
+        <td>大众</td>
+        <td>桑塔纳</td>
+    </tr>
+</table>
+</body>
+</html>

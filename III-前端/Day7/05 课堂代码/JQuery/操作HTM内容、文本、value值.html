@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+
+    <script>
+
+        /*① 获取元素中的HTML 内容*/
+        function getHtml() {
+            var htmlContent = $("html").html();
+            alert(htmlContent);
+        }
+        /*② 获取元素中的Text 内容*/
+        function getText() {
+            var textContent = $("html").text();
+            alert(textContent);
+        }
+        /*③ 获取元素中的value值*/
+        function getValue() {
+            var value = $("input[value]").val();
+            alert(value);
+        }
+
+
+        /*① 设置元素中的HTML 内容*/
+        function setHtml() {
+            $("html").html("<h1>新的HTML内容为一个h1标题</h1>");
+        }
+
+        /*② 设置元素中的Text 内容*/
+        function setText() {
+            $("html").text("<h1>新的Text内容为一个h1标题</h1>");
+        }
+
+        /*③ 设置元素中的Text 内容*/
+        function setValue() {
+            $("input").last().val("新的value值");
+        }
+    </script>
+
+</head>
+<body>
+
+    <button onclick="getHtml()">获取元素中html内容</button>
+    <button onclick="getText()">获取元素中的文本内容</button>
+    <input onclick="getValue()" type="button" value="获取元素中的value值"><br>
+
+    <button onclick="setHtml()">设置元素中html内容</button>
+    <button onclick="setText()">设置元素中的文本内容</button>
+    <input onclick="setValue()" type="button" value="设置元素中的value值">
+</body>
+</html>

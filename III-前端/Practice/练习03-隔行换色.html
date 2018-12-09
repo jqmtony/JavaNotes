@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行换色</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <style>
+        .odd {
+            background-color: beige;
+        }
+
+        .even {
+            background-color: cadetblue;
+        }
+    </style>
+
+
+    <script>
+        $(function () {
+            $("tr:odd").addClass("odd");
+            $("tr:even").addClass("even");
+            $("td:eq(6)").css("color","red")
+        })
+
+    </script>
+</head>
+<body>
+<table border="1px solid red" width="300px">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+</table>
+
+</body>
+</html>

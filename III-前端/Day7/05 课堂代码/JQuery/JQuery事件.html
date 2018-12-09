@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script>
+
+        /*喜欢js脚本 在dom文档加载完毕之后，再加载*/
+
+        /*自动加载函数
+        * 保证：当前函数中的js脚本，需要等待dom加载完毕之后才会执行
+        * */
+        $(function () {
+
+            /*
+                使用jquery 事件
+                需要浏览器随时监听用户对于网页元素的操作
+                需要关注jquery 事件代码
+             */
+            /*① 失去焦点事件*/
+            $("input[type='text']").blur(function () {
+                $(this).css("background-color","red");
+
+            });
+
+            /*② 内容改变事件*/
+            $("input[type='password']").change(function () {
+                $(this).css("background-color","green");
+            });
+
+            /*③ 鼠标单击事件*/
+            $(".one").click(function () {
+                alert($(this).val());
+            });
+            
+            /*④ 鼠标双击事件*/
+            $(".two").dblclick(function () {
+                alert($(this).val());
+            });
+
+            /*⑤ 获取焦点事件*/
+            $(".c-focus").focus(function () {
+                $(this).css("background-color","pink");
+            });
+
+            /*⑥ 鼠标移入*/
+            $(".c-mouseover").mouseover(function () {
+                $(this).val("鼠标移入后的文字");
+                alert("鼠标移入");
+            });
+            /*⑦ 鼠标移出事件*/
+            $(".c-mouseover").mouseout(function () {
+                $(this).val("鼠标移出")
+                alert("鼠标移出");
+            });
+            /*⑧ 鼠标移动事件*/
+            $(".c-mousemove").mousemove(function () {
+                /*$(this).val("鼠标移动")*/
+                alert("鼠标移动");
+            });
+            /*⑨ 鼠标点击时的事件*/
+            $(".c-mouseup").mouseup(function () {
+                alert("鼠标点击松开");
+            });
+        })
+
+        /*function blurs(){
+            $("input").css("background-color","red");
+        }*/
+
+
+    </script>
+
+</head>
+<body>
+账户：<input type="text"><br>
+密码：<input type="password"><br>
+<input class="one" type="button" value="鼠标单击按钮">
+<input class="two" type="button" value="鼠标双击按钮"><br>
+获取焦点 <input class="c-focus" type="text"><br>
+<input class="c-mouseover" type="button" value="鼠标移入">
+<input class="c-mousemove" type="button" value="鼠标移动事件">
+<input class="c-mouseup" type="button" value="鼠标点击松开事件">
+</body>
+</html>

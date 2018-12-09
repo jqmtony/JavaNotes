@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行换色</title>
+    <script>
+        function init() {
+            //-- 1. 获取表格
+            var tab = document.getElementById("t1");
+            //-- 2. 获取所有的行 tBody 代表整个表格的正文内容
+            var lengths = tab.tBodies[0].rows.length;
+            console.log("lengths:" + lengths);
+            //-- 3.循环遍历
+            for (var i = 0; i < lengths; i++) {
+                if (i % 2 == 0) {
+                    //-- 偶数行
+                    var row = tab.tBodies[0].rows[i];
+                    //-- row 是偶数行对象。通过对象来操作样式
+                    row.style.backgroundColor = "gray";
+                } else {
+                    //-- 通过js来操作元素的样式
+                    //-- 元素.sytle.某个样式 = 样式的值
+                    tab.tBodies[0].rows[i].style.background = "pink";
+                }
+            }
+        }
+    </script>
+</head>
+<!--onload() 代表页面或者图片加载完成后立刻执行-->
+<body onload="init()">
+<center>
+    <table class="t1" id="t1" border="1px" width="400px">
+
+        <tr>
+            <td>
+                <input type="checkbox" id="cb1"/>
+            </td>
+            <td>1</td>
+            <td>大众</td>
+            <td>桑塔纳</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="cb2"/>
+            </td>
+            <td>2</td>
+            <td>大众</td>
+            <td>桑塔纳</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="cb3"/>
+            </td>
+            <td>3</td>
+            <td>大众</td>
+            <td>桑塔纳</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="cb4"/>
+            </td>
+            <td>4</td>
+            <td>大众</td>
+            <td>桑塔纳</td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>

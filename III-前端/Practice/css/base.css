@@ -1,0 +1,43 @@
+#mainTopic {
+	text-align: center;
+	/* border: 1px black solid; */
+	height: 30px;
+}
+
+.headler {
+	/* border: 1px black solid; */
+	height: 50px;
+}
+
+.headler ul li{
+	list-style: none;
+	float: right;
+	margin: 5px 15px;
+}
+
+.tests {
+	height: 300px;
+	border: 1px black solid;
+	margin: 20px 50px 10px;
+}
+
+
+/*#reset,#sub {*/
+	/*float: right;*/
+	/*margin-right: 20px;*/
+/*}*/
+
+
+.nextView {
+	text-align: center;
+	height: 40px;
+	/* border: 1px black solid; */
+}
+
+.nextView ul {}
+
+.nextView li {
+	list-style: none;
+	float: left;
+	margin: 10px;
+}

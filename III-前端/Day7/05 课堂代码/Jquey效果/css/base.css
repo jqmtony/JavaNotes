@@ -1,0 +1,43 @@
+/*
+为了保证选择器不出现编写错误，*/
+
+/*通用的样式设置*/
+body,ul,p,h1,h2,h3{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Comic Sans MS";
+    font-size: 14px;
+}
+
+
+/*纵向导航菜单*/
+.cols-list{
+
+}
+
+.cols-list .first-menu{  /*一级  外层ul 的样式*/
+    width: 120px;
+    background-color: #121617;
+    color: #ffffff;
+    padding: 5px 0px;
+}
+
+.cols-list .first-menu>li{/*外层ul包含子元素li 的样式*/
+    padding: 3px;
+    text-indent: 1.5em;
+    border-bottom: 1px solid #606A67;
+}
+
+/*.cols-list .first-menu>li:hover ul{
+    display: block;
+}*/
+
+.cols-list .first-menu .second-menu{       /*二级  内层ul 的样式*/
+    display: none;
+    font-size: 13px;
+    text-indent: 2em;
+    border-top: 1px solid #606A67;
+    margin-top: 5px;
+}
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+
+    <!--jquery中的效果 替换原本的使用css伪类 实现的动态效果-->
+    <script>
+        /*自动加载函数*/
+        $(function () {
+            /*一级 ul 中li 的鼠标移入事件*/
+           /* $(".first-menu li span").mouseover(function () {
+                /!*通过jquery 中的方法实现 元素的显示和隐藏
+                * ① 显示  ： show()
+                * ② 隐藏  ： hide()
+                * 获取当前元素的下一个元素节点对象： next("ul")
+                * *!/
+                $(this).next("ul").show("slow");
+            })*/
+
+            /*一级 ul 中li 的鼠标移出事件*/
+           /* $(".first-menu li span").mouseout(function () {
+                /!*通过jquery 中的方法实现 元素的显示和隐藏
+                * ① 显示  ： show()
+                * ② 隐藏  ： hide()
+                * 获取当前元素的下一个元素节点对象： next("ul")
+                * *!/
+                $(this).next("ul").hide("slow");
+            })*/
+
+           /*自动切换 可见和隐藏的状态*/
+            $(".first-menu li span").mouseover(function () {
+                /*通过jquery 中的方法实现 元素的显示和隐藏
+                * ① 显示 和 隐藏  切换 ：toggle
+                * 获取当前元素的下一个元素节点对象： next("ul")
+                * */
+                $(this).next("ul").toggle(2000);
+            })
+
+            $(".first-menu li span").mouseout(function () {
+                /*通过jquery 中的方法实现 元素的显示和隐藏
+                * ① 显示  ： show()
+                * ② 隐藏  ： hide()
+                * 获取当前元素的下一个元素节点对象： next("ul")
+                * */
+                $(this).next("ul").toggle(2000);
+            })
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+    <!--① 纵向菜单列表-->
+
+    <div class="cols-list">
+        <ul class="first-menu">
+            <li><span>菜单管理</span>
+                <ul class="second-menu">
+                    <li>查询菜单</li>
+                    <li>添加菜单</li>
+                    <li>删除菜单</li>
+                </ul>
+            </li>
+
+            <li><span>系统管理</span>
+                <ul class="second-menu">
+                    <li>查询菜单</li>
+                    <li>添加菜单</li>
+                    <li>删除菜单</li>
+                </ul>
+            </li>
+
+            <li><span>订单管理</span>
+                <ul class="second-menu">
+                    <li>查询菜单</li>
+                    <li>添加菜单</li>
+                    <li>删除菜单</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

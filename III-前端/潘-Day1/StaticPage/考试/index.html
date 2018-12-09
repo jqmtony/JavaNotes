@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index_style.css">
+    <title>考试题</title>
+</head>
+<body>
+
+<div class="container">
+    <!--标题栏-->
+    <h3 id="title">JavaSE</h3>
+    <!--水平分割线-->
+    <hr>
+
+    <div id="toolbar">
+        <select name="" id="">
+            <option value="-1">---请选择---</option>
+            <option value="1">JavaSE</option>
+            <option value="1">MySQL</option>
+            <option value="1">Oracle</option>
+            <option value="1">JavaWeb</option>
+            <option value="1">Spring</option>
+            <option value="1">Mybatis</option>
+            <option value="1">SpringMVC</option>
+            <option value="1">SpringBoot</option>
+            <option value="1">SpringCloud</option>
+        </select>
+
+        <text>错误题数</text>
+    </div>
+
+    <!--题目正文内容-->
+    <div id="content">
+
+        <h4>题目:XXXX</h4>
+        <!--选项-->
+        <form action="" method="post">
+            <input type="checkbox"> A: <br>
+            <input type="checkbox"> B: <br>
+            <input type="checkbox"> C: <br>
+            <input type="checkbox"> D: <br>
+
+            <input type="submit" value="提交">
+            <input type="submit" value="重置">
+        </form>
+    </div>
+
+    <hr>
+
+    <div id="foot">
+        <button>上一题</button>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <button>下一题</button>
+    </div>
+</div>
+<script>
+    $(function () {
+        // 利用标签选择器找到selecter元素  change代表select改变的事件
+       $("select").change(function () {
+            var tx = $("select").find("option:selected").text();
+            $("#title").text(tx);
+       });
+    });
+</script>
+
+</body>
+</html>

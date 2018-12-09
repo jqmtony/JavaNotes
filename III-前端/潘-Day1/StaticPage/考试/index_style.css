@@ -1,0 +1,21 @@
+#title{
+    text-align: center;
+}
+
+#toolbar{
+    line-height: 40px;
+    text-align: right;
+}
+
+#toolbar text{
+    height: 40px;
+    margin-left: 10px;
+}
+
+#content{
+    margin-top: 10px;
+}
+
+#foot{
+    text-align: center;
+}
