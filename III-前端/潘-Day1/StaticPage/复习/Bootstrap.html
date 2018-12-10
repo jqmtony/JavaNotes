@@ -16,6 +16,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<div class="dropdown">
+    <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown trigger
+        <span class="caret">choose</span>
+
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dLabel">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+
 <div class="container">
     <div id="myCarousel" class="carousel slide">
         <!-- 轮播（Carousel）指标 -->
@@ -38,10 +53,12 @@
         </div>
         <!-- 轮播（Carousel）导航 -->
         <a class="carousel-control left" href="#myCarousel"
-           data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+           data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true"
+                                    class="glyphicon glyphicon-chevron-right"></span></a>
         <a class="carousel-control right" href="#myCarousel"
            data-slide="next">&rsaquo;</a>
     </div>
 </div>
+<hr>
 </body>
 </html>
