@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+		 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+		 version="4.0">
+  <display-name>ServletDemo01</display-name>
+	<!-- 告诉Web服务器(Tomcat)这里有一个Servlet -->
+	<servlet>
+		<!--给Servlet起个名字.不可以使用中文-->
+		<servlet-name>
+			ServletOne
+		</servlet-name>
+		<!-- 告诉Web服务器(Tomcat)这个Servlet在哪里.对应哪个.class文件 -->
+		<servlet-class>
+			com.hwua.web.servlet.ServletDemo02
+		</servlet-class>
+	</servlet>
+	<!-- Serlvet的映射配置 -->
+	<servlet-mapping>
+		<!-- 一样可以随便写但是必须和上面的name一致 --> 
+		<servlet-name>
+		ServletOne
+		</servlet-name>
+		<!-- 请求的路径是什么 -->
+		<url-pattern>
+		/ABC
+		</url-pattern>
+	</servlet-mapping>
+</web-app>
+
+

@@ -1,0 +1,50 @@
+家庭作业:
+1.完成注册模块.
+2.表单的提交只可以一次(避免刷新后重复提交).在前端用JS实现控制
+
+扩展:
+1.BeanUtils
+
+视屏地址:http://oracleoaec.gensee.com/webcast/site/vod/play-e38bacdca48f4977b80cd24c4b9e1d06
+
+明天内容:
+1.Servlet的生命周期
+2.请求和响应对象
+3.Http协议
+4.Config和Context
+
+5.数据库
+DBCP	:工具类和
+C3P0	:连接池
+
+实现小米的注册和登录(先不包括邮箱或短信验证)
+JavaMail Java来发送邮件!
+
+
+---
+Cookie 和 Session
+
+上次登录时间
+购物车(京东的购物车)
+历史浏览
+重写表单的提交只有1次
+
+
+JSP
+
+EL
+JSTL
+
+
+Ajax和JQuery
+
+分页(重要的内容)
+
+
+Filter/国际化/文件上传和下载
+
+
+
+
+
+
