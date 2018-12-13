@@ -1,0 +1,17 @@
+视屏地址
+Web第二天址:http://oracleoaec.gensee.com/webcast/site/vod/play-e38bacdca48f4977b80cd24c4b9e1d06
+
+Web第三天
+http://oracleoaec.gensee.com/webcast/site/vod/play-21c0377953ac48e18b3fe2e75813a98a
+
+预习:
+Request和Response
+C3P0/Druid
+反射
+
+目的:实现完整的登录和注册
+
+
+
+
+

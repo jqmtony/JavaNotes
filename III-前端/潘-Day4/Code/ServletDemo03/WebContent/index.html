@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试提交数据</title>
+<style>
+	.red{
+		color:red;
+	}
+</style>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script>
+	$(function(){		
+		$("form").submit(function(){
+			//-- 前提是必须有name属性.
+			if($("#username").val()==""){
+				$("#namelabel").text("用户名不可以为空");
+				$("#namelabel").addClass("red");
+				return false;
+			}else{
+				$("#namelabel").text("");
+				$("#namelabel").removeClass("red");
+			}
+			
+			if($("#password").val()==""){
+				$("#pwdlabel").text("密码不可以为空");
+				$("#pwdlabel").addClass("red");
+				//return false;
+			}else{
+				$("#pwdlabel").text("");
+				$("#pwdlabel").removeClass("red");
+			}			
+		});
+	})
+</script>
+
+</head>
+<body>
+<!-- 默认提交方式就是GET -->
+<form action="Servlet01" method="get">
+	姓名:<input id="username" type="text" name="username"/>
+	<span id="namelabel"></span> 
+	<br>
+	密码:<input id="password"type="password" name="password"/>
+		<span id="pwdlabel"></span> 
+	<br>
+	喜好:<input type="checkbox" value="吃"  name="like"/>吃
+		<input type="checkbox" value="喝" name="like"/>喝
+		<input type="checkbox" value="玩" name="like"/>玩
+		<input type="checkbox" value="乐" name="like"/>乐
+		<br>
+	性别:<input type="radio" value="男" name="gender"/>男
+		<input type="radio" value="女" name="gender"/>女
+		<br>
+	<input type="submit"/>
+</form>
+</body>
+</html>
