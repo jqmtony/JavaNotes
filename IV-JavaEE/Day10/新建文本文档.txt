@@ -1,0 +1,8 @@
+private static void generate()
+			throws IOException, XMLParserException, InvalidConfigurationException, SQLException, InterruptedException {
+		List<String> warnings = new ArrayList<String>();
+		Configuration config = new ConfigurationParser(warnings)
+				.parseConfiguration(AutoCoder.class.getResourceAsStream("AutoCoder.xml"));
+		MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, new DefaultShellCallback(true), warnings);
+		myBatisGenerator.generate(null);
+	}
