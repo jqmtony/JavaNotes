@@ -1,0 +1,93 @@
+﻿一.面向过程
+1.for/if/双层for
+(数组找最大/最小)
+(阶乘/1+2+3+..+100=?)
+(1!+2!+..+5!=?)
+(回文数/水仙花数)
+(九九乘法表)
+2.自定义函数
+3.循环标签/break;continue;return;
+-怎样跳出多层嵌套循环
+二.面向对象
+1.解释static
+2.解释public/private/..
+3*.封装/继承/多态
+-工厂与反射
+(动态创建类对象-根据字符串创建)
+(动态调用方法-根据字符串调用)
+4.堆/栈/常量池
+5.解释final
+6.形参能否影响实参
+-形参的改变:
+ 如果改变的是对象内容，则影响实参
+ 如果改变的是引用地址，则不影响实参
+7.递归/内存溢出
+8.String/StringBuffer/StringBuilder
+-String的不可变性
+9.==/equals()/hashcode()
+// 对于默认obj无论== equals 还是 hashcode 都是比对地址
+// 但是equals的逻辑是可以根据需求自定义的 重写equals
+// equals与hashcode有一致性契约
+// equals为true时hashcode一定相等/hashcode相等时equals是否一定为true呢?
+
+三.集合
+1.List/Set/Map
+-遍历读取/遍历删除/迭代器/比较器
+-匿名内部类
+-引入线程安全
+-分辨各种区别
+(ArrayList/LinkedList/Vector/CopyOnWriteArrayList)
+(List/Set区别)
+(HashSet/TreeSet)
+(HashMap/TreeMap/HashTable/ConcurrentHashMap)
+
+四.IO流
+1.字节流/字符流
+
+2.缓冲流/转换流
+
+3.装饰者模式
+
+五.异常处理
+1.try-catch-finally
+-提前return会不会执行finally
+2.throw/throws
+
+六.多线程
+1.两种实现方式
+-继承Thread父类/实现Runnable接口
+-复习匿名内部类
+-.run()/.start()
+-补充模板模式
+2*.同步锁与同步块
+-把一拥而上变成排队
+3.等待与唤醒
+-sleep()/wait()
+4.线程封闭
+5.原子性与可见性
+6.线程池/守护线程/fork-join/杂项...
+
+7*.并发与线程安全
+-线程安全问题只可能出现在这种情况下:多个线程 同时操作 同一资源
+-线程安全问题的解决方式
+(改造为纯单线程环境)
+(错开同一资源:线程封闭:栈封闭/ThreadLocal)
+(错开同时:加锁排队)
+
+sychronized(锁对象){
+ ---
+ ---同步代码块
+ ---
+}
+
+-多步原子性操作的组合 不再具有原子性
+
+
+-当一个线程进入某对象obj的一个synchronized方法，另一个线程能否进入该方法，那么能否进入该obj对象的另一个方法
+-可见性-----结合单例模式(饿汉单例/懒汉单例  其中懒汉单例分 双检锁单例和静态内部类单例)
+
+七.设计模式
+
+
+
+

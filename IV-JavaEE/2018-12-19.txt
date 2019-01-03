@@ -1,0 +1,38 @@
+一.Servlet简介
+
+-用于处理HTTP请求的Java类
+(接收http请求并给出相应)
+
+-关于request域和session域
+
+二.传统Servlet开发方式的3大罪状
+
+1.Servlet数量爆发式增长
+
+2.链接式的接口访问 体验不好
+
+3.允许浏览器直接访问视图 安全性 便利性 都不高
+
+三.复习前端
+1.行级与块级
+-块级元素:默认分行摆放、可设置尺寸
+-行级元素:默认同行摆放、不可设置尺寸
+-块级元素需同行摆放时方法有float-left/iniline-block
+
+2.盒子模型
+
+3.上手bootstrap前端框架
+-表示尺寸 sm md lg 
+-表示色彩 primary secondary info success warning danger
+-网格排版 row col-sm-宽度 offset-sm-偏移量 
+
+4.关于jQuery
+-dom选择器
+-ajax请求
+
+5.视图的嵌套
+
+四.线索
+1.前端调用ajax()向特定接口发送请求，
+2.后端某接口接收请求->取数据->序列化json->向web端输出
+3.前端接收到json，做反序列化，遍历并渲染到table

@@ -1,0 +1,95 @@
+一.关于分享
+1.csdn
+
+2.css3
+(阴影)
+(圆角)
+(旋转)
+(浏览器兼容的写法)
+
+二.总结与回顾
+
+1.搭建web-mvc部分/用于处理http请求
+
+web.xml : dispatcher-servlet
+spring-servlet.xml : 包扫描-扫描controller路径 视图解析器
+组件controller包中的控制器类
+
+浏览器输入接口地址->触发相应Controller类的相应方法->这一部分调试成功
+
+2.搭建spring-ioc/di部分 用于做对象的创建与属性的注入
+---IOC---
+ProductService productService=new ProductService();
+ProductDao productDao=new ProductDao();
+---DI---
+productService.setProductDao(productDao);
+
+web.xml : spring监听器
+applicationContext.xml : 包扫描-扫描从Service/Dao到底层session工厂/数据源等一切对象
+
+service/dao所有类全部通过注解 委托给Spring管理
+在controller层注入service对象
+在service层注入dao对象
+调用成功->最终触发dao相应方法->这一部分调试成功
+
+3.搭建数据持久化部分
+
+applicationContext.xml : 拼装dataSource对象 拼装jdbcTpl对象用于操作数据(属性注入dataSource对象)
+dao层用@Autowired注入jdbcTpl对象 : 用jdbcTpl对象query一张表
+
+数据正常层层返回到controller输出/或向web输出json数据->这一部分调试成功
+
+三.动态代理的实际应用
+
+1.面向切面编程
+Spring-Aop即由此延伸而来
+
+2.用于持久层框架的"只有接口没有实现"的设计理念
+
+3.即时加载->延迟加载
+
+四.引入MyBatis
+
+1.反向工具
+用于根据数据表生成entity及持久化操作类
+(反向工具配置.xml : jdbc连接 / 生成文件的路径)
+(反向工具主程序 : main函数形式 / eclipse插件形式 / ...)
+
+2.applicationContext.xml : dataSource对象仍然需要 mybatis的session工厂 mybatis的mapper扫描器
+
+五.补充
+
+1.三层架构
+
+界面层-(交互方式:MVC式/事件驱动式)
+|
+业务层-(与db无关的业务直接处理/与db有关的业务向下调用数据层对象处理)
+|
+数据层-(向下调用orm框架的数据操作对象)
+
+2.MVC
+C-控制器-web接口触发的模块
+M-数据模型-保存在域中的数据
+V-物理视图
+
+3.生产中的三层架构
+
+根据实际需要分为了2层->N层
+
+utils工具包/以静态方法为主
+
+其他的个性化封装
+
+---
+
+4.springMVC的日期处理
+
+web->controller传递时
+@DateTimeFormat打在实体类相应字段
+@initBinder方法，放在controller。
+
+controller->web传递时
+后端处理
+前端处理 MVVM的filter处理
+
+

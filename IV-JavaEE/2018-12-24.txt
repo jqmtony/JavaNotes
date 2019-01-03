@@ -1,0 +1,93 @@
+一.IOC与DI
+IOC:控制反转/利用第三方容器创建对象/将一个类委托给IOC管理
+DI:依赖注入/给对象的属性赋值
+
+配置式:
+IOC:<bean class="委托类"></bean>
+DI:<property name="" value=""></property>
+
+注解式:
+IOC:包扫描+4类注解
+DI:@Autowired/@Resource
+
+总结:
+A a=new A();---IOC
+B b=new B();---IOC
+b.setA(a);-----DI
+
+按类型注入和按名称注入
+@Autowired-按类型注入-byType
+@Resource-按名称注入-byName
+
+@Autowired+@Qualifier-也可实现按名称注入
+
+二.三层架构/MVC
+
+三.SpringMVC/Spring的职责划分
+SpringMVC的IOC/DI功能是弱化版的
+
+controller对象由SpringMVC装配
+service对象/dao对象/底层session工厂对象/数据源对象。。交由Spring装配。。
+
+*补充:JAVAEE开发框架的演变史
+早期---原生Servlet+手工创建各层对象+原生JDBC
+
+中早期---Struts+Spring+Hibernate---SSH
+
+中期---SpringMVC+Spring+SpringJDBC/MyBatis---SSM
+
+---每个部分是可以自由组装的
+
+后期---SpringBoot+SpringDataJPA(只有接口没有实现的理念)
+
+四.SpringMVC 拦截器
+
+-cookie/session的区别与联系
+(cookie存在客户端/session存在服务端-服务端通过客户端cookie辨认匹配的session空间)
+-cookie分两种
+(常规cookie/长效cookie---生命周期较长，可自定义。电商购物车未登录时常用。)
+(浏览器进程cookie/短效cookie/临时cookie---生命周期短，浏览器关闭即销毁。与服务端session数据由关联的就是这种cookie。)
+
+-认证与授权
+
+-传统session式认证
+登录成功时存session
+拦截器判断session是否存在来决定 拒绝或放行
+
+-无状态的token式认证
+登录成功时生成新token给客户端 客户端每一次请求携带此token
+拦截器判断请求中是否携带了正确的token 来决定 拒绝或放行
+
+五.SpringAOP
+AOP-面向切面编程-为一批已有的业务方法统一植入自定义逻辑
+切点-一批已有的业务方法为切点
+切面-植入的逻辑为切面
+
+
+六.装饰者模式->静态代理->动态代理
+-装饰者模式 是 继承的一种替补方案(java不可多继承)
+-装饰与代理的区别和联系
+
+七.引入MyBatis
+
+*补充:
+1.ajax跨域的多种方案
+(jsonP)
+(后端controller安全跨域)
+(nginx跨域)
+(cors跨域)
+
+2.nginx的多种作用
+(动静分离-生产环境tomcat的优化方式之一-充当cdn服务器)
+(正反向代理)
+(负载均衡)
+
+3.生产环境tomcat的优化方式
+(运行模式由bio/nio改为apr)
+(jvm参数优化)
+(线程池优化)
+(动静分离)
+
+
+
+

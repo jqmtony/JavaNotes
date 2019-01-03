@@ -1,0 +1,57 @@
+一.引入真实框架
+
+观察几处改良设计
+
+-1.关于SpringMVC的日期处理
+
+-2.关于Controller父类
+
+-3.关于Dao父接口/Dao父类
+
+父类Dao->实现->父类DaoImpl
+|                 |
+继承              继承
+|                 |
+子类Dao->实现->子类DaoImpl
+
+常用的Mybatis插件:通用Mapper/Mybatis-Plus
+(本质是给各子类Mapper添加一个父类Mapper)
+
+MyBatis+了插件后 仍然兼容官方原版的使用方式 并且新增了一些特有方式 比如Criteria查询
+
+-4.关于properties
+
+-5.关于加强版反向工具
+
+二.MQ中间件
+
+三.Redis
+-redisTemplate的使用
+-结合SpringCache的使用
+-关于分布式锁
+
+四.WEB推送
+-短轮询
+-长轮询
+-websocket
+
+五.分布式与集群
+-分布式的几个概念:注册中心 / 生产者 /消费者
+
+-Dubbo+Zookeeper
+
+-SpringCloud+Eureka
+(SpringBoot+SpringDataJPA)
+(restTemplate/feign)
+(服务发现/服务治理/负载均衡/熔断器...)
+
+六.企业常用业务
+关于RBAC/ACL权限
+
+单点登录(SSO)
+
+微信API调用/OAUTH认证...
+
+在线支付流程
+
+---
