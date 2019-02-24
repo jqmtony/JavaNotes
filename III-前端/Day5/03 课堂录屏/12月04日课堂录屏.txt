@@ -1,8 +1,0 @@
-JS 核心语法01
-http://oracleoaec.gensee.com/webcast/site/vod/play-29afe1125faa41d28f6a81bf30953a96
-
-JS 核心语法02
-http://oracleoaec.gensee.com/webcast/site/vod/play-98be0f8d9ff7446fa2a03fb490fec2e4
-
-JS DOM文档对象
-http://oracleoaec.gensee.com/webcast/site/vod/play-dbb1deb08a7f4453a61084a2172d003d
